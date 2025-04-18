@@ -1,29 +1,13 @@
 
 <h1 align="center">👋 Hey, I'm Pepe!</h1>
-<h3 align="center">Frontend Magician ✨ | Minecraft Architect 🎮 | Chromebook Hacker 💻</h3>
+<h3 align="center">Website Developer ✨ | Minecraft Pack Creator 🎮 | Chromebook Iser 💻</h3>
 
 ---
 
-<p align="center">
-  <a href="https://youtu.be/dQw4w9WgXcQ?t=43"><img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=22&duration=3000&pause=1000&color=6B46C1&center=true&vCenter=true&width=435&lines=Turning+coffee+into+code;Professional+block+artist;Tailwind+CSS+wizard;Linux+power+user;Vim+keyboard+acrobat" alt="Typing SVG" /></a>
-</p>
-
----
-
-### 🎮 Minecraft Mastery
-- 🔧 **Bedrock Add-on Alchemist**  
-- 🎨 **16x Texture Pack Creator**  
-- 🚀 Making Minecraft do things Mojang didn't plan for  
-
-### 💻 Development Flow
-```bash
-while True:
-    code()
-    if coffee_level < 20%:
-        brew_new_pot()
-    elif ideas.exist():
-        implement_in_vim()
-```
+### 🎮 Minecraft Pack Creations
+- 🐻 **Glacier Client**  
+- 🎨 **Pepe's Projects HUB**  
+- 💡 **Project Light**
 
 ---
 
