@@ -54,7 +54,7 @@
 
 ### 🎯 Community Stuff
 <p align="center">
-  <a href="https://discord.com/users/yourid">
+  <a href="https://discord.com/users/pepeyt>
     <img src="https://dcbadge.vercel.app/api/shield/yourid?style=flat-square&theme=discord" alt="Discord Presence">
   </a>
   <a href="https://ko-fi.com/pepeonkofi">
@@ -65,6 +65,6 @@
 ---
 
 <p align="center">
-  <img src="https://komarev.com/ghpvc/?username=pepe&color=blueviolet&style=flat-square" alt="Profile Views"> 
+  <img src="https://komarev.com/ghpvc/?username=pepeongithub&color=blueviolet&style=flat-square" alt="Profile Views"> 
   <a href="https://github.com/pepeongithub?tab=repositories"><img src="https://img.shields.io/badge/-Explore%20My%20World-2EA043?style=flat-square&logo=github"></a>
 </p>
