@@ -23,7 +23,7 @@
 ![Python](https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white)
 ![Node.js](https://img.shields.io/badge/-Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white)
 
-#### 🎮 Minecraft Craft
+#### 🎮 Minecraft Tools:
 ![Bedrock](https://img.shields.io/badge/-Bedrock-62B47A?style=flat-square&logo=minecraft&logoColor=white)
 ![Blockbench](https://img.shields.io/badge/-Blockbench-FF7F00?style=flat-square&logo=blender&logoColor=white)
 
