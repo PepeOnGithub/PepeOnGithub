@@ -56,7 +56,7 @@
 
 <p align="center">
   <a href="https://discord.com/users/653986158552023050">
-    <img src="https://dcbadge.vercel.app/api/shield/653986158552023050?style=flat-square&theme=discord" alt="Discord Presence">
+    <img src="https://img.shields.io/badge/Discord-%20Pepe%230001-5865F2?style=flat-square&logo=discord&logoColor=white" alt="Discord">
   </a>
   <a href="https://ko-fi.com/pepeonkofi">
     <img src="https://img.shields.io/badge/-Buy%20me%20a%20coffee-FF5E5B?style=flat-square&logo=ko-fi" alt="Ko-fi">
