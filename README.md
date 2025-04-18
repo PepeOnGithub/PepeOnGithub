@@ -1,6 +1,6 @@
 
 <h1 align="center">👋 Hey, I'm Pepe!</h1>
-<h3 align="center">Website Developer ✨ | Minecraft Pack Creator 🎮 | Chromebook Iser 💻</h3>
+<h3 align="center">Website Developer ✨ | Minecraft Pack Creator 🎮 | Chromebook User 💻</h3>
 
 ---
 
@@ -53,12 +53,13 @@
 ---
 
 ### 🎯 Community Stuff
+
 <p align="center">
-  <a href="https://discord.com/users/653986158552023050>
-    <img src="https://dcbadge.vercel.app/api/shield/yourid?style=flat-square&theme=discord" alt="Discord Presence">
+  <a href="https://discord.com/users/653986158552023050">
+    <img src="https://dcbadge.vercel.app/api/shield/653986158552023050?style=flat-square&theme=discord" alt="Discord Presence">
   </a>
   <a href="https://ko-fi.com/pepeonkofi">
-    <img src="https://img.shields.io/badge/-Buy%20me%20a%20coffee-FF5E5B?style=flat-square&logo=ko-fi">
+    <img src="https://img.shields.io/badge/-Buy%20me%20a%20coffee-FF5E5B?style=flat-square&logo=ko-fi" alt="Ko-fi">
   </a>
 </p>
 
