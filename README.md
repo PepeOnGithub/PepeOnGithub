@@ -54,7 +54,7 @@
 
 ### 🎯 Community Stuff
 <p align="center">
-  <a href="https://discord.com/users/pepeyt>
+  <a href="https://discord.com/users/653986158552023050>
     <img src="https://dcbadge.vercel.app/api/shield/yourid?style=flat-square&theme=discord" alt="Discord Presence">
   </a>
   <a href="https://ko-fi.com/pepeonkofi">
