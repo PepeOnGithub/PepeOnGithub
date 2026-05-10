@@ -1,11 +1,11 @@
 <h1 align="center">👋 Hey, I'm Pepe!</h1>
-<h3 align="center">Website Developer ✨ | Minecraft Pack Creator 🎮 | Chromebook User 💻</h3>
+<h3 align="center">Website Developer ✨ | Minecraft Pack Creator 🎮 | Glacier Owner ❄️</h3>
 
 ---
 
 ### 🎮 Minecraft Pack Creations
-- 🐻 **Glacier Client**  
-- 🎨 **Pepe's Projects HUB**  
+- 🐻 **Glacier Client** *(Owner)*
+- 🎨 **Pepe's Projects HUB**
 - 💡 **Project Light**
 
 ---
@@ -28,14 +28,7 @@
 
 ---
 
-### ⚙️ Daily Drivers
-![Chromebook](https://img.shields.io/badge/-ChromeOS-4285F4?style=flat-square&logo=google-chrome&logoColor=white)
-![Linux](https://img.shields.io/badge/-Linux-FCC624?style=flat-square&logo=linux&logoColor=black)
-![VS Code](https://img.shields.io/badge/-VS%20Code-007ACC?style=flat-square&logo=visual-studio-code&logoColor=white)
-
----
-
-### 📈 GitHub War Stats
+### 📈 GitHub Stats
 
 <div align="center">
 
@@ -51,7 +44,7 @@
 
 ---
 
-### 🎯 Community Stuff
+### 🎯 Community
 
 <p align="center">
   <a href="https://discord.com/users/653986158552023050">
@@ -65,6 +58,7 @@
 ---
 
 ### 🌐 Visit My Portfolio
+
 <p align="center">
   <a href="https://pepeongithub.github.io/Pepes-Portfolio">
     <img src="https://img.shields.io/badge/Check%20Out%20My%20Portfolio-2EA043?style=flat-square&logo=github&logoColor=white" alt="Portfolio">
