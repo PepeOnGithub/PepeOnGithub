@@ -1,0 +1,22 @@
+{
+  "stonecutter": {
+    "title": "Stonecutter",
+    "vanilla_file": "stonecutter_screen.json",
+    "hook_path": "right_panel/stonecutter_screen_inventory",
+    "lines": [
+      "Put one block into the input slot and the list of everything it can be cut into appears.",
+      "Every recipe takes a single ingredient and gives a fixed amount, so there is no pattern to place.",
+      "Stairs, walls and chiseled variants cost one block each, and slabs give two per block.",
+      "It can cut stone, cobblestone, deepslate, bricks and copper, and can skip crafting steps.",
+      "Stone can be cut straight into cobblestone or stone bricks, which a crafting table cannot do."
+    ],
+    "verified": true,
+    "notes": "Path verified in vanilla: stonecutter_screen_inventory is a child of right_panel (stonecutter_screen.json), same shape as loom 'right_panel/loom_screen_inventory'. Bedrock cut copper: 1 copper block -> 4 cut copper (per wiki); stairs 1 per block; slabs 2 per block. Pack has no stonecutter_screen.json yet and _ui_defs entry would be needed if the pack registers files."
+  },
+  "_skipped_shared_or_covered": {
+    "hopper/dispenser/dropper/crafter": "All four are screens inside redstone_screen.json sharing redstone.panel (panel_crafter for crafter). Pack already hooks panel/root_panel/redstone_screen_inventory and panel_crafter/root_panel/redstone_screen_inventory in pack/ui/redstone_screen.json (bc_shared.redstone_content), so they are already covered.",
+    "crafting_table": "crafting_screen lives in inventory_screen.json and shares the player_inventory panel with inventory_screen (already hooked with inventory_info). No separate hook point without a binding to tell them apart.",
+    "barrel/shulker_box/ender_chest": "barrel_screen and shulker_box_screen inherit chest.small_chest_screen; ender_chest_screen has its own screen but its panel inherits chest.small_chest_panel, so the existing chest_panel hook covers them.",
+    "lectern/composter/other": "No dedicated vanilla screen file (lectern uses book_screen.json, not a container; composter has no UI)."
+  }
+}

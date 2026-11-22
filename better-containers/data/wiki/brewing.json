@@ -1,0 +1,398 @@
+{
+  "sources": [
+    "https://minecraft.wiki/w/Brewing",
+    "https://minecraft.wiki/w/Potion"
+  ],
+  "verified": "2026-11-22",
+  "potions": {
+    "awkward": {
+      "in_grid": true,
+      "grid_control": "potion_1",
+      "wiki_extended": false,
+      "wiki_upgraded": false,
+      "grid_has_duration": false,
+      "grid_has_potency": false,
+      "notes": "base potion"
+    },
+    "night_vision": {
+      "in_grid": true,
+      "grid_control": "potion_2",
+      "wiki_extended": true,
+      "wiki_upgraded": false,
+      "grid_has_duration": true,
+      "grid_has_potency": false,
+      "notes": ""
+    },
+    "invisibility": {
+      "in_grid": true,
+      "grid_control": "potion_3",
+      "wiki_extended": true,
+      "wiki_upgraded": false,
+      "grid_has_duration": true,
+      "grid_has_potency": false,
+      "notes": ""
+    },
+    "leaping": {
+      "in_grid": true,
+      "grid_control": "potion_4",
+      "wiki_extended": true,
+      "wiki_upgraded": true,
+      "grid_has_duration": true,
+      "grid_has_potency": true,
+      "notes": "Leaping II cannot be corrupted"
+    },
+    "fire_resistance": {
+      "in_grid": true,
+      "grid_control": "potion_5",
+      "wiki_extended": true,
+      "wiki_upgraded": false,
+      "grid_has_duration": true,
+      "grid_has_potency": false,
+      "notes": ""
+    },
+    "swiftness": {
+      "in_grid": true,
+      "grid_control": "potion_6",
+      "wiki_extended": true,
+      "wiki_upgraded": true,
+      "grid_has_duration": true,
+      "grid_has_potency": true,
+      "notes": "Swiftness II cannot be corrupted"
+    },
+    "slowness": {
+      "in_grid": true,
+      "grid_control": "potion_7",
+      "wiki_extended": true,
+      "wiki_upgraded": true,
+      "grid_has_duration": true,
+      "grid_has_potency": true,
+      "notes": "enhanced = Slowness IV"
+    },
+    "water_breathing": {
+      "in_grid": true,
+      "grid_control": "potion_8",
+      "wiki_extended": true,
+      "wiki_upgraded": false,
+      "grid_has_duration": true,
+      "grid_has_potency": false,
+      "notes": ""
+    },
+    "healing": {
+      "in_grid": true,
+      "grid_control": "potion_9",
+      "wiki_extended": false,
+      "wiki_upgraded": true,
+      "grid_has_duration": false,
+      "grid_has_potency": true,
+      "notes": "instant"
+    },
+    "harming": {
+      "in_grid": true,
+      "grid_control": "potion_10",
+      "wiki_extended": false,
+      "wiki_upgraded": true,
+      "grid_has_duration": false,
+      "grid_has_potency": true,
+      "notes": "instant"
+    },
+    "poison": {
+      "in_grid": true,
+      "grid_control": "potion11",
+      "wiki_extended": true,
+      "wiki_upgraded": true,
+      "grid_has_duration": true,
+      "grid_has_potency": true,
+      "notes": ""
+    },
+    "regeneration": {
+      "in_grid": true,
+      "grid_control": "potion12",
+      "wiki_extended": true,
+      "wiki_upgraded": true,
+      "grid_has_duration": true,
+      "grid_has_potency": true,
+      "notes": ""
+    },
+    "strength": {
+      "in_grid": true,
+      "grid_control": "potion13",
+      "wiki_extended": true,
+      "wiki_upgraded": true,
+      "grid_has_duration": true,
+      "grid_has_potency": true,
+      "notes": "BE: Strength II + fermented spider eye -> Weakness"
+    },
+    "weakness": {
+      "in_grid": true,
+      "grid_control": "potion14",
+      "wiki_extended": true,
+      "wiki_upgraded": false,
+      "grid_has_duration": true,
+      "grid_has_potency": false,
+      "notes": ""
+    },
+    "turtle_master": {
+      "in_grid": true,
+      "grid_control": "potion15",
+      "wiki_extended": true,
+      "wiki_upgraded": true,
+      "grid_has_duration": true,
+      "grid_has_potency": true,
+      "notes": ""
+    },
+    "slow_falling": {
+      "in_grid": true,
+      "grid_control": "potion16",
+      "wiki_extended": true,
+      "wiki_upgraded": false,
+      "grid_has_duration": true,
+      "grid_has_potency": false,
+      "notes": ""
+    },
+    "wind_charging": {
+      "in_grid": true,
+      "grid_control": "potion17",
+      "wiki_extended": false,
+      "wiki_upgraded": false,
+      "grid_has_duration": false,
+      "grid_has_potency": false,
+      "notes": ""
+    },
+    "weaving": {
+      "in_grid": true,
+      "grid_control": "potion18",
+      "wiki_extended": false,
+      "wiki_upgraded": false,
+      "grid_has_duration": false,
+      "grid_has_potency": false,
+      "notes": ""
+    },
+    "oozing": {
+      "in_grid": true,
+      "grid_control": "potion19",
+      "wiki_extended": false,
+      "wiki_upgraded": false,
+      "grid_has_duration": false,
+      "grid_has_potency": false,
+      "notes": ""
+    },
+    "infestation": {
+      "in_grid": true,
+      "grid_control": "potion20",
+      "wiki_extended": false,
+      "wiki_upgraded": false,
+      "grid_has_duration": false,
+      "grid_has_potency": false,
+      "notes": ""
+    }
+  },
+  "flag_mismatches": [],
+  "missing_from_grid": {
+    "brewable_bedrock": [
+      "mundane",
+      "thick"
+    ],
+    "not_brewable_or_edu_or_upcoming": [
+      "water_bottle",
+      "uncraftable",
+      "decay (BE, unbrewable)",
+      "luck (JE only)",
+      "freezing (upcoming Deep Freeze)",
+      "education cures: antidote, elixir, eye_drops, tonic (Education/cheat toggle)"
+    ],
+    "note": "mundane/thick are no-effect base potions; BE thick/mundane + fermented spider eye -> Weakness"
+  },
+  "variant_forms": "Every potion can be splash (+gunpowder) and lingering (+dragon's breath on splash); lingering duration = 1/4. Grid has no separate splash/lingering controls.",
+  "effect_polarity_check": "data/potion_polarity.json consistent with wiki (positive/negative/mixed turtle_master).",
+  "modifiers": {
+    "redstone": "extends duration (extended)",
+    "glowstone_dust": "increases potency (upgraded; shortens duration)",
+    "fermented_spider_eye": "corrupts",
+    "gunpowder": "potion->splash_potion",
+    "dragons_breath": "splash_potion->lingering_potion"
+  },
+  "ingredient_table": [
+    {
+      "ingredient": "nether_wart",
+      "input": "water_bottle",
+      "output": "awkward"
+    },
+    {
+      "ingredient": "any effect ingredient (not melon/carrot/pufferfish/shell/membrane)",
+      "input": "water_bottle",
+      "output": "mundane (wiki: most; BE also thick via glowstone, mundane via redstone)"
+    },
+    {
+      "ingredient": "redstone",
+      "input": "water_bottle",
+      "output": "mundane"
+    },
+    {
+      "ingredient": "glowstone_dust",
+      "input": "water_bottle",
+      "output": "thick"
+    },
+    {
+      "ingredient": "sugar",
+      "input": "awkward",
+      "output": "swiftness"
+    },
+    {
+      "ingredient": "rabbit_foot",
+      "input": "awkward",
+      "output": "leaping"
+    },
+    {
+      "ingredient": "glistering_melon_slice",
+      "input": "awkward",
+      "output": "healing"
+    },
+    {
+      "ingredient": "spider_eye",
+      "input": "awkward",
+      "output": "poison"
+    },
+    {
+      "ingredient": "blaze_powder",
+      "input": "awkward",
+      "output": "strength"
+    },
+    {
+      "ingredient": "golden_carrot",
+      "input": "awkward",
+      "output": "night_vision"
+    },
+    {
+      "ingredient": "ghast_tear",
+      "input": "awkward",
+      "output": "regeneration"
+    },
+    {
+      "ingredient": "pufferfish",
+      "input": "awkward",
+      "output": "water_breathing"
+    },
+    {
+      "ingredient": "magma_cream",
+      "input": "awkward",
+      "output": "fire_resistance"
+    },
+    {
+      "ingredient": "turtle_shell",
+      "input": "awkward",
+      "output": "turtle_master"
+    },
+    {
+      "ingredient": "phantom_membrane",
+      "input": "awkward",
+      "output": "slow_falling"
+    },
+    {
+      "ingredient": "breeze_rod",
+      "input": "awkward",
+      "output": "wind_charging"
+    },
+    {
+      "ingredient": "stone",
+      "input": "awkward",
+      "output": "infestation"
+    },
+    {
+      "ingredient": "cobweb",
+      "input": "awkward",
+      "output": "weaving"
+    },
+    {
+      "ingredient": "slime_block",
+      "input": "awkward",
+      "output": "oozing"
+    },
+    {
+      "ingredient": "fermented_spider_eye",
+      "input": "water_breathing",
+      "output": "harming"
+    },
+    {
+      "ingredient": "fermented_spider_eye",
+      "input": "healing",
+      "output": "harming"
+    },
+    {
+      "ingredient": "fermented_spider_eye",
+      "input": "poison",
+      "output": "harming"
+    },
+    {
+      "ingredient": "fermented_spider_eye",
+      "input": "swiftness",
+      "output": "slowness"
+    },
+    {
+      "ingredient": "fermented_spider_eye",
+      "input": "leaping",
+      "output": "slowness"
+    },
+    {
+      "ingredient": "fermented_spider_eye",
+      "input": "night_vision",
+      "output": "invisibility"
+    },
+    {
+      "ingredient": "fermented_spider_eye",
+      "input": "mundane/thick (BE)",
+      "output": "weakness"
+    },
+    {
+      "ingredient": "fermented_spider_eye",
+      "input": "strength (BE II)",
+      "output": "weakness"
+    },
+    {
+      "ingredient": "redstone",
+      "input": "any extendable potion",
+      "output": "extended version"
+    },
+    {
+      "ingredient": "glowstone_dust",
+      "input": "any upgradable potion",
+      "output": "upgraded version"
+    },
+    {
+      "ingredient": "gunpowder",
+      "input": "any potion",
+      "output": "splash version"
+    },
+    {
+      "ingredient": "dragons_breath",
+      "input": "any splash potion",
+      "output": "lingering version"
+    }
+  ],
+  "viewer_item_ids_stable-1.26.60": {
+    "potion": 430,
+    "splash_potion": 571,
+    "lingering_potion": 572,
+    "nether_wart": 294,
+    "gunpowder": 331,
+    "rabbit_foot": 538,
+    "blaze_powder": 433,
+    "sugar": 419,
+    "ghast_tear": 428,
+    "spider_eye": 278,
+    "magma_cream": 434,
+    "glistering_melon_slice": 438,
+    "golden_carrot": 283,
+    "pufferfish": 267,
+    "turtle_helmet(turtle shell)": 583,
+    "phantom_membrane": 584,
+    "fermented_spider_eye": 432,
+    "redstone": 376,
+    "glowstone_dust": 397,
+    "dragon_breath": 570,
+    "stone": 1,
+    "breeze_rod": 882,
+    "web(cobweb)": 30,
+    "slime(slime block)": 165
+  },
+  "global_variables_check": "all $bc_brewing:* ingredient ids match data/item_ids (turtle_shell=turtle_helmet 583, cobweb=web 30, slime_block=slime 165). Potion-result ids (4..46) are aux values, not in item_ids file."
+}
