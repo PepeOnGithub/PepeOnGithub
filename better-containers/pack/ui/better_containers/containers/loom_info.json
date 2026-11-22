@@ -1,0 +1,54 @@
+{
+  "namespace": "bc_loom_info",
+  "info_row": {
+    "type": "label",
+    "text": "$line_text",
+    "size": [
+      "100%",
+      "default"
+    ],
+    "font_size": "small"
+  },
+  "loom_info": {
+    "type": "panel",
+    "size": [
+      144,
+      "default"
+    ],
+    "layer": 2,
+    "controls": [
+      {
+        "title_label": {
+          "type": "label",
+          "text": "%bc_loom_info.title",
+          "size": [
+            "100%",
+            12
+          ]
+        }
+      },
+      {
+        "info_lines": {
+          "type": "stack_panel",
+          "orientation": "vertical",
+          "size": [
+            "100%",
+            "default"
+          ],
+          "controls": [
+            {
+              "line_0@bc_loom_info.info_row": {
+                "$line_text": "%bc_loom_info.line.0"
+              }
+            },
+            {
+              "line_1@bc_loom_info.info_row": {
+                "$line_text": "%bc_loom_info.line.1"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

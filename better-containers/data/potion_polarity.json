@@ -1,0 +1,30 @@
+{
+  "positive": [
+    "strength",
+    "swiftness",
+    "healing",
+    "regeneration",
+    "fire_resistance",
+    "water_breathing",
+    "night_vision",
+    "invisibility",
+    "leaping",
+    "slow_falling"
+  ],
+  "negative": [
+    "harming",
+    "poison",
+    "weakness",
+    "slowness"
+  ],
+  "mixed": [
+    "turtle_master"
+  ],
+  "unknown": [
+    "wind_charging",
+    "weaving",
+    "oozing",
+    "infestation"
+  ],
+  "_note": "Polarity per potion, from the vanilla effect list. \"unknown\" entries must be checked in game before a filter uses them."
+}

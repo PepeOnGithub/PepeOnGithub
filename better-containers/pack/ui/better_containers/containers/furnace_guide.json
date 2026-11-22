@@ -72,6 +72,21 @@
         }
       },
       {
+        "smelt_furnace@bc_furnace_guide.text_row": {
+          "$line_text": "%bc_furnace_guide.smelt.furnace"
+        }
+      },
+      {
+        "smelt_blast_furnace@bc_furnace_guide.text_row": {
+          "$line_text": "%bc_furnace_guide.smelt.blast_furnace"
+        }
+      },
+      {
+        "smelt_smoker@bc_furnace_guide.text_row": {
+          "$line_text": "%bc_furnace_guide.smelt.smoker"
+        }
+      },
+      {
         "tab_bar": {
           "type": "stack_panel",
           "orientation": "horizontal",
@@ -640,6 +655,46 @@
                           }
                         }
                       ]
+                    }
+                  },
+                  {
+                    "line_0@bc_furnace_guide.text_row": {
+                      "$line_text": "%bc_furnace_guide.burn.coal"
+                    }
+                  },
+                  {
+                    "line_1@bc_furnace_guide.text_row": {
+                      "$line_text": "%bc_furnace_guide.burn.charcoal"
+                    }
+                  },
+                  {
+                    "line_2@bc_furnace_guide.text_row": {
+                      "$line_text": "%bc_furnace_guide.burn.coal_block"
+                    }
+                  },
+                  {
+                    "line_3@bc_furnace_guide.text_row": {
+                      "$line_text": "%bc_furnace_guide.burn.lava_bucket"
+                    }
+                  },
+                  {
+                    "line_4@bc_furnace_guide.text_row": {
+                      "$line_text": "%bc_furnace_guide.burn.blaze_rod"
+                    }
+                  },
+                  {
+                    "line_5@bc_furnace_guide.text_row": {
+                      "$line_text": "%bc_furnace_guide.burn.dried_kelp_block"
+                    }
+                  },
+                  {
+                    "line_6@bc_furnace_guide.text_row": {
+                      "$line_text": "%bc_furnace_guide.burn.bamboo"
+                    }
+                  },
+                  {
+                    "line_7@bc_furnace_guide.text_row": {
+                      "$line_text": "%bc_furnace_guide.burn.stick"
                     }
                   }
                 ],

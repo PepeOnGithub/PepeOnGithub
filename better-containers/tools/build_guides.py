@@ -86,6 +86,15 @@ COLOR_CODES = [('0', 'Black'), ('1', 'Dark Blue'), ('2', 'Dark Green'), ('3', 'D
 # Vanilla-named override files. "screen" is the variable block set on the screen root (Glacier does the same
 # for blast furnace and smoker); each placement is (path inside the screen, guide root name, guide namespace).
 FURNACE_PLACEMENT = ('right_panel/furnace_screen_inventory', 'furnace_guide', 'bc_furnace_guide')
+INFO_PLACEMENTS = {
+    'beacon': ('beacon_screen.json', 'beacon_panel/root_panel/beacon_inventory'),
+    'cartography': ('cartography_screen.json', 'cartography_panel/root_panel/cartography_screen_inventory'),
+    'grindstone': ('grindstone_screen.json', 'grindstone_panel/root_panel/grindstone_screen_inventory'),
+    'horse': ('horse_screen.json', 'horse_panel/root_panel'),
+    'inventory': ('inventory_screen.json', 'player_inventory'),
+    'loom': ('loom_screen.json', 'right_panel/loom_screen_inventory'),
+    'trade': ('trade_2_screen.json', 'right_panel/trade_screen_inventory'),
+}
 HOOK_SPECS = [
     {'file': 'furnace_screen.json', 'screen': None, 'placements': [FURNACE_PLACEMENT]},
     {'file': 'blast_furnace_screen.json', 'screen': {'blast_furnace_screen': {'$is_blast_furnace': True}},
@@ -98,6 +107,8 @@ HOOK_SPECS = [
         ('anvil_panel/root_panel/anvil_screen_inventory', 'anvil_guide', 'bc_anvil_guide')]},
     {'file': 'smithing_table_2_screen.json', 'screen': None, 'placements': [
         ('smithing_table_panel/root_panel/smithing_table_screen_inventory', 'smithing_guide', 'bc_smithing_guide')]},
+    *[{'file': f, 'screen': None, 'placements': [(path, f'{n}_info', f'bc_{n}_info')]}
+      for n, (f, path) in INFO_PLACEMENTS.items()],
     {'file': 'chest_screen.json', 'screen': None, 'placements': [
         ('small_chest_panel/root_panel/chest_panel', 'chest_guide', 'bc_chest_guide'),
         ('large_chest_panel/root_panel/chest_panel', 'chest_guide', 'bc_chest_guide')]},
@@ -190,10 +201,19 @@ def text_panel_controls(ns, keys):
 # ---------------------------------------------------------------- guides
 def furnace():
     tabs = []
+    burn = read_json(os.path.join(ROOT, 'data', 'container_info.json'))['fuel_burn']
     for key, title, items, hidden in FURNACE_TABS:
-        tabs.append((key, f'bc_furnace_guide.tab.{key}', grid([(i, i) for i in items]), hidden))
+        controls = grid([(i, i) for i in items])
+        if key == 'fuel':
+            controls += text_panel_controls('bc_furnace_guide', [f'bc_furnace_guide.burn.{i}' for i in burn])
+        tabs.append((key, f'bc_furnace_guide.tab.{key}', controls, hidden))
     body = tabbed('bc_furnace_guide', 'furnace_guide', 'bc_furnace_guide.title', CELL * COLUMNS, tabs,
                   defaults={'$is_blast_furnace|default': False, '$is_smoker|default': False})
+    smelt = read_json(os.path.join(ROOT, 'data', 'container_info.json'))['smelt_time']
+    root_controls = body['furnace_guide']['controls']
+    smelt_rows = [{f'smelt_{k}@bc_furnace_guide.text_row': {'$line_text': f'%bc_furnace_guide.smelt.{k}'}}
+                  for k in smelt]
+    root_controls[1:1] = smelt_rows
     body['progress_bar'] = {
         'type': 'panel', 'size': ['100%', 6], 'controls': [
             {'track': {'type': 'panel', 'size': ['100%', 4], 'controls': [
@@ -273,6 +293,20 @@ def chest():
     return top
 
 
+def info_guide(name, spec):
+    """A plain information panel for a container: title and one wrapped text line per entry."""
+    ns = f'bc_{name}_info'
+    rows = [{f'line_{i}@{ns}.info_row': {'$line_text': f'%{ns}.line.{i}'}} for i in range(len(spec['lines']))]
+    return {
+        'namespace': ns,
+        'info_row': {'type': 'label', 'text': '$line_text', 'size': ['100%', 'default'], 'font_size': 'small'},
+        f'{name}_info': {'type': 'panel', 'size': [CELL * COLUMNS, 'default'], 'layer': 2, 'controls': [
+            {'title_label': {'type': 'label', 'text': f'%{ns}.title', 'size': ['100%', 12]}},
+            {'info_lines': {'type': 'stack_panel', 'orientation': 'vertical', 'size': ['100%', 'default'],
+                            'controls': rows}}]},
+    }
+
+
 # ---------------------------------------------------------------- lang text
 def strings():
     descriptions = read_json(os.path.join(ROOT, 'data', 'enchantment_descriptions.json'))
@@ -295,6 +329,15 @@ def strings():
         'bc_chest_guide.auto_place_all': 'Auto place all',
         'bc_chest_guide.auto_place_one': 'Auto place one',
     }
+    info = read_json(os.path.join(ROOT, 'data', 'container_info.json'))
+    for name, spec in info['containers'].items():
+        s[f'bc_{name}_info.title'] = spec['title']
+        for i, line in enumerate(spec['lines']):
+            s[f'bc_{name}_info.line.{i}'] = line
+    for k, text in info['smelt_time'].items():
+        s[f'bc_furnace_guide.smelt.{k}'] = f'Smelt time, {k.replace("_", " ")}: {text}'
+    for k, text in info['fuel_burn'].items():
+        s[f'bc_furnace_guide.burn.{k}'] = f'{k.replace("_", " ").title()}: {text}'
     for key, text in descriptions.items():
         s[f'bc_enchanting_guide.desc.{key}'] = text
     for i, entry in enumerate(nametags):
@@ -351,6 +394,10 @@ def main():
     for name, body in guides.items():
         out = os.path.join(PACK, 'ui', 'better_containers', 'containers', f'{name}_guide.json')
         write_json(out, body)
+    info = read_json(os.path.join(ROOT, 'data', 'container_info.json'))['containers']
+    for name, spec in info.items():
+        write_json(os.path.join(PACK, 'ui', 'better_containers', 'containers', f'{name}_info.json'),
+                   info_guide(name, spec))
 
     write_json(os.path.join(PACK, 'ui', 'better_containers', 'shared', 'item_cell.json'), {
         'namespace': 'bc_item_cell',
@@ -384,8 +431,10 @@ def main():
     # 5. register the new UI files
     dpath = os.path.join(PACK, 'ui', '_ui_defs.json')
     defs = read_json(dpath)['ui_defs']
+    info_names = list(read_json(os.path.join(ROOT, 'data', 'container_info.json'))['containers'])
     wanted = ['ui/better_containers/shared/item_cell.json'] + [
-        f'ui/better_containers/containers/{n}_guide.json' for n in guides]
+        f'ui/better_containers/containers/{n}_guide.json' for n in guides] + [
+        f'ui/better_containers/containers/{n}_info.json' for n in info_names]
     for entry in wanted:
         if entry not in defs:
             defs.append(entry)
