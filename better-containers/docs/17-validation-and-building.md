@@ -44,6 +44,20 @@ WARN  76 control reference(s) match no pack control (vanilla or built at runtime
 - Whether property names and bindings do what you intend.
 - How anything looks. Test in game.
 
+## `tools/sync_item_ids.py`
+
+Checks every `$<item>_item_id` against the item list in `data/item_ids/stable-1.26.60.json` (the list the Minecraft Item ID
+Viewer uses). It reports each mismatch. Add `--write` to correct them. Brewing potion-type values are not checked.
+
+```bash
+python3 tools/sync_item_ids.py           # report
+python3 tools/sync_item_ids.py --write   # correct
+```
+
+## `tools/build_furnace_guide.py`
+
+Generates the furnace guide panel from its tab lists (see [01 — Furnace guide](guides/01-furnace.md)). Re-run after you change a tab.
+
 ## `tools/build_mcpack.py`
 
 ```bash

@@ -65,4 +65,4 @@ The hook path starts at `right_panel`, not `root_panel`. The pack does not hook 
 
 ## Status
 
-Only the management row is added here. There's no container-specific layout yet. That's the next step if this screen needs more than the row (see [21 — Known issues](../21-known-issues-and-roadmap.md)).
+The pack adds the management row, and the furnace guide panel built from [guides 01](../guides/01-furnace.md). The guide panel covers the tabs and items; the progress bars are not built yet (see [21 — Known issues](../21-known-issues-and-roadmap.md)).
