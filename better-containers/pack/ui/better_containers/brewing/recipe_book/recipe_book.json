@@ -408,6 +408,336 @@
                       "$visible_condition": "lingering_potion_tab",
                       "$index_offset": 300
                     }
+                  },
+                  {
+                    "center_bg_positive@bc_brewing_recipe_book.recipe_grid_positive": {
+                      "type": "image",
+                      "texture": "textures/ui/recipe_back_panel",
+                      "size": [
+                        12,
+                        160
+                      ],
+                      "offset": [
+                        -4,
+                        0
+                      ],
+                      "anchor_from": "right_middle",
+                      "anchor_to": "left_middle",
+                      "layer": -1
+                    }
+                  },
+                  {
+                    "center_bg_negative@bc_brewing_recipe_book.recipe_grid_negative": {
+                      "type": "image",
+                      "texture": "textures/ui/recipe_back_panel",
+                      "size": [
+                        12,
+                        160
+                      ],
+                      "offset": [
+                        -4,
+                        0
+                      ],
+                      "anchor_from": "right_middle",
+                      "anchor_to": "left_middle",
+                      "layer": -1
+                    }
+                  },
+                  {
+                    "center_bg_mixed@bc_brewing_recipe_book.recipe_grid_mixed": {
+                      "type": "image",
+                      "texture": "textures/ui/recipe_back_panel",
+                      "size": [
+                        12,
+                        160
+                      ],
+                      "offset": [
+                        -4,
+                        0
+                      ],
+                      "anchor_from": "right_middle",
+                      "anchor_to": "left_middle",
+                      "layer": -1
+                    }
+                  },
+                  {
+                    "recipe_underlay_positive@bc_brewing_recipe_book.recipe_grid_positive": {
+                      "type": "image",
+                      "texture": "textures/ui/recipe_book_pane_bg",
+                      "size": [
+                        134,
+                        123
+                      ],
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "layer": 1,
+                      "offset": [
+                        6,
+                        37
+                      ],
+                      "controls": [
+                        {
+                          "shadow_container": {
+                            "type": "panel",
+                            "layer": 10,
+                            "size": [
+                              134,
+                              2
+                            ],
+                            "anchor_from": "top_left",
+                            "anchor_to": "top_left",
+                            "controls": [
+                              {
+                                "top_shadow": {
+                                  "type": "image",
+                                  "size": [
+                                    "100%",
+                                    "2px"
+                                  ],
+                                  "layer": 20,
+                                  "texture": "textures/ui/White",
+                                  "color": [
+                                    0,
+                                    0,
+                                    0
+                                  ],
+                                  "alpha": 0.5,
+                                  "anchor_from": "top_left",
+                                  "anchor_to": "top_left",
+                                  "keep_ratio": false
+                                }
+                              },
+                              {
+                                "top_overlay": {
+                                  "type": "image",
+                                  "size": [
+                                    "100%",
+                                    1
+                                  ],
+                                  "offset": [
+                                    0,
+                                    -1
+                                  ],
+                                  "layer": 20,
+                                  "texture": "textures/ui/White",
+                                  "color": [
+                                    0.75,
+                                    0.75,
+                                    0.75
+                                  ],
+                                  "anchor_from": "top_left",
+                                  "anchor_to": "top_left",
+                                  "keep_ratio": false
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "recipe_underlay_negative@bc_brewing_recipe_book.recipe_grid_negative": {
+                      "type": "image",
+                      "texture": "textures/ui/recipe_book_pane_bg",
+                      "size": [
+                        134,
+                        123
+                      ],
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "layer": 1,
+                      "offset": [
+                        6,
+                        37
+                      ],
+                      "controls": [
+                        {
+                          "shadow_container": {
+                            "type": "panel",
+                            "layer": 10,
+                            "size": [
+                              134,
+                              2
+                            ],
+                            "anchor_from": "top_left",
+                            "anchor_to": "top_left",
+                            "controls": [
+                              {
+                                "top_shadow": {
+                                  "type": "image",
+                                  "size": [
+                                    "100%",
+                                    "2px"
+                                  ],
+                                  "layer": 20,
+                                  "texture": "textures/ui/White",
+                                  "color": [
+                                    0,
+                                    0,
+                                    0
+                                  ],
+                                  "alpha": 0.5,
+                                  "anchor_from": "top_left",
+                                  "anchor_to": "top_left",
+                                  "keep_ratio": false
+                                }
+                              },
+                              {
+                                "top_overlay": {
+                                  "type": "image",
+                                  "size": [
+                                    "100%",
+                                    1
+                                  ],
+                                  "offset": [
+                                    0,
+                                    -1
+                                  ],
+                                  "layer": 20,
+                                  "texture": "textures/ui/White",
+                                  "color": [
+                                    0.75,
+                                    0.75,
+                                    0.75
+                                  ],
+                                  "anchor_from": "top_left",
+                                  "anchor_to": "top_left",
+                                  "keep_ratio": false
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "recipe_underlay_mixed@bc_brewing_recipe_book.recipe_grid_mixed": {
+                      "type": "image",
+                      "texture": "textures/ui/recipe_book_pane_bg",
+                      "size": [
+                        134,
+                        123
+                      ],
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "layer": 1,
+                      "offset": [
+                        6,
+                        37
+                      ],
+                      "controls": [
+                        {
+                          "shadow_container": {
+                            "type": "panel",
+                            "layer": 10,
+                            "size": [
+                              134,
+                              2
+                            ],
+                            "anchor_from": "top_left",
+                            "anchor_to": "top_left",
+                            "controls": [
+                              {
+                                "top_shadow": {
+                                  "type": "image",
+                                  "size": [
+                                    "100%",
+                                    "2px"
+                                  ],
+                                  "layer": 20,
+                                  "texture": "textures/ui/White",
+                                  "color": [
+                                    0,
+                                    0,
+                                    0
+                                  ],
+                                  "alpha": 0.5,
+                                  "anchor_from": "top_left",
+                                  "anchor_to": "top_left",
+                                  "keep_ratio": false
+                                }
+                              },
+                              {
+                                "top_overlay": {
+                                  "type": "image",
+                                  "size": [
+                                    "100%",
+                                    1
+                                  ],
+                                  "offset": [
+                                    0,
+                                    -1
+                                  ],
+                                  "layer": 20,
+                                  "texture": "textures/ui/White",
+                                  "color": [
+                                    0.75,
+                                    0.75,
+                                    0.75
+                                  ],
+                                  "anchor_from": "top_left",
+                                  "anchor_to": "top_left",
+                                  "keep_ratio": false
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "potion_positive@bc_brewing_recipe_book.recipe_grid_positive": {}
+                  },
+                  {
+                    "potion_negative@bc_brewing_recipe_book.recipe_grid_negative": {}
+                  },
+                  {
+                    "potion_mixed@bc_brewing_recipe_book.recipe_grid_mixed": {}
+                  },
+                  {
+                    "splash_potion_positive@bc_brewing_recipe_book.recipe_grid_positive": {
+                      "$base_id": "$bc_brewing:splash_potion",
+                      "$visible_condition": "splash_potion_tab",
+                      "$index_offset": 200
+                    }
+                  },
+                  {
+                    "splash_potion_negative@bc_brewing_recipe_book.recipe_grid_negative": {
+                      "$base_id": "$bc_brewing:splash_potion",
+                      "$visible_condition": "splash_potion_tab",
+                      "$index_offset": 200
+                    }
+                  },
+                  {
+                    "splash_potion_mixed@bc_brewing_recipe_book.recipe_grid_mixed": {
+                      "$base_id": "$bc_brewing:splash_potion",
+                      "$visible_condition": "splash_potion_tab",
+                      "$index_offset": 200
+                    }
+                  },
+                  {
+                    "lingering_potion_positive@bc_brewing_recipe_book.recipe_grid_positive": {
+                      "$base_id": "$bc_brewing:lingering_potion",
+                      "$visible_condition": "lingering_potion_tab",
+                      "$index_offset": 300
+                    }
+                  },
+                  {
+                    "lingering_potion_negative@bc_brewing_recipe_book.recipe_grid_negative": {
+                      "$base_id": "$bc_brewing:lingering_potion",
+                      "$visible_condition": "lingering_potion_tab",
+                      "$index_offset": 300
+                    }
+                  },
+                  {
+                    "lingering_potion_mixed@bc_brewing_recipe_book.recipe_grid_mixed": {
+                      "$base_id": "$bc_brewing:lingering_potion",
+                      "$visible_condition": "lingering_potion_tab",
+                      "$index_offset": 300
+                    }
                   }
                 ]
               }
@@ -700,5 +1030,14 @@
         }
       }
     ]
+  },
+  "recipe_grid_positive@bc_brewing_recipe_grid.recipe_book_grid_positive": {
+    "layer": 3
+  },
+  "recipe_grid_negative@bc_brewing_recipe_grid.recipe_book_grid_negative": {
+    "layer": 3
+  },
+  "recipe_grid_mixed@bc_brewing_recipe_grid.recipe_book_grid_mixed": {
+    "layer": 3
   }
 }

@@ -14,7 +14,7 @@
     "text": "$line_text",
     "size": [
       "100%",
-      10
+      "default"
     ],
     "font_size": "small"
   },
@@ -31,7 +31,7 @@
     "type": "stack_panel",
     "orientation": "vertical",
     "size": [
-      144,
+      108,
       "100%c"
     ],
     "layer": 2,
@@ -55,30 +55,66 @@
       {
         "tab_bar": {
           "type": "stack_panel",
-          "orientation": "horizontal",
+          "orientation": "vertical",
           "size": [
             "100%",
-            16
+            "100%c"
           ],
           "controls": [
             {
-              "armors_tab_slot": {
-                "type": "panel",
+              "tab_row_0": {
+                "type": "stack_panel",
+                "orientation": "horizontal",
                 "size": [
-                  28,
+                  "100%",
                   14
                 ],
                 "controls": [
                   {
-                    "armors_tab@bc_shared.radio": {
-                      "$toggle_name": "smithing_guide_tabs",
-                      "$toggle_view_binding_name": "armors_tab_toggle",
-                      "$toggle_group_forced_index": 0,
-                      "$toggle_default_state": true,
-                      "$button_content": "bc_smithing_guide.armors_label",
+                    "armors_tab_slot": {
+                      "type": "panel",
                       "size": [
-                        28,
+                        54,
                         14
+                      ],
+                      "controls": [
+                        {
+                          "armors_tab@bc_shared.radio": {
+                            "$toggle_name": "smithing_guide_tabs",
+                            "$toggle_view_binding_name": "armors_tab_toggle",
+                            "$toggle_group_forced_index": 0,
+                            "$toggle_default_state": true,
+                            "$button_content": "bc_smithing_guide.armors_label",
+                            "size": [
+                              54,
+                              14
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "templates_tab_slot": {
+                      "type": "panel",
+                      "size": [
+                        54,
+                        14
+                      ],
+                      "controls": [
+                        {
+                          "templates_tab@bc_shared.radio": {
+                            "$toggle_name": "smithing_guide_tabs",
+                            "$toggle_view_binding_name": "templates_tab_toggle",
+                            "$toggle_group_forced_index": 1,
+                            "$toggle_default_state": false,
+                            "$button_content": "bc_smithing_guide.templates_label",
+                            "size": [
+                              54,
+                              14
+                            ]
+                          }
+                        }
                       ]
                     }
                   }
@@ -86,47 +122,35 @@
               }
             },
             {
-              "templates_tab_slot": {
-                "type": "panel",
+              "tab_row_1": {
+                "type": "stack_panel",
+                "orientation": "horizontal",
                 "size": [
-                  28,
+                  "100%",
                   14
                 ],
                 "controls": [
                   {
-                    "templates_tab@bc_shared.radio": {
-                      "$toggle_name": "smithing_guide_tabs",
-                      "$toggle_view_binding_name": "templates_tab_toggle",
-                      "$toggle_group_forced_index": 1,
-                      "$toggle_default_state": false,
-                      "$button_content": "bc_smithing_guide.templates_label",
+                    "resources_tab_slot": {
+                      "type": "panel",
                       "size": [
-                        28,
+                        54,
                         14
-                      ]
-                    }
-                  }
-                ]
-              }
-            },
-            {
-              "resources_tab_slot": {
-                "type": "panel",
-                "size": [
-                  28,
-                  14
-                ],
-                "controls": [
-                  {
-                    "resources_tab@bc_shared.radio": {
-                      "$toggle_name": "smithing_guide_tabs",
-                      "$toggle_view_binding_name": "resources_tab_toggle",
-                      "$toggle_group_forced_index": 2,
-                      "$toggle_default_state": false,
-                      "$button_content": "bc_smithing_guide.resources_label",
-                      "size": [
-                        28,
-                        14
+                      ],
+                      "controls": [
+                        {
+                          "resources_tab@bc_shared.radio": {
+                            "$toggle_name": "smithing_guide_tabs",
+                            "$toggle_view_binding_name": "resources_tab_toggle",
+                            "$toggle_group_forced_index": 2,
+                            "$toggle_default_state": false,
+                            "$button_content": "bc_smithing_guide.resources_label",
+                            "size": [
+                              54,
+                              14
+                            ]
+                          }
+                        }
                       ]
                     }
                   }
@@ -191,16 +215,6 @@
                           "chainmail_chestplate_cell@bc_item_cell.item_cell": {
                             "$item_id": "$chainmail_chestplate_item_id"
                           }
-                        },
-                        {
-                          "chainmail_leggings_cell@bc_item_cell.item_cell": {
-                            "$item_id": "$chainmail_leggings_item_id"
-                          }
-                        },
-                        {
-                          "chainmail_boots_cell@bc_item_cell.item_cell": {
-                            "$item_id": "$chainmail_boots_item_id"
-                          }
                         }
                       ]
                     }
@@ -214,6 +228,16 @@
                         18
                       ],
                       "controls": [
+                        {
+                          "chainmail_leggings_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$chainmail_leggings_item_id"
+                          }
+                        },
+                        {
+                          "chainmail_boots_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$chainmail_boots_item_id"
+                          }
+                        },
                         {
                           "iron_helmet_cell@bc_item_cell.item_cell": {
                             "$item_id": "$iron_helmet_item_id"
@@ -233,7 +257,19 @@
                           "iron_boots_cell@bc_item_cell.item_cell": {
                             "$item_id": "$iron_boots_item_id"
                           }
-                        },
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "row_2": {
+                      "type": "stack_panel",
+                      "orientation": "horizontal",
+                      "size": [
+                        "100%",
+                        18
+                      ],
+                      "controls": [
                         {
                           "golden_helmet_cell@bc_item_cell.item_cell": {
                             "$item_id": "$golden_helmet_item_id"
@@ -253,19 +289,7 @@
                           "golden_boots_cell@bc_item_cell.item_cell": {
                             "$item_id": "$golden_boots_item_id"
                           }
-                        }
-                      ]
-                    }
-                  },
-                  {
-                    "row_2": {
-                      "type": "stack_panel",
-                      "orientation": "horizontal",
-                      "size": [
-                        "100%",
-                        18
-                      ],
-                      "controls": [
+                        },
                         {
                           "diamond_helmet_cell@bc_item_cell.item_cell": {
                             "$item_id": "$diamond_helmet_item_id"
@@ -275,7 +299,19 @@
                           "diamond_chestplate_cell@bc_item_cell.item_cell": {
                             "$item_id": "$diamond_chestplate_item_id"
                           }
-                        },
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "row_3": {
+                      "type": "stack_panel",
+                      "orientation": "horizontal",
+                      "size": [
+                        "100%",
+                        18
+                      ],
+                      "controls": [
                         {
                           "diamond_leggings_cell@bc_item_cell.item_cell": {
                             "$item_id": "$diamond_leggings_item_id"
@@ -310,7 +346,7 @@
                     }
                   },
                   {
-                    "row_3": {
+                    "row_4": {
                       "type": "stack_panel",
                       "orientation": "horizontal",
                       "size": [
@@ -384,16 +420,6 @@
                           "dune_cell@bc_item_cell.item_cell": {
                             "$item_id": "$dune_trim_item_id"
                           }
-                        },
-                        {
-                          "wayfinder_cell@bc_item_cell.item_cell": {
-                            "$item_id": "$wayfinder_trim_item_id"
-                          }
-                        },
-                        {
-                          "shaper_cell@bc_item_cell.item_cell": {
-                            "$item_id": "$shaper_trim_item_id"
-                          }
                         }
                       ]
                     }
@@ -407,6 +433,16 @@
                         18
                       ],
                       "controls": [
+                        {
+                          "wayfinder_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$wayfinder_trim_item_id"
+                          }
+                        },
+                        {
+                          "shaper_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$shaper_trim_item_id"
+                          }
+                        },
                         {
                           "raiser_cell@bc_item_cell.item_cell": {
                             "$item_id": "$raiser_trim_item_id"
@@ -426,7 +462,19 @@
                           "silence_cell@bc_item_cell.item_cell": {
                             "$item_id": "$silence_trim_item_id"
                           }
-                        },
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "row_2": {
+                      "type": "stack_panel",
+                      "orientation": "horizontal",
+                      "size": [
+                        "100%",
+                        18
+                      ],
+                      "controls": [
                         {
                           "tide_cell@bc_item_cell.item_cell": {
                             "$item_id": "$tide_trim_item_id"
@@ -446,19 +494,7 @@
                           "eye_cell@bc_item_cell.item_cell": {
                             "$item_id": "$eye_trim_item_id"
                           }
-                        }
-                      ]
-                    }
-                  },
-                  {
-                    "row_2": {
-                      "type": "stack_panel",
-                      "orientation": "horizontal",
-                      "size": [
-                        "100%",
-                        18
-                      ],
-                      "controls": [
+                        },
                         {
                           "spire_cell@bc_item_cell.item_cell": {
                             "$item_id": "$spire_trim_item_id"
@@ -468,7 +504,19 @@
                           "flow_cell@bc_item_cell.item_cell": {
                             "$item_id": "$flow_trim_item_id"
                           }
-                        },
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "row_3": {
+                      "type": "stack_panel",
+                      "orientation": "horizontal",
+                      "size": [
+                        "100%",
+                        18
+                      ],
+                      "controls": [
                         {
                           "bolt_cell@bc_item_cell.item_cell": {
                             "$item_id": "$bolt_trim_item_id"
@@ -535,16 +583,6 @@
                           "iron_ingot_cell@bc_item_cell.item_cell": {
                             "$item_id": "$iron_ingot_item_id"
                           }
-                        },
-                        {
-                          "lapis_lazuli_cell@bc_item_cell.item_cell": {
-                            "$item_id": "$lapis_lazuli_item_id"
-                          }
-                        },
-                        {
-                          "nether_quartz_cell@bc_item_cell.item_cell": {
-                            "$item_id": "$nether_quartz_item_id"
-                          }
                         }
                       ]
                     }
@@ -558,6 +596,16 @@
                         18
                       ],
                       "controls": [
+                        {
+                          "lapis_lazuli_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$lapis_lazuli_item_id"
+                          }
+                        },
+                        {
+                          "nether_quartz_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$nether_quartz_item_id"
+                          }
+                        },
                         {
                           "netherite_ingot_cell@bc_item_cell.item_cell": {
                             "$item_id": "$netherite_ingot_item_id"

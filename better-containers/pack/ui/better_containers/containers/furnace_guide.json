@@ -14,7 +14,7 @@
     "text": "$line_text",
     "size": [
       "100%",
-      10
+      "default"
     ],
     "font_size": "small"
   },
@@ -37,7 +37,7 @@
     "type": "stack_panel",
     "orientation": "vertical",
     "size": [
-      144,
+      108,
       "100%c"
     ],
     "layer": 2,
@@ -98,80 +98,128 @@
       {
         "tab_bar": {
           "type": "stack_panel",
-          "orientation": "horizontal",
+          "orientation": "vertical",
           "size": [
             "100%",
-            16
+            "100%c"
           ],
           "controls": [
             {
-              "foods_tab_slot": {
-                "type": "panel",
+              "tab_row_0": {
+                "type": "stack_panel",
+                "orientation": "horizontal",
                 "size": [
-                  28,
+                  "100%",
                   14
                 ],
                 "controls": [
                   {
-                    "foods_tab@bc_shared.radio": {
-                      "$toggle_name": "furnace_guide_tabs",
-                      "$toggle_view_binding_name": "foods_tab_toggle",
-                      "$toggle_group_forced_index": 0,
-                      "$toggle_default_state": true,
-                      "$button_content": "bc_furnace_guide.foods_label",
+                    "foods_tab_slot": {
+                      "type": "panel",
                       "size": [
-                        28,
+                        54,
                         14
-                      ]
+                      ],
+                      "controls": [
+                        {
+                          "foods_tab@bc_shared.radio": {
+                            "$toggle_name": "furnace_guide_tabs",
+                            "$toggle_view_binding_name": "foods_tab_toggle",
+                            "$toggle_group_forced_index": 0,
+                            "$toggle_default_state": true,
+                            "$button_content": "bc_furnace_guide.foods_label",
+                            "size": [
+                              54,
+                              14
+                            ]
+                          }
+                        }
+                      ],
+                      "ignored": "$is_blast_furnace"
+                    }
+                  },
+                  {
+                    "ores_tab_slot": {
+                      "type": "panel",
+                      "size": [
+                        54,
+                        14
+                      ],
+                      "controls": [
+                        {
+                          "ores_tab@bc_shared.radio": {
+                            "$toggle_name": "furnace_guide_tabs",
+                            "$toggle_view_binding_name": "ores_tab_toggle",
+                            "$toggle_group_forced_index": 1,
+                            "$toggle_default_state": false,
+                            "$button_content": "bc_furnace_guide.ores_label",
+                            "size": [
+                              54,
+                              14
+                            ]
+                          }
+                        }
+                      ],
+                      "ignored": "$is_smoker"
                     }
                   }
-                ],
-                "ignored": "$is_blast_furnace"
+                ]
               }
             },
             {
-              "ores_tab_slot": {
-                "type": "panel",
+              "tab_row_1": {
+                "type": "stack_panel",
+                "orientation": "horizontal",
                 "size": [
-                  28,
+                  "100%",
                   14
                 ],
                 "controls": [
                   {
-                    "ores_tab@bc_shared.radio": {
-                      "$toggle_name": "furnace_guide_tabs",
-                      "$toggle_view_binding_name": "ores_tab_toggle",
-                      "$toggle_group_forced_index": 1,
-                      "$toggle_default_state": false,
-                      "$button_content": "bc_furnace_guide.ores_label",
+                    "blocks_tab_slot": {
+                      "type": "panel",
                       "size": [
-                        28,
+                        54,
                         14
+                      ],
+                      "controls": [
+                        {
+                          "blocks_tab@bc_shared.radio": {
+                            "$toggle_name": "furnace_guide_tabs",
+                            "$toggle_view_binding_name": "blocks_tab_toggle",
+                            "$toggle_group_forced_index": 2,
+                            "$toggle_default_state": false,
+                            "$button_content": "bc_furnace_guide.blocks_label",
+                            "size": [
+                              54,
+                              14
+                            ]
+                          }
+                        }
                       ]
                     }
-                  }
-                ],
-                "ignored": "$is_smoker"
-              }
-            },
-            {
-              "blocks_tab_slot": {
-                "type": "panel",
-                "size": [
-                  28,
-                  14
-                ],
-                "controls": [
+                  },
                   {
-                    "blocks_tab@bc_shared.radio": {
-                      "$toggle_name": "furnace_guide_tabs",
-                      "$toggle_view_binding_name": "blocks_tab_toggle",
-                      "$toggle_group_forced_index": 2,
-                      "$toggle_default_state": false,
-                      "$button_content": "bc_furnace_guide.blocks_label",
+                    "nature_tab_slot": {
+                      "type": "panel",
                       "size": [
-                        28,
+                        54,
                         14
+                      ],
+                      "controls": [
+                        {
+                          "nature_tab@bc_shared.radio": {
+                            "$toggle_name": "furnace_guide_tabs",
+                            "$toggle_view_binding_name": "nature_tab_toggle",
+                            "$toggle_group_forced_index": 3,
+                            "$toggle_default_state": false,
+                            "$button_content": "bc_furnace_guide.nature_label",
+                            "size": [
+                              54,
+                              14
+                            ]
+                          }
+                        }
                       ]
                     }
                   }
@@ -179,47 +227,35 @@
               }
             },
             {
-              "nature_tab_slot": {
-                "type": "panel",
+              "tab_row_2": {
+                "type": "stack_panel",
+                "orientation": "horizontal",
                 "size": [
-                  28,
+                  "100%",
                   14
                 ],
                 "controls": [
                   {
-                    "nature_tab@bc_shared.radio": {
-                      "$toggle_name": "furnace_guide_tabs",
-                      "$toggle_view_binding_name": "nature_tab_toggle",
-                      "$toggle_group_forced_index": 3,
-                      "$toggle_default_state": false,
-                      "$button_content": "bc_furnace_guide.nature_label",
+                    "fuel_tab_slot": {
+                      "type": "panel",
                       "size": [
-                        28,
+                        54,
                         14
-                      ]
-                    }
-                  }
-                ]
-              }
-            },
-            {
-              "fuel_tab_slot": {
-                "type": "panel",
-                "size": [
-                  28,
-                  14
-                ],
-                "controls": [
-                  {
-                    "fuel_tab@bc_shared.radio": {
-                      "$toggle_name": "furnace_guide_tabs",
-                      "$toggle_view_binding_name": "fuel_tab_toggle",
-                      "$toggle_group_forced_index": 4,
-                      "$toggle_default_state": false,
-                      "$button_content": "bc_furnace_guide.fuel_label",
-                      "size": [
-                        28,
-                        14
+                      ],
+                      "controls": [
+                        {
+                          "fuel_tab@bc_shared.radio": {
+                            "$toggle_name": "furnace_guide_tabs",
+                            "$toggle_view_binding_name": "fuel_tab_toggle",
+                            "$toggle_group_forced_index": 4,
+                            "$toggle_default_state": false,
+                            "$button_content": "bc_furnace_guide.fuel_label",
+                            "size": [
+                              54,
+                              14
+                            ]
+                          }
+                        }
                       ]
                     }
                   }
@@ -284,16 +320,6 @@
                           "cod_cell@bc_item_cell.item_cell": {
                             "$item_id": "$cod_item_id"
                           }
-                        },
-                        {
-                          "salmon_cell@bc_item_cell.item_cell": {
-                            "$item_id": "$salmon_item_id"
-                          }
-                        },
-                        {
-                          "potato_cell@bc_item_cell.item_cell": {
-                            "$item_id": "$potato_item_id"
-                          }
                         }
                       ]
                     }
@@ -307,6 +333,16 @@
                         18
                       ],
                       "controls": [
+                        {
+                          "salmon_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$salmon_item_id"
+                          }
+                        },
+                        {
+                          "potato_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$potato_item_id"
+                          }
+                        },
                         {
                           "kelp_cell@bc_item_cell.item_cell": {
                             "$item_id": "$kelp_item_id"
@@ -374,16 +410,6 @@
                           "iron_ore_cell@bc_item_cell.item_cell": {
                             "$item_id": "$iron_ore_item_id"
                           }
-                        },
-                        {
-                          "lapis_ore_cell@bc_item_cell.item_cell": {
-                            "$item_id": "$lapis_ore_item_id"
-                          }
-                        },
-                        {
-                          "nether_gold_ore_cell@bc_item_cell.item_cell": {
-                            "$item_id": "$nether_gold_ore_item_id"
-                          }
                         }
                       ]
                     }
@@ -397,6 +423,16 @@
                         18
                       ],
                       "controls": [
+                        {
+                          "lapis_ore_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$lapis_ore_item_id"
+                          }
+                        },
+                        {
+                          "nether_gold_ore_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$nether_gold_ore_item_id"
+                          }
+                        },
                         {
                           "quartz_ore_cell@bc_item_cell.item_cell": {
                             "$item_id": "$quartz_ore_item_id"
@@ -416,7 +452,19 @@
                           "raw_copper_cell@bc_item_cell.item_cell": {
                             "$item_id": "$raw_copper_item_id"
                           }
-                        },
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "row_2": {
+                      "type": "stack_panel",
+                      "orientation": "horizontal",
+                      "size": [
+                        "100%",
+                        18
+                      ],
+                      "controls": [
                         {
                           "raw_gold_cell@bc_item_cell.item_cell": {
                             "$item_id": "$raw_gold_item_id"
@@ -436,19 +484,7 @@
                           "deepslate_copper_ore_cell@bc_item_cell.item_cell": {
                             "$item_id": "$deepslate_copper_ore_item_id"
                           }
-                        }
-                      ]
-                    }
-                  },
-                  {
-                    "row_2": {
-                      "type": "stack_panel",
-                      "orientation": "horizontal",
-                      "size": [
-                        "100%",
-                        18
-                      ],
-                      "controls": [
+                        },
                         {
                           "deepslate_diamond_ore_cell@bc_item_cell.item_cell": {
                             "$item_id": "$deepslate_diamond_ore_item_id"
@@ -458,7 +494,19 @@
                           "deepslate_emerald_ore_cell@bc_item_cell.item_cell": {
                             "$item_id": "$deepslate_emerald_ore_item_id"
                           }
-                        },
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "row_3": {
+                      "type": "stack_panel",
+                      "orientation": "horizontal",
+                      "size": [
+                        "100%",
+                        18
+                      ],
+                      "controls": [
                         {
                           "deepslate_gold_ore_cell@bc_item_cell.item_cell": {
                             "$item_id": "$deepslate_gold_ore_item_id"
@@ -541,16 +589,6 @@
                           "cobbled_deepslate_cell@bc_item_cell.item_cell": {
                             "$item_id": "$cobbled_deepslate_item_id"
                           }
-                        },
-                        {
-                          "stone_bricks_cell@bc_item_cell.item_cell": {
-                            "$item_id": "$stone_bricks_item_id"
-                          }
-                        },
-                        {
-                          "deepslate_bricks_cell@bc_item_cell.item_cell": {
-                            "$item_id": "$deepslate_bricks_item_id"
-                          }
                         }
                       ]
                     }
@@ -564,6 +602,16 @@
                         18
                       ],
                       "controls": [
+                        {
+                          "stone_bricks_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$stone_bricks_item_id"
+                          }
+                        },
+                        {
+                          "deepslate_bricks_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$deepslate_bricks_item_id"
+                          }
+                        },
                         {
                           "deepslate_tiles_cell@bc_item_cell.item_cell": {
                             "$item_id": "$deepslate_tiles_item_id"
@@ -583,7 +631,19 @@
                           "red_sandstone_cell@bc_item_cell.item_cell": {
                             "$item_id": "$red_sandstone_item_id"
                           }
-                        },
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "row_2": {
+                      "type": "stack_panel",
+                      "orientation": "horizontal",
+                      "size": [
+                        "100%",
+                        18
+                      ],
+                      "controls": [
                         {
                           "nether_brick_cell@bc_item_cell.item_cell": {
                             "$item_id": "$nether_brick_item_id"
@@ -665,16 +725,6 @@
                           "oak_log_cell@bc_item_cell.item_cell": {
                             "$item_id": "$oak_log_item_id"
                           }
-                        },
-                        {
-                          "spruce_log_cell@bc_item_cell.item_cell": {
-                            "$item_id": "$spruce_log_item_id"
-                          }
-                        },
-                        {
-                          "birch_log_cell@bc_item_cell.item_cell": {
-                            "$item_id": "$birch_log_item_id"
-                          }
                         }
                       ]
                     }
@@ -688,6 +738,16 @@
                         18
                       ],
                       "controls": [
+                        {
+                          "spruce_log_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$spruce_log_item_id"
+                          }
+                        },
+                        {
+                          "birch_log_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$birch_log_item_id"
+                          }
+                        },
                         {
                           "jungle_log_cell@bc_item_cell.item_cell": {
                             "$item_id": "$jungle_log_item_id"
@@ -707,7 +767,19 @@
                           "mangrove_log_cell@bc_item_cell.item_cell": {
                             "$item_id": "$mangrove_log_item_id"
                           }
-                        },
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "row_2": {
+                      "type": "stack_panel",
+                      "orientation": "horizontal",
+                      "size": [
+                        "100%",
+                        18
+                      ],
+                      "controls": [
                         {
                           "cherry_log_cell@bc_item_cell.item_cell": {
                             "$item_id": "$cherry_log_item_id"
@@ -779,16 +851,6 @@
                           "dried_kelp_block_cell@bc_item_cell.item_cell": {
                             "$item_id": "$dried_kelp_block_item_id"
                           }
-                        },
-                        {
-                          "bamboo_cell@bc_item_cell.item_cell": {
-                            "$item_id": "$bamboo_item_id"
-                          }
-                        },
-                        {
-                          "bamboo_block_cell@bc_item_cell.item_cell": {
-                            "$item_id": "$bamboo_block_item_id"
-                          }
                         }
                       ]
                     }
@@ -802,6 +864,16 @@
                         18
                       ],
                       "controls": [
+                        {
+                          "bamboo_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$bamboo_item_id"
+                          }
+                        },
+                        {
+                          "bamboo_block_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$bamboo_block_item_id"
+                          }
+                        },
                         {
                           "stick_cell@bc_item_cell.item_cell": {
                             "$item_id": "$stick_item_id"

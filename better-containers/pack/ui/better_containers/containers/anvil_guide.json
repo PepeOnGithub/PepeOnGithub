@@ -14,7 +14,7 @@
     "text": "$line_text",
     "size": [
       "100%",
-      10
+      "default"
     ],
     "font_size": "small"
   },
@@ -34,7 +34,7 @@
     "type": "stack_panel",
     "orientation": "vertical",
     "size": [
-      144,
+      108,
       "100%c"
     ],
     "layer": 2,
@@ -58,30 +58,66 @@
       {
         "tab_bar": {
           "type": "stack_panel",
-          "orientation": "horizontal",
+          "orientation": "vertical",
           "size": [
             "100%",
-            16
+            "100%c"
           ],
           "controls": [
             {
-              "repair_tab_slot": {
-                "type": "panel",
+              "tab_row_0": {
+                "type": "stack_panel",
+                "orientation": "horizontal",
                 "size": [
-                  28,
+                  "100%",
                   14
                 ],
                 "controls": [
                   {
-                    "repair_tab@bc_shared.radio": {
-                      "$toggle_name": "anvil_guide_tabs",
-                      "$toggle_view_binding_name": "repair_tab_toggle",
-                      "$toggle_group_forced_index": 0,
-                      "$toggle_default_state": true,
-                      "$button_content": "bc_anvil_guide.repair_label",
+                    "repair_tab_slot": {
+                      "type": "panel",
                       "size": [
-                        28,
+                        54,
                         14
+                      ],
+                      "controls": [
+                        {
+                          "repair_tab@bc_shared.radio": {
+                            "$toggle_name": "anvil_guide_tabs",
+                            "$toggle_view_binding_name": "repair_tab_toggle",
+                            "$toggle_group_forced_index": 0,
+                            "$toggle_default_state": true,
+                            "$button_content": "bc_anvil_guide.repair_label",
+                            "size": [
+                              54,
+                              14
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "format_tab_slot": {
+                      "type": "panel",
+                      "size": [
+                        54,
+                        14
+                      ],
+                      "controls": [
+                        {
+                          "format_tab@bc_shared.radio": {
+                            "$toggle_name": "anvil_guide_tabs",
+                            "$toggle_view_binding_name": "format_tab_toggle",
+                            "$toggle_group_forced_index": 1,
+                            "$toggle_default_state": false,
+                            "$button_content": "bc_anvil_guide.format_label",
+                            "size": [
+                              54,
+                              14
+                            ]
+                          }
+                        }
                       ]
                     }
                   }
@@ -89,71 +125,59 @@
               }
             },
             {
-              "format_tab_slot": {
-                "type": "panel",
+              "tab_row_1": {
+                "type": "stack_panel",
+                "orientation": "horizontal",
                 "size": [
-                  28,
+                  "100%",
                   14
                 ],
                 "controls": [
                   {
-                    "format_tab@bc_shared.radio": {
-                      "$toggle_name": "anvil_guide_tabs",
-                      "$toggle_view_binding_name": "format_tab_toggle",
-                      "$toggle_group_forced_index": 1,
-                      "$toggle_default_state": false,
-                      "$button_content": "bc_anvil_guide.format_label",
+                    "color_tab_slot": {
+                      "type": "panel",
                       "size": [
-                        28,
+                        54,
                         14
+                      ],
+                      "controls": [
+                        {
+                          "color_tab@bc_shared.radio": {
+                            "$toggle_name": "anvil_guide_tabs",
+                            "$toggle_view_binding_name": "color_tab_toggle",
+                            "$toggle_group_forced_index": 2,
+                            "$toggle_default_state": false,
+                            "$button_content": "bc_anvil_guide.color_label",
+                            "size": [
+                              54,
+                              14
+                            ]
+                          }
+                        }
                       ]
                     }
-                  }
-                ]
-              }
-            },
-            {
-              "color_tab_slot": {
-                "type": "panel",
-                "size": [
-                  28,
-                  14
-                ],
-                "controls": [
+                  },
                   {
-                    "color_tab@bc_shared.radio": {
-                      "$toggle_name": "anvil_guide_tabs",
-                      "$toggle_view_binding_name": "color_tab_toggle",
-                      "$toggle_group_forced_index": 2,
-                      "$toggle_default_state": false,
-                      "$button_content": "bc_anvil_guide.color_label",
+                    "nametag_tab_slot": {
+                      "type": "panel",
                       "size": [
-                        28,
+                        54,
                         14
-                      ]
-                    }
-                  }
-                ]
-              }
-            },
-            {
-              "nametag_tab_slot": {
-                "type": "panel",
-                "size": [
-                  28,
-                  14
-                ],
-                "controls": [
-                  {
-                    "nametag_tab@bc_shared.radio": {
-                      "$toggle_name": "anvil_guide_tabs",
-                      "$toggle_view_binding_name": "nametag_tab_toggle",
-                      "$toggle_group_forced_index": 3,
-                      "$toggle_default_state": false,
-                      "$button_content": "bc_anvil_guide.nametag_label",
-                      "size": [
-                        28,
-                        14
+                      ],
+                      "controls": [
+                        {
+                          "nametag_tab@bc_shared.radio": {
+                            "$toggle_name": "anvil_guide_tabs",
+                            "$toggle_view_binding_name": "nametag_tab_toggle",
+                            "$toggle_group_forced_index": 3,
+                            "$toggle_default_state": false,
+                            "$button_content": "bc_anvil_guide.nametag_label",
+                            "size": [
+                              54,
+                              14
+                            ]
+                          }
+                        }
                       ]
                     }
                   }

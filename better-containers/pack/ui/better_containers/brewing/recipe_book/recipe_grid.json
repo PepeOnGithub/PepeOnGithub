@@ -19,8 +19,7 @@
           "grid_position": "$brewing_grid_position_0",
           "$collection_index": 1,
           "$potion_key_type": "is_awkward_potion_key",
-          "$remainder": "$bc_brewing:awkward_potion",
-          "$polarity_control": "bc_filter_all"
+          "$remainder": "$bc_brewing:awkward_potion"
         }
       },
       {
@@ -29,8 +28,7 @@
           "grid_position": "$brewing_grid_position_1",
           "$collection_index": 2,
           "$potion_key_type": "is_night_vision_key",
-          "$remainder": "$bc_brewing:potion_of_night_vision",
-          "$polarity_control": "bc_filter_positive"
+          "$remainder": "$bc_brewing:potion_of_night_vision"
         }
       },
       {
@@ -39,8 +37,7 @@
           "grid_position": "$brewing_grid_position_2",
           "$collection_index": 3,
           "$potion_key_type": "is_invisibility_key",
-          "$remainder": "$bc_brewing:potion_of_invisibility",
-          "$polarity_control": "bc_filter_positive"
+          "$remainder": "$bc_brewing:potion_of_invisibility"
         }
       },
       {
@@ -48,8 +45,7 @@
           "grid_position": "$brewing_grid_position_3",
           "$collection_index": 4,
           "$potion_key_type": "is_leaping_key",
-          "$remainder": "$bc_brewing:potion_of_leaping",
-          "$polarity_control": "bc_filter_positive"
+          "$remainder": "$bc_brewing:potion_of_leaping"
         }
       },
       {
@@ -58,8 +54,7 @@
           "grid_position": "$brewing_grid_position_4",
           "$collection_index": 5,
           "$potion_key_type": "is_fire_resistance_key",
-          "$remainder": "$bc_brewing:potion_of_fire_resistance",
-          "$polarity_control": "bc_filter_positive"
+          "$remainder": "$bc_brewing:potion_of_fire_resistance"
         }
       },
       {
@@ -67,8 +62,7 @@
           "grid_position": "$brewing_grid_position_5",
           "$collection_index": 6,
           "$potion_key_type": "is_swiftness_key",
-          "$remainder": "$bc_brewing:potion_of_swiftness",
-          "$polarity_control": "bc_filter_positive"
+          "$remainder": "$bc_brewing:potion_of_swiftness"
         }
       },
       {
@@ -76,8 +70,7 @@
           "grid_position": "$brewing_grid_position_6",
           "$collection_index": 7,
           "$potion_key_type": "is_slowness_key",
-          "$remainder": "$bc_brewing:potion_of_slowness",
-          "$polarity_control": "bc_filter_negative"
+          "$remainder": "$bc_brewing:potion_of_slowness"
         }
       },
       {
@@ -86,8 +79,7 @@
           "grid_position": "$brewing_grid_position_7",
           "$collection_index": 8,
           "$potion_key_type": "is_water_breathing_key",
-          "$remainder": "$bc_brewing:potion_of_water_breathing",
-          "$polarity_control": "bc_filter_positive"
+          "$remainder": "$bc_brewing:potion_of_water_breathing"
         }
       },
       {
@@ -96,8 +88,7 @@
           "grid_position": "$brewing_grid_position_8",
           "$collection_index": 9,
           "$potion_key_type": "is_healing_key",
-          "$remainder": "$bc_brewing:potion_of_healing",
-          "$polarity_control": "bc_filter_positive"
+          "$remainder": "$bc_brewing:potion_of_healing"
         }
       },
       {
@@ -106,8 +97,7 @@
           "grid_position": "$brewing_grid_position_9",
           "$collection_index": 10,
           "$potion_key_type": "is_harming_key",
-          "$remainder": "$bc_brewing:potion_of_harming",
-          "$polarity_control": "bc_filter_negative"
+          "$remainder": "$bc_brewing:potion_of_harming"
         }
       },
       {
@@ -213,6 +203,17 @@
         "binding_type": "view",
         "source_control_name": "$visible_condition",
         "source_property_name": "#toggle_state",
+        "target_property_name": "#tab_visible"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "bc_filter_all",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#filter_visible"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#tab_visible and #filter_visible)",
         "target_property_name": "#visible"
       }
     ]
@@ -226,27 +227,7 @@
     "$toggle_collection_name": "brewing_items",
     "$toggle_control_name": "('potion_item_' + $item_index_id)",
     "$toggle_binding_value": "('#item_' + $item_index_id)",
-    "$toggle_extra_properties": "bc_brewing_recipe_grid.primary_toggle_properties",
-    "$polarity_control|default": "bc_filter_all",
-    "bindings": [
-      {
-        "binding_type": "view",
-        "source_control_name": "bc_filter_all",
-        "source_property_name": "#toggle_state",
-        "target_property_name": "#filter_all"
-      },
-      {
-        "binding_type": "view",
-        "source_control_name": "$polarity_control",
-        "source_property_name": "#toggle_state",
-        "target_property_name": "#filter_match"
-      },
-      {
-        "binding_type": "view",
-        "source_property_name": "(#filter_all or #filter_match)",
-        "target_property_name": "#visible"
-      }
-    ]
+    "$toggle_extra_properties": "bc_brewing_recipe_grid.primary_toggle_properties"
   },
   "primary_toggle_properties": {
     "unchecked_hover_control": "hover",
@@ -401,6 +382,219 @@
           "offset": "$grid_item_renderer_offset",
           "layer": 8
         }
+      }
+    ]
+  },
+  "recipe_book_grid_positive@bc_brewing_recipe_grid.recipe_book_grid": {
+    "controls": [
+      {
+        "potion_1@$grid_item": {
+          "$has_potency": false,
+          "$has_duration": false,
+          "grid_position": [
+            0,
+            0
+          ],
+          "$collection_index": 1,
+          "$potion_key_type": "is_awkward_potion_key",
+          "$remainder": "$bc_brewing:awkward_potion"
+        }
+      },
+      {
+        "potion_2@$grid_item": {
+          "$has_potency": false,
+          "grid_position": [
+            1,
+            0
+          ],
+          "$collection_index": 2,
+          "$potion_key_type": "is_night_vision_key",
+          "$remainder": "$bc_brewing:potion_of_night_vision"
+        }
+      },
+      {
+        "potion_3@$grid_item": {
+          "$has_potency": false,
+          "grid_position": [
+            2,
+            0
+          ],
+          "$collection_index": 3,
+          "$potion_key_type": "is_invisibility_key",
+          "$remainder": "$bc_brewing:potion_of_invisibility"
+        }
+      },
+      {
+        "potion_4@$grid_item": {
+          "grid_position": [
+            3,
+            0
+          ],
+          "$collection_index": 4,
+          "$potion_key_type": "is_leaping_key",
+          "$remainder": "$bc_brewing:potion_of_leaping"
+        }
+      },
+      {
+        "potion_5@$grid_item": {
+          "$has_potency": false,
+          "grid_position": [
+            4,
+            0
+          ],
+          "$collection_index": 5,
+          "$potion_key_type": "is_fire_resistance_key",
+          "$remainder": "$bc_brewing:potion_of_fire_resistance"
+        }
+      },
+      {
+        "potion_6@$grid_item": {
+          "grid_position": [
+            5,
+            0
+          ],
+          "$collection_index": 6,
+          "$potion_key_type": "is_swiftness_key",
+          "$remainder": "$bc_brewing:potion_of_swiftness"
+        }
+      },
+      {
+        "potion_8@$grid_item": {
+          "$has_potency": false,
+          "grid_position": [
+            6,
+            0
+          ],
+          "$collection_index": 8,
+          "$potion_key_type": "is_water_breathing_key",
+          "$remainder": "$bc_brewing:potion_of_water_breathing"
+        }
+      },
+      {
+        "potion_9@$grid_item": {
+          "$has_duration": false,
+          "grid_position": [
+            0,
+            1
+          ],
+          "$collection_index": 9,
+          "$potion_key_type": "is_healing_key",
+          "$remainder": "$bc_brewing:potion_of_healing"
+        }
+      }
+    ],
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "$visible_condition",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#tab_visible"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "bc_filter_positive",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#filter_visible"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#tab_visible and #filter_visible)",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+  "recipe_book_grid_negative@bc_brewing_recipe_grid.recipe_book_grid": {
+    "controls": [
+      {
+        "potion_1@$grid_item": {
+          "$has_potency": false,
+          "$has_duration": false,
+          "grid_position": [
+            0,
+            0
+          ],
+          "$collection_index": 1,
+          "$potion_key_type": "is_awkward_potion_key",
+          "$remainder": "$bc_brewing:awkward_potion"
+        }
+      },
+      {
+        "potion_7@$grid_item": {
+          "grid_position": [
+            1,
+            0
+          ],
+          "$collection_index": 7,
+          "$potion_key_type": "is_slowness_key",
+          "$remainder": "$bc_brewing:potion_of_slowness"
+        }
+      },
+      {
+        "potion_10@$grid_item": {
+          "$has_duration": false,
+          "grid_position": [
+            2,
+            0
+          ],
+          "$collection_index": 10,
+          "$potion_key_type": "is_harming_key",
+          "$remainder": "$bc_brewing:potion_of_harming"
+        }
+      }
+    ],
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "$visible_condition",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#tab_visible"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "bc_filter_negative",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#filter_visible"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#tab_visible and #filter_visible)",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+  "recipe_book_grid_mixed@bc_brewing_recipe_grid.recipe_book_grid": {
+    "controls": [
+      {
+        "potion_1@$grid_item": {
+          "$has_potency": false,
+          "$has_duration": false,
+          "grid_position": [
+            0,
+            0
+          ],
+          "$collection_index": 1,
+          "$potion_key_type": "is_awkward_potion_key",
+          "$remainder": "$bc_brewing:awkward_potion"
+        }
+      }
+    ],
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "$visible_condition",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#tab_visible"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "bc_filter_mixed",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#filter_visible"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#tab_visible and #filter_visible)",
+        "target_property_name": "#visible"
       }
     ]
   }

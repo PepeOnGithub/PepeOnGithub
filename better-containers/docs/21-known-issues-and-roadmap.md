@@ -73,7 +73,7 @@ The IDs in `_global_variables.json` weren't verified against game data (see [14]
 
 The items below are what still needs work, and why.
 
-- **Brewing filter:** built by `tools/build_brewing_filter.py`. Each recipe-grid potion is a fixed control, so its polarity comes from `data/potion_polarity.json` and is written as `$polarity_control`. Four radio toggles (All, Good, Bad, Mixed) at the bottom of the recipe book show or hide grid items. Hidden items leave a gap because grid positions are fixed. Unverified in game: the row position, the `(#filter_all or #filter_match)` visibility binding, and the checked/unchecked textures (`craft_toggle_on`/`off`).
+- **Brewing filter:** built by `tools/build_brewing_filter.py`. Each recipe-grid potion is a fixed control, so its polarity comes from `data/potion_polarity.json` and is written as `$polarity_control`. Four radio toggles (All, Good, Bad, Mixed) at the bottom of the recipe book show or hide grid items. Each filter shows its own packed grid. Unverified in game: the row position, the `(#filter_all or #filter_match)` visibility binding, and the checked/unchecked textures (`craft_toggle_on`/`off`).
 
 - Information panels for the seven management-row containers are built. Positions and text wrapping must be checked in game.
 
@@ -91,4 +91,10 @@ The items below are what still needs work, and why.
 
 Fixed: every guide and info panel is now a vertical stack that anchors to the right of the hooked panel instead of covering the inventory; `toolbar_background` inherits the real vanilla template; an unused third-party layout toggle was removed from the brewing recipe book; the smithing guide and management toggles now sit inside the custom smithing screen (the old hook path sat under a removed panel and never applied).
 
-Open: the move/drop mode toggles read a global binding named `'#mode_' + $toggle_view_binding_name` that could not be checked against vanilla; phone (`*_pocket`) layouts get no guide; a 144-wide guide beside a 176-wide panel needs about GUI scale 4 or lower on a 1080p screen.
+Panel fit: guides are now 108 px wide (6 cells) with two tabs per row, so a guide beside the 176 px screen needs a GUI width of about 400, which is GUI scale 4 on a 1080p display. At scale 5 or higher on 1080p the guide is cut off by the screen edge; JSON UI cannot read the GUI scale, so there is no automatic fallback.
+
+Mode toggles: the `'#mode_' + $toggle_view_binding_name` global binding is copied unchanged from the original pack. Nothing in the pack ever writes a `#mode_*` global, so the binding resolves to nothing and the toggles run on their own `#toggle_state` and `toggle_mode_reset` logic. It is inert, not a source of failures.
+
+Brewing filter gaps: fixed. Each filter (Good, Bad, Mixed) has its own grid with only the matching potions packed from the first cell, so hiding leaves no holes. The All grid is unchanged. `tools/build_brewing_filter.py` builds the grids from `data/potion_polarity.json`.
+
+Open: phone (`*_pocket`) layouts get no guide.

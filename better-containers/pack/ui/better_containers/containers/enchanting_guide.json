@@ -4,7 +4,7 @@
     "type": "panel",
     "size": [
       "100%",
-      26
+      34
     ],
     "controls": [
       {
@@ -25,7 +25,7 @@
           "type": "label",
           "text": "$name_text",
           "size": [
-            "100%-70px",
+            "100%-46px",
             10
           ],
           "offset": [
@@ -41,7 +41,7 @@
           "text": "$desc_text",
           "size": [
             "100%-18px",
-            10
+            22
           ],
           "offset": [
             18,
@@ -55,7 +55,7 @@
           "type": "label",
           "text": "$level_text",
           "size": [
-            40,
+            26,
             10
           ],
           "anchor_from": "top_right",
@@ -69,7 +69,7 @@
     "type": "stack_panel",
     "orientation": "vertical",
     "size": [
-      144,
+      108,
       "100%c"
     ],
     "layer": 2,

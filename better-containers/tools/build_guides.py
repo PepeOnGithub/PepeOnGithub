@@ -23,8 +23,9 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PACK = os.path.join(ROOT, 'pack')
 LIST = os.path.join(ROOT, 'data', 'item_ids', 'stable-1.26.60.json')
 CELL = 18
-COLUMNS = 8                      # item cells per row: 8 x 18px = 144px
-TAB_W = 28
+COLUMNS = 6                      # item cells per row: 6 x 18px = 108px. A guide plus the 176px screen and
+                                 # a 4px gap needs half the GUI width >= 200, i.e. GUI scale 4 on a 1080p display
+TAB_W = 54                       # two tabs per row
 
 # ---------------------------------------------------------------- item lists
 # (variable name without $, item label key is not needed: the cell shows the real item)
@@ -181,7 +182,7 @@ def tabbed(ns, root, title_key, width, tabs, defaults=None):
     """Radio tab bar with one panel per tab. tabs: list of (key, label_key, panel_controls, hidden_expr)."""
     top = {'namespace': ns,
            'tab_label': {'type': 'label', 'text': '$tab_text', 'size': ['100%', 12], 'font_size': 'small'},
-           'text_row': {'type': 'label', 'text': '$line_text', 'size': ['100%', 10], 'font_size': 'small'}}
+           'text_row': {'type': 'label', 'text': '$line_text', 'size': ['100%', 'default'], 'font_size': 'small'}}
     bar, contents = [], []
     for index, (key, label_key, controls, hidden) in enumerate(tabs):
         label = f'{key}_label'
@@ -198,8 +199,10 @@ def tabbed(ns, root, title_key, width, tabs, defaults=None):
     root_panel = {'type': 'stack_panel', 'orientation': 'vertical', 'size': [width, '100%c'], 'layer': 2, 'anchor_from': 'top_left', 'anchor_to': 'top_right', 'offset': [4, 0],
                   'controls': [
                       {'title_label': {'type': 'label', 'text': f'%{title_key}', 'size': ['100%', 12]}},
-                      {'tab_bar': {'type': 'stack_panel', 'orientation': 'horizontal', 'size': ['100%', 16],
-                                   'controls': bar}},
+                      {'tab_bar': {'type': 'stack_panel', 'orientation': 'vertical', 'size': ['100%', '100%c'],
+                                   'controls': [{f'tab_row_{n}': {'type': 'stack_panel', 'orientation': 'horizontal',
+                                                                  'size': ['100%', 14], 'controls': bar[n * 2:n * 2 + 2]}}
+                                                for n in range((len(bar) + 1) // 2)]}},
                       {'tab_contents': {'type': 'panel', 'size': ['100%', 'default'],
                                         'controls': contents}}]}
     if defaults:
@@ -251,14 +254,14 @@ def enchanting(enchants):
         rows.append({f'row_{i}@bc_enchanting_guide.enchant_row': {
             '$name_text': f'%{key}', '$desc_text': f'%bc_enchanting_guide.desc.{key}', '$level_text': level}})
     top = {'namespace': 'bc_enchanting_guide',
-           'enchant_row': {'type': 'panel', 'size': ['100%', 26], 'controls': [
+           'enchant_row': {'type': 'panel', 'size': ['100%', 34], 'controls': [
                {'book_icon@bc_item_cell.item_cell': {'$item_id': '$enchanted_book_item_id', 'size': [14, 14],
                                                      'offset': [0, 2]}},
-               {'name_label': {'type': 'label', 'text': '$name_text', 'size': ['100%-70px', 10],
+               {'name_label': {'type': 'label', 'text': '$name_text', 'size': ['100%-46px', 10],
                                'offset': [18, 0], 'font_size': 'small'}},
-               {'desc_label': {'type': 'label', 'text': '$desc_text', 'size': ['100%-18px', 10],
+               {'desc_label': {'type': 'label', 'text': '$desc_text', 'size': ['100%-18px', 22],
                                'offset': [18, 11], 'font_size': 'small'}},
-               {'level_label': {'type': 'label', 'text': '$level_text', 'size': [40, 10],
+               {'level_label': {'type': 'label', 'text': '$level_text', 'size': [26, 10],
                                 'anchor_from': 'top_right', 'anchor_to': 'top_right', 'font_size': 'small'}}]}}
     top['enchanting_guide'] = {'type': 'stack_panel', 'orientation': 'vertical', 'size': [CELL * COLUMNS, '100%c'], 'layer': 2, 'anchor_from': 'top_left', 'anchor_to': 'top_right', 'offset': [4, 0], 'controls': [
         {'title_label': {'type': 'label', 'text': '%bc_enchanting_guide.title', 'size': ['100%', 12]}},

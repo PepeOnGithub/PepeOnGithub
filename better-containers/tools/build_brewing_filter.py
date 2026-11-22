@@ -62,12 +62,30 @@ def filter_toggle(index, key):
     }
 
 
+GRID = 'recipe_book_grid@bc_brewing_common.text_keys'
+KINDS = ['positive', 'negative', 'mixed']
+COLUMNS = 7
+
+
+def grid_bindings(filter_control):
+    """Visible when its tab is shown and its filter button is on."""
+    return [
+        {'binding_type': 'view', 'source_control_name': '$visible_condition',
+         'source_property_name': '#toggle_state', 'target_property_name': '#tab_visible'},
+        {'binding_type': 'view', 'source_control_name': filter_control,
+         'source_property_name': '#toggle_state', 'target_property_name': '#filter_visible'},
+        {'binding_type': 'view', 'source_property_name': '(#tab_visible and #filter_visible)',
+         'target_property_name': '#visible'},
+    ]
+
+
 def main():
     pol = polarity_map()
     gp = os.path.join(BREW, 'recipe_grid.json')
     grid = load(gp)
-    missing = []
-    for entry in grid['recipe_book_grid@bc_brewing_common.text_keys']['controls']:
+    base = grid[GRID]
+    missing, entries = [], []
+    for entry in base['controls']:
         (name, props), = entry.items()
         if not name.startswith('potion_') or '$potion_key_type' not in props:
             continue
@@ -75,17 +93,23 @@ def main():
         kind = pol.get(key)
         if kind is None and key != 'awkward_potion':
             missing.append(key)
-        props['$polarity_control'] = f'bc_filter_{kind or "all"}'
-    item = grid['recipe_grid_item@bc_brewing_recipe_grid.item_toggle']
-    item['$polarity_control|default'] = 'bc_filter_all'
-    item['bindings'] = [
-        {'binding_type': 'view', 'source_control_name': 'bc_filter_all',
-         'source_property_name': '#toggle_state', 'target_property_name': '#filter_all'},
-        {'binding_type': 'view', 'source_control_name': '$polarity_control',
-         'source_property_name': '#toggle_state', 'target_property_name': '#filter_match'},
-        {'binding_type': 'view', 'source_property_name': '(#filter_all or #filter_match)',
-         'target_property_name': '#visible'},
-    ]
+        props.pop('$polarity_control', None)
+        entries.append((name, props, kind))
+    base['bindings'] = grid_bindings('bc_filter_all')
+    # the old per-item filter binding is gone: whole grids switch instead
+    grid['recipe_grid_item@bc_brewing_recipe_grid.item_toggle'].pop('bindings', None)
+    grid['recipe_grid_item@bc_brewing_recipe_grid.item_toggle'].pop('$polarity_control|default', None)
+
+    # one compact grid per filter: only the matching potions, packed from the first cell, so hiding leaves no gaps
+    for kind in KINDS:
+        subset = [(n, p) for n, p, k in entries if k == kind or k is None]
+        controls = []
+        for i, (n, p) in enumerate(subset):
+            moved = dict(p)
+            moved['grid_position'] = [i % COLUMNS, i // COLUMNS]
+            controls.append({n: moved})
+        grid[f'recipe_book_grid_{kind}@bc_brewing_recipe_grid.recipe_book_grid'] = {
+            'controls': controls, 'bindings': grid_bindings(f'bc_filter_{kind}')}
     save(gp, grid)
 
     bp = os.path.join(BREW, 'recipe_book.json')
@@ -97,9 +121,19 @@ def main():
         'anchor_from': 'bottom_left', 'anchor_to': 'bottom_left', 'offset': [4, -2], 'layer': 8,
         'controls': [filter_toggle(i, k) for i, (k, _) in enumerate(FILTERS)],
     }
+    for kind in KINDS:
+        book[f'recipe_grid_{kind}@bc_brewing_recipe_grid.recipe_book_grid_{kind}'] = {'layer': 3}
     holder = find_content(book)
     holder['controls'] = [c for c in holder['controls'] if 'filter_row@bc_brewing_recipe_book.filter_row' not in c]
     holder['controls'].append({'filter_row@bc_brewing_recipe_book.filter_row': {}})
+    # duplicate each tab's grid usage for the three filtered grids
+    for node in find_grid_lists(book):
+        node[:] = [c for c in node if not any(k.split('@')[0].endswith(tuple('_' + x for x in KINDS)) for k in c)]
+        originals = list(node)
+        for entry in originals:
+            (k, v), = entry.items()
+            for kind in KINDS:
+                node.append({f"{k.split('@')[0]}_{kind}@bc_brewing_recipe_book.recipe_grid_{kind}": dict(v)})
     save(bp, book)
 
     for lang in glob.glob(os.path.join(ROOT, 'pack', 'texts', '*.lang')):
@@ -108,6 +142,21 @@ def main():
         if add:
             open(lang, 'w', encoding='utf-8').write(text.rstrip('\n') + '\n' + add)
     print('filter wired; unclassified potions:', missing or 'none')
+
+
+def find_grid_lists(node):
+    """The controls lists that hold the potion / splash_potion / lingering_potion grid usages."""
+    found = []
+    if isinstance(node, list):
+        names = [k.split('@')[0] for c in node if isinstance(c, dict) for k in c]
+        if 'potion' in names and 'splash_potion' in names:
+            found.append(node)
+        for v in node:
+            found += find_grid_lists(v)
+    elif isinstance(node, dict):
+        for v in node.values():
+            found += find_grid_lists(v)
+    return found
 
 
 def find_content(node):
