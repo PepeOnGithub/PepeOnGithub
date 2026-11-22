@@ -10,34 +10,74 @@
 </p>
 
 <p align="center">
-  <a href="#-about">About</a> ·
-  <a href="#-clients">Clients</a> ·
-  <a href="#-hud-packs">HUD packs</a> ·
-  <a href="#-apps">Apps</a> ·
-  <a href="#-open-source">Open source</a> ·
-  <a href="#-stack">Stack</a> ·
-  <a href="#-socials">Socials</a>
+  <a href="#-about"><code>About</code></a>&nbsp;
+  <a href="#-clients"><code>Clients</code></a>&nbsp;
+  <a href="#-hud-packs"><code>HUD Packs</code></a>&nbsp;
+  <a href="#-apps"><code>Apps</code></a>&nbsp;
+  <a href="#-open-source"><code>Open Source</code></a>&nbsp;
+  <a href="#-stack"><code>Stack</code></a>&nbsp;
+  <a href="#-socials"><code>Socials</code></a>&nbsp;
+  <a href="#-stats"><code>Stats</code></a>
 </p>
 
----
+<br>
 
-## 👋 About
+<table align="center">
+<tr>
+<td align="center" width="33%">
+
+### ❄️ Glacier Client
+The flagship client and home base of **Glacier Productions**.
+
+<a href="https://pepe.glacierclient.xyz"><img src="https://img.shields.io/badge/View_on_portfolio-489C49?style=flat-square" alt="View Glacier Client"></a>
+
+</td>
+<td align="center" width="33%">
+
+### 🧩 Pepe's Debug HUD
+A clean, minimal debug overlay. Press **F8** to toggle.
+
+<a href="https://pepe.glacierclient.xyz"><img src="https://img.shields.io/badge/Get_the_pack-348B25?style=flat-square" alt="Get Debug HUD"></a>
+
+</td>
+<td align="center" width="33%">
+
+### 🧮 Pepe's Calculator
+Scientific calculator with unit tools and a home-screen widget.
+
+<a href="https://github.com/PepeOnGithub/Pepes-Calculator"><img src="https://img.shields.io/badge/Source-216639?style=flat-square" alt="Calculator source"></a>
+
+</td>
+</tr>
+</table>
+
+<br>
+
+<a id="-about"></a>
+<img src="assets/headers/about.svg" alt="01 About" width="100%">
+
+<br>
 
 I'm **Pepe**. I run **Glacier Productions**, build the **Glacier Client**, and make HUD packs, Android apps, websites and Discord bots. Every release lives in the library on my portfolio.
 
-| Role | Where |
-| --- | --- |
-| 👑 **Owner** — Glacier Client & the Glacier hub | [Glacier-Client-BE](https://github.com/Glacier-Client-BE) |
-| 🧪 **Studio** — original MCBE experiences & tools | [Nyxora Productions](https://github.com/Nyxora-Productions) |
-| 🛠️ **Former developer** — Azelux Client for MCBE | — |
+<table>
+<tr>
+<td align="center" width="33%"><b>👑 Owner</b><br>Glacier Client & the Glacier hub<br><sub><a href="https://github.com/Glacier-Client-BE">Glacier-Client-BE</a></sub></td>
+<td align="center" width="33%"><b>🧪 Studio</b><br>Original MCBE experiences & tools<br><sub><a href="https://github.com/Nyxora-Productions">Nyxora Productions</a></sub></td>
+<td align="center" width="33%"><b>🛠️ Former dev</b><br>Azelux Client for MCBE<br><sub>Earlier work</sub></td>
+</tr>
+</table>
 
-> **Library:** every pack, client and app, with past versions kept → **[pepe.glacierclient.xyz](https://pepe.glacierclient.xyz)**
+<p align="center">
+  <a href="https://pepe.glacierclient.xyz"><b>📚 Browse the full library →</b></a>
+</p>
 
----
+<br>
 
-## ❄️ Clients
+<a id="-clients"></a>
+<img src="assets/headers/clients.svg" alt="02 Clients" width="100%">
 
-The flagship is **Glacier Client**. Everything else is the line of clients I've built or rebranded along the way.
+<br>
 
 <table>
 <tr>
@@ -80,58 +120,67 @@ An early Optifine-branded release from the Zephyx era.
 </tr>
 </table>
 
----
+<br>
 
-## 🧩 HUD Packs
+<a id="-hud-packs"></a>
+<img src="assets/headers/hud-packs.svg" alt="03 HUD Packs" width="100%">
 
-Small, focused packs for the Bedrock HUD. Drop one in and it works.
+<br>
 
 <details open>
-<summary><b>Show the HUD packs</b></summary>
+<summary><b>All 20 HUD packs</b></summary>
+
+<br>
 
 | Pack | What it does |
 | --- | --- |
-| Debug HUD | Clean, minimal debug overlay — toggle with **F8** |
-| FPS Counter | Lightweight, accurate FPS readout |
-| Better Coordinates | Overworld, chunk and Nether coordinates together |
-| DirectionHUD | Compact heading indicator |
-| Clock & Compass HUD | Time of day and direction at a glance |
-| Speedometer | Live movement speed — great for elytra |
-| Elytra Pitch | Look-angle readout with a glowing elytra icon |
-| Waypoints+ | Set markers by sneaking and clicking |
-| Death Coords | Saves exactly where you died |
-| ArmorHUD | Worn armor as compact icons on the HUD |
-| Better Armor Bar | Armor bar recolored by material |
-| OffhandHUD | Offhand item shown beside the main hand |
-| InventoryHUD | Live mirror of your inventory |
-| Durability Viewer | On-screen durability numbers |
-| Level Calculator | XP needed for your next level |
-| Totem Pop Counter | Totems popped by each player, over their head |
-| Food Stats+ | Hunger and saturation restored per food |
-| Better Hover Text | Exact durability and technical tooltips |
-| Force Spectator | First-person spectator camera on death |
-| Status Effect HUD | Active effects and durations *(discontinued, archive kept)* |
+| 🧩 Debug HUD | Clean, minimal debug overlay — toggle with **F8** |
+| 📈 FPS Counter | Lightweight, accurate FPS readout |
+| 📍 Better Coordinates | Overworld, chunk and Nether coordinates together |
+| 🧭 DirectionHUD | Compact heading indicator |
+| 🕒 Clock & Compass HUD | Time of day and direction at a glance |
+| 💨 Speedometer | Live movement speed — great for elytra |
+| 🪽 Elytra Pitch | Look-angle readout with a glowing elytra icon |
+| 🎯 Waypoints+ | Set markers by sneaking and clicking |
+| 💀 Death Coords | Saves exactly where you died |
+| 🛡️ ArmorHUD | Worn armor as compact icons on the HUD |
+| 🟦 Better Armor Bar | Armor bar recolored by material |
+| 🤚 OffhandHUD | Offhand item shown beside the main hand |
+| 🎒 InventoryHUD | Live mirror of your inventory |
+| 🔧 Durability Viewer | On-screen durability numbers |
+| ⭐ Level Calculator | XP needed for your next level |
+| 🏆 Totem Pop Counter | Totems popped by each player, over their head |
+| 🍗 Food Stats+ | Hunger and saturation restored per food |
+| 🔍 Better Hover Text | Exact durability and technical tooltips |
+| 👁️ Force Spectator | First-person spectator camera on death |
+| 🧪 Status Effect HUD | Active effects and durations *(discontinued, archive kept)* |
 
 </details>
 
-### 🧰 Utility, addons & cosmetics
+<details>
+<summary><b>Utility, addons, cosmetics & foundation</b></summary>
+
+<br>
 
 | Type | Packs |
 | --- | --- |
-| 🔧 Utility | Anvil Damage Indicator · Animated Crop Growth Highlighter · Armor Hider · Bundle Item Counter · Dynamic 3rd-Person Crosshair · Shiny Pots · Spinning Projectiles · Time Changer |
-| ➕ Addons | Experience Tome · Hotbar Refiller · Item Magnet · Void Totem |
-| ✨ Cosmetics | Charged Overlay · Halo |
-| 📦 Foundation | **Pepe's Assets Pack** — the shared base every Pepe pack builds on |
+| 🔧 **Utility** | Anvil Damage Indicator · Animated Crop Growth Highlighter · Armor Hider · Bundle Item Counter · Dynamic 3rd-Person Crosshair · Shiny Pots · Spinning Projectiles · Time Changer |
+| ➕ **Addons** | Experience Tome · Hotbar Refiller · Item Magnet · Void Totem |
+| ✨ **Cosmetics** | Charged Overlay · Halo |
+| 📦 **Foundation** | **Pepe's Assets Pack** — the shared base every Pepe pack builds on |
 
----
+</details>
 
-## 📱 Apps
+<br>
 
-Android apps, built in Kotlin.
+<a id="-apps"></a>
+<img src="assets/headers/apps.svg" alt="04 Apps" width="100%">
+
+<br>
 
 | App | What it does |
 | --- | --- |
-| 🧮 **Calculator** | Scientific calculator with unit tools, history and a home-screen keypad widget |
+| 🧮 **Calculator** | Scientific calculator with unit tools, history and a keypad widget |
 | 📅 **Calendar** | Agenda and month views, with event alarms that ring in Clock |
 | ⏰ **Clock** | Alarms, timers, stopwatch, world clock and bedtime, with a widget |
 | 🎵 **Music** | Home, Search, Library and Radio, with a full Now Playing screen |
@@ -139,12 +188,17 @@ Android apps, built in Kotlin.
 | 🌍 **Translator** | On-device and online translation, camera translation and conversation mode |
 | ⛅ **Weather** | Editable dashboard, hourly and daily forecasts, radar and air quality |
 
----
+<br>
 
-## 🧑‍💻 Open Source
+<a id="-open-source"></a>
+<img src="assets/headers/open-source.svg" alt="05 Open Source" width="100%">
+
+<br>
 
 <details>
-<summary><b>Indigo Tools & MCBE tools</b></summary>
+<summary><b>🔧 Indigo Tools & MCBE tools</b></summary>
+
+<br>
 
 | Repo | What it does |
 | --- | --- |
@@ -162,7 +216,9 @@ Android apps, built in Kotlin.
 </details>
 
 <details>
-<summary><b>Web projects</b></summary>
+<summary><b>🌐 Web projects</b></summary>
+
+<br>
 
 | Repo | What it is |
 | --- | --- |
@@ -179,7 +235,9 @@ Android apps, built in Kotlin.
 </details>
 
 <details>
-<summary><b>Desktop, bots & other</b></summary>
+<summary><b>🤖 Desktop, bots & other</b></summary>
+
+<br>
 
 | Repo | What it is |
 | --- | --- |
@@ -193,11 +251,14 @@ Android apps, built in Kotlin.
 
 </details>
 
----
+<br>
 
-## 🛠️ Stack
+<a id="-stack"></a>
+<img src="assets/headers/stack.svg" alt="06 Stack" width="100%">
 
-**Languages I know:** HTML · CSS · JavaScript · Python · C# · Java
+<br>
+
+**Known:** HTML · CSS · JavaScript · Python · C# · Java  
 **Learning:** Rust · C++
 
 <p>
@@ -217,11 +278,14 @@ Android apps, built in Kotlin.
   <img src="https://img.shields.io/badge/-Blockbench-FF7F00?style=flat-square&logo=blender&logoColor=white" alt="Blockbench">
 </p>
 
----
+<br>
 
-## 🌐 Socials
+<a id="-socials"></a>
+<img src="assets/headers/socials.svg" alt="07 Socials" width="100%">
 
-<table>
+<br>
+
+<table align="center">
 <tr>
 <td align="center" width="25%"><a href="https://youtube.com/@PepeOnYoutube"><b>▶ YouTube</b></a><br><sub>@PepeOnYoutube</sub></td>
 <td align="center" width="25%"><a href="https://x.com/_pepeyt_"><b>𝕏 X</b></a><br><sub>@_pepeyt_</sub></td>
@@ -242,9 +306,12 @@ Android apps, built in Kotlin.
 </tr>
 </table>
 
----
+<br>
 
-## 📈 GitHub Stats
+<a id="-stats"></a>
+<img src="assets/headers/stats.svg" alt="08 Stats" width="100%">
+
+<br>
 
 <div align="center">
 
@@ -258,7 +325,7 @@ Android apps, built in Kotlin.
 
 </div>
 
----
+<br>
 
 <p align="center">
   <img src="https://komarev.com/ghpvc/?username=pepeongithub&color=489C49&style=flat-square" alt="Profile Views">

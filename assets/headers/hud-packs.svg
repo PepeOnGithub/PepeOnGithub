@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="110" viewBox="0 0 1200 110" role="img" aria-label="Hud Packs">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#074723"/>
+      <stop offset="0.7" stop-color="#216639"/>
+      <stop offset="1" stop-color="#1b5a33"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="110" rx="18" fill="url(#g)"/>
+  <rect x="0" y="0" width="10" height="110" rx="5" fill="#86D177"/>
+  <g stroke="#86D177" stroke-opacity="0.12">
+    <line x1="900" y1="0" x2="900" y2="110"/><line x1="948" y1="0" x2="948" y2="110"/><line x1="996" y1="0" x2="996" y2="110"/><line x1="1044" y1="0" x2="1044" y2="110"/><line x1="1092" y1="0" x2="1092" y2="110"/><line x1="1140" y1="0" x2="1140" y2="110"/>
+    <line x1="900" y1="48" x2="1200" y2="48"/><line x1="900" y1="0" x2="1200" y2="0"/>
+  </g>
+  <text x="50" y="44" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15" font-weight="700" letter-spacing="4" fill="#86D177">DROP-IN PACKS FOR THE BEDROCK HUD</text>
+  <text x="50" y="82" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="40" font-weight="800" letter-spacing="2" fill="#FFFFFF">HUD PACKS</text>
+  <rect x="1090" y="40" width="70" height="30" rx="15" fill="#489C49" fill-opacity="0.35" stroke="#86D177" stroke-opacity="0.6"/>
+  <text x="1125" y="61" text-anchor="middle" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#C9F5CF">03</text>
+</svg>
