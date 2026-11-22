@@ -186,7 +186,7 @@
     "anchor_to": "bottom_right",
     "controls": [
       {
-        "toolbar_background@crafting.toolbar_background": {
+        "toolbar_background@common.toolbar_background_image": {
           "size": [
             "100%sm + 8px",
             27

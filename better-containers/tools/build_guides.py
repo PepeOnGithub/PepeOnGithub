@@ -118,8 +118,9 @@ HOOK_SPECS = [
         ('enchanting_panel/root_panel/enchanting_screen_inventory', 'enchanting_guide', 'bc_enchanting_guide')]},
     {'file': 'anvil_screen.json', 'screen': None, 'placements': [
         ('anvil_panel/root_panel/anvil_screen_inventory', 'anvil_guide', 'bc_anvil_guide')]},
-    {'file': 'smithing_table_2_screen.json', 'screen': None, 'placements': [
-        ('smithing_table_panel/root_panel/smithing_table_screen_inventory', 'smithing_guide', 'bc_smithing_guide')]},
+    # smithing: the guide and management toggles live inside smithing/smithing_table.json (the vanilla
+    # root_panel is removed, so a path below it would never apply)
+    {'file': 'smithing_table_2_screen.json', 'screen': None, 'placements': []},
     *[{'file': f, 'screen': None, 'placements': [(path, f'{n}_info', f'bc_{n}_info')]}
       for n, (f, path) in INFO_PLACEMENTS.items()],
     {'file': 'chest_screen.json', 'screen': None, 'placements': [
@@ -194,7 +195,7 @@ def tabbed(ns, root, title_key, width, tabs, defaults=None):
             tab['ignored'] = hidden
         bar.append({f'{key}_tab_slot': tab})
         contents.append({f'{key}_panel': tab_panel(key, controls, hidden)})
-    root_panel = {'type': 'panel', 'size': [width, 'default'], 'layer': 2,
+    root_panel = {'type': 'stack_panel', 'orientation': 'vertical', 'size': [width, '100%c'], 'layer': 2, 'anchor_from': 'top_left', 'anchor_to': 'top_right', 'offset': [4, 0],
                   'controls': [
                       {'title_label': {'type': 'label', 'text': f'%{title_key}', 'size': ['100%', 12]}},
                       {'tab_bar': {'type': 'stack_panel', 'orientation': 'horizontal', 'size': ['100%', 16],
@@ -259,7 +260,7 @@ def enchanting(enchants):
                                'offset': [18, 11], 'font_size': 'small'}},
                {'level_label': {'type': 'label', 'text': '$level_text', 'size': [40, 10],
                                 'anchor_from': 'top_right', 'anchor_to': 'top_right', 'font_size': 'small'}}]}}
-    top['enchanting_guide'] = {'type': 'panel', 'size': [CELL * COLUMNS, 'default'], 'layer': 2, 'controls': [
+    top['enchanting_guide'] = {'type': 'stack_panel', 'orientation': 'vertical', 'size': [CELL * COLUMNS, '100%c'], 'layer': 2, 'anchor_from': 'top_left', 'anchor_to': 'top_right', 'offset': [4, 0], 'controls': [
         {'title_label': {'type': 'label', 'text': '%bc_enchanting_guide.title', 'size': ['100%', 12]}},
         {'scroll_view': {'type': 'scroll_view', 'size': ['100%', 120], 'controls': [
             {'scrolling_content': {'type': 'stack_panel', 'orientation': 'vertical', 'size': ['100%', 'default'],
@@ -293,7 +294,7 @@ def smithing():
 def chest():
     top = {'namespace': 'bc_chest_guide',
            'action_label': {'type': 'label', 'text': '$action_text', 'size': ['100%', 10], 'font_size': 'small'}}
-    top['chest_guide'] = {'type': 'panel', 'size': [60, 'default'], 'layer': 2, 'controls': [
+    top['chest_guide'] = {'type': 'stack_panel', 'orientation': 'vertical', 'size': [60, '100%c'], 'layer': 2, 'anchor_from': 'top_left', 'anchor_to': 'top_right', 'offset': [4, 0], 'controls': [
         {'title_label': {'type': 'label', 'text': '%bc_chest_guide.title', 'size': ['100%', 12]}},
         {'search_box@bc_shared.text_edit_control': {}},
         {'auto_place_all_label@bc_chest_guide.action_label': {'$action_text': '%bc_chest_guide.auto_place_all'}},
@@ -312,7 +313,7 @@ def info_guide(name, spec):
     return {
         'namespace': ns,
         'info_row': {'type': 'label', 'text': '$line_text', 'size': ['100%', 'default'], 'font_size': 'small'},
-        f'{name}_info': {'type': 'panel', 'size': [CELL * COLUMNS, 'default'], 'layer': 2, 'controls': [
+        f'{name}_info': {'type': 'stack_panel', 'orientation': 'vertical', 'size': [CELL * COLUMNS, '100%c'], 'layer': 2, 'anchor_from': 'top_left', 'anchor_to': 'top_right', 'offset': [4, 0], 'controls': [
             {'title_label': {'type': 'label', 'text': f'%{ns}.title', 'size': ['100%', 12]}},
             {'info_lines': {'type': 'stack_panel', 'orientation': 'vertical', 'size': ['100%', 'default'],
                             'controls': rows}}]},

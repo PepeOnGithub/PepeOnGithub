@@ -86,3 +86,9 @@ The items below are what still needs work, and why.
 3. **Templatize the smithing tab icons.** They differ only by their item variable. Merge them into one template with a parameter, then test.
 4. **Decide the armor arc merge.** Compare the two arcs' bindings in game before merging.
 5. **Add `pack_icon.png` and `min_engine_version`.**
+
+## Audit against the vanilla UI (data/wiki/audit.md)
+
+Fixed: every guide and info panel is now a vertical stack that anchors to the right of the hooked panel instead of covering the inventory; `toolbar_background` inherits the real vanilla template; an unused third-party layout toggle was removed from the brewing recipe book; the smithing guide and management toggles now sit inside the custom smithing screen (the old hook path sat under a removed panel and never applied).
+
+Open: the move/drop mode toggles read a global binding named `'#mode_' + $toggle_view_binding_name` that could not be checked against vanilla; phone (`*_pocket`) layouts get no guide; a 144-wide guide beside a 176-wide panel needs about GUI scale 4 or lower on a 1080p screen.

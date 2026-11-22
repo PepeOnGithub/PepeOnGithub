@@ -28,12 +28,19 @@
     "$tab_text": "%bc_smithing_guide.tab.resources"
   },
   "smithing_guide": {
-    "type": "panel",
+    "type": "stack_panel",
+    "orientation": "vertical",
     "size": [
       144,
-      "default"
+      "100%c"
     ],
     "layer": 2,
+    "anchor_from": "top_left",
+    "anchor_to": "top_right",
+    "offset": [
+      4,
+      0
+    ],
     "controls": [
       {
         "title_label": {

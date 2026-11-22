@@ -853,6 +853,14 @@
             },
             {
               "gamepad_cursor_button@common.gamepad_cursor_button": {}
+            },
+            {
+              "primary_elements@bc_management_toggles.primary_management_toggles": {
+                "$toggle_position": "right"
+              }
+            },
+            {
+              "smithing_guide@bc_smithing_guide.smithing_guide": {}
             }
           ]
         }
