@@ -451,6 +451,8 @@ def main():
     print('guides written:', ', '.join(guides))
     import translate_ui_labels  # re-apply translated short labels over the English placeholders
     translate_ui_labels.main()
+    import apply_translations  # re-apply stored long-text translations
+    apply_translations.main()
 
 
 if __name__ == '__main__':
