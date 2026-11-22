@@ -1,0 +1,1212 @@
+{
+  "namespace": "sp_smithing_table",
+  "item_picker_icon": {
+    "type": "panel",
+    "size": [
+      "100% - 4px",
+      "100% - 4px"
+    ],
+    "layer": 5,
+    "controls": [
+      {
+        "item_renderer@common.item_renderer": {
+          "size": [
+            16,
+            16
+          ],
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "$item_id|default": 0,
+          "$item_id_aux|default": 0,
+          "property_bag": {
+            "#item_id": "($item_id * 65536)",
+            "#full_item_id": "$item_id_aux"
+          },
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_property_name": "(#full_item_id + #item_id)",
+              "target_property_name": "#item_id_aux"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "item_picker_toggle@common_toggles.light_content_toggle": {
+    "$radio_toggle_group": true,
+    "$button_content": "sp_smithing_table.item_picker_icon",
+    "size": [
+      22,
+      22
+    ]
+  },
+  "toggle_row": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "size": [
+      "100%c",
+      22
+    ]
+  },
+  "item_picker_panel": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%c + 8px"
+    ],
+    "controls": [
+      {
+        "stack_panel": {
+          "type": "stack_panel",
+          "size": [
+            "100% - 4px",
+            "100%c"
+          ],
+          "$toggle_name": "toggle_group_01",
+          "controls": [
+            {
+              "toggle_row_2@sp_smithing_table.toggle_row": {
+                "controls": [
+                  {
+                    "item_picker_toggle_2@sp_smithing_table.item_picker_toggle": {
+                      "$item_id": "$leather_helmet_item_id",
+                      "$toggle_view_binding_name": "toggle_binding_03",
+                      "$toggle_group_forced_index": 0
+                    }
+                  },
+                  {
+                    "item_picker_toggle_3@sp_smithing_table.item_picker_toggle": {
+                      "$item_id": "$chainmail_helmet_item_id",
+                      "$toggle_view_binding_name": "eng_2",
+                      "$toggle_group_forced_index": 4
+                    }
+                  },
+                  {
+                    "item_picker_toggle_4@sp_smithing_table.item_picker_toggle": {
+                      "$item_id": "$iron_helmet_item_id",
+                      "$toggle_view_binding_name": "toggle_binding_04",
+                      "$toggle_group_forced_index": 8
+                    }
+                  },
+                  {
+                    "item_picker_toggle_5@sp_smithing_table.item_picker_toggle": {
+                      "$item_id": "$golden_helmet_item_id",
+                      "$toggle_view_binding_name": "toggle_binding_05",
+                      "$toggle_group_forced_index": 12
+                    }
+                  },
+                  {
+                    "item_picker_toggle_6@sp_smithing_table.item_picker_toggle": {
+                      "$item_id": "$diamond_helmet_item_id",
+                      "$toggle_view_binding_name": "toggle_binding_06",
+                      "$toggle_group_forced_index": 16
+                    }
+                  },
+                  {
+                    "item_picker_toggle_7@sp_smithing_table.item_picker_toggle": {
+                      "$item_id": "$netherite_helmet_item_id",
+                      "$toggle_view_binding_name": "toggle_binding_07",
+                      "$toggle_group_forced_index": 20
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "toggle_row_3@sp_smithing_table.toggle_row": {
+                "controls": [
+                  {
+                    "item_picker_toggle_8@sp_smithing_table.item_picker_toggle": {
+                      "$item_id": "$leather_chestplate_item_id",
+                      "$toggle_view_binding_name": "toggle_binding_08",
+                      "$toggle_group_forced_index": 1
+                    }
+                  },
+                  {
+                    "item_picker_toggle_9@sp_smithing_table.item_picker_toggle": {
+                      "$item_id": "$chainmail_chestplate_item_id",
+                      "$toggle_view_binding_name": "toggle_binding_09",
+                      "$toggle_group_forced_index": 5
+                    }
+                  },
+                  {
+                    "item_picker_toggle_10@sp_smithing_table.item_picker_toggle": {
+                      "$item_id": "$iron_chestplate_item_id",
+                      "$toggle_view_binding_name": "toggle_binding_10",
+                      "$toggle_group_forced_index": 9
+                    }
+                  },
+                  {
+                    "item_picker_toggle_11@sp_smithing_table.item_picker_toggle": {
+                      "$item_id": "$golden_chestplate_item_id",
+                      "$toggle_view_binding_name": "toggle_binding_11",
+                      "$toggle_group_forced_index": 13
+                    }
+                  },
+                  {
+                    "item_picker_toggle_12@sp_smithing_table.item_picker_toggle": {
+                      "$item_id": "$diamond_chestplate_item_id",
+                      "$toggle_view_binding_name": "toggle_binding_12",
+                      "$toggle_group_forced_index": 17
+                    }
+                  },
+                  {
+                    "item_picker_toggle_13@sp_smithing_table.item_picker_toggle": {
+                      "$item_id": "$netherite_chestplate_item_id",
+                      "$toggle_view_binding_name": "jtv_1",
+                      "$toggle_group_forced_index": 21
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "toggle_row_4@sp_smithing_table.toggle_row": {
+                "controls": [
+                  {
+                    "item_picker_toggle_14@sp_smithing_table.item_picker_toggle": {
+                      "$item_id": "$leather_leggings_item_id",
+                      "$toggle_view_binding_name": "toggle_binding_13",
+                      "$toggle_group_forced_index": 2
+                    }
+                  },
+                  {
+                    "item_picker_toggle_15@sp_smithing_table.item_picker_toggle": {
+                      "$item_id": "$chainmail_leggings_item_id",
+                      "$toggle_view_binding_name": "toggle_binding_14",
+                      "$toggle_group_forced_index": 6
+                    }
+                  },
+                  {
+                    "item_picker_toggle_16@sp_smithing_table.item_picker_toggle": {
+                      "$item_id": "$iron_leggings_item_id",
+                      "$toggle_view_binding_name": "toggle_binding_15",
+                      "$toggle_group_forced_index": 10
+                    }
+                  },
+                  {
+                    "item_picker_toggle_17@sp_smithing_table.item_picker_toggle": {
+                      "$item_id": "$golden_leggings_item_id",
+                      "$toggle_view_binding_name": "toggle_binding_16",
+                      "$toggle_group_forced_index": 14
+                    }
+                  },
+                  {
+                    "item_picker_toggle_18@sp_smithing_table.item_picker_toggle": {
+                      "$item_id": "$diamond_leggings_item_id",
+                      "$toggle_view_binding_name": "toggle_binding_17",
+                      "$toggle_group_forced_index": 18
+                    }
+                  },
+                  {
+                    "item_picker_toggle_19@sp_smithing_table.item_picker_toggle": {
+                      "$item_id": "$netherite_leggings_item_id",
+                      "$toggle_view_binding_name": "toggle_binding_18",
+                      "$toggle_group_forced_index": 22
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "toggle_row_5@sp_smithing_table.toggle_row": {
+                "controls": [
+                  {
+                    "item_picker_toggle_20@sp_smithing_table.item_picker_toggle": {
+                      "$item_id": "$leather_boots_item_id",
+                      "$toggle_view_binding_name": "toggle_binding_19",
+                      "$toggle_group_forced_index": 3
+                    }
+                  },
+                  {
+                    "item_picker_toggle_21@sp_smithing_table.item_picker_toggle": {
+                      "$item_id": "$chainmail_boots_item_id",
+                      "$toggle_view_binding_name": "toggle_binding_20",
+                      "$toggle_group_forced_index": 7
+                    }
+                  },
+                  {
+                    "item_picker_toggle_22@sp_smithing_table.item_picker_toggle": {
+                      "$item_id": "$iron_boots_item_id",
+                      "$toggle_view_binding_name": "toggle_binding_21",
+                      "$toggle_group_forced_index": 11
+                    }
+                  },
+                  {
+                    "item_picker_toggle_23@sp_smithing_table.item_picker_toggle": {
+                      "$item_id": "$golden_boots_item_id",
+                      "$toggle_view_binding_name": "toggle_binding_22",
+                      "$toggle_group_forced_index": 15
+                    }
+                  },
+                  {
+                    "item_picker_toggle_24@sp_smithing_table.item_picker_toggle": {
+                      "$item_id": "$diamond_boots_item_id",
+                      "$toggle_view_binding_name": "toggle_binding_23",
+                      "$toggle_group_forced_index": 19
+                    }
+                  },
+                  {
+                    "item_picker_toggle_25@sp_smithing_table.item_picker_toggle": {
+                      "$item_id": "$netherite_boots_item_id",
+                      "$toggle_view_binding_name": "toggle_binding_24",
+                      "$toggle_group_forced_index": 23
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "toggle_row_6@sp_smithing_table.toggle_row": {
+                "controls": [
+                  {
+                    "item_picker_toggle_26@sp_smithing_table.item_picker_toggle": {
+                      "$item_id": "$turtle_shell_item_id",
+                      "$toggle_view_binding_name": "toggle_binding_25",
+                      "$toggle_group_forced_index": 24
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "tab_binding_01",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "stack_panel_2": {
+          "type": "stack_panel",
+          "size": [
+            "100% - 4px",
+            "100%c"
+          ],
+          "$toggle_name": "toggle_group_02",
+          "controls": [
+            {
+              "toggle_row_7@sp_smithing_table.toggle_row": {
+                "controls": [
+                  {
+                    "item_picker_toggle_27@sp_smithing_table.item_picker_toggle": {
+                      "$item_id": "$netherite_upgrade_item_id",
+                      "$toggle_view_binding_name": "toggle_binding_26",
+                      "$toggle_group_forced_index": 1235
+                    }
+                  },
+                  {
+                    "item_picker_toggle_28@sp_smithing_table.item_picker_toggle": {
+                      "$item_id": "$sentry_trim_item_id",
+                      "$toggle_view_binding_name": "toggle_binding_27",
+                      "$toggle_group_forced_index": 0
+                    }
+                  },
+                  {
+                    "item_picker_toggle_29@sp_smithing_table.item_picker_toggle": {
+                      "$item_id": "$vex_trim_item_id",
+                      "$toggle_view_binding_name": "toggle_binding_28",
+                      "$toggle_group_forced_index": 1
+                    }
+                  },
+                  {
+                    "item_picker_toggle_30@sp_smithing_table.item_picker_toggle": {
+                      "$item_id": "$wild_trim_item_id",
+                      "$toggle_view_binding_name": "toggle_binding_29",
+                      "$toggle_group_forced_index": 2
+                    }
+                  },
+                  {
+                    "item_picker_toggle_31@sp_smithing_table.item_picker_toggle": {
+                      "$item_id": "$coast_trim_item_id",
+                      "$toggle_view_binding_name": "toggle_binding_30",
+                      "$toggle_group_forced_index": 3
+                    }
+                  },
+                  {
+                    "item_picker_toggle_32@sp_smithing_table.item_picker_toggle": {
+                      "$item_id": "$dune_trim_item_id",
+                      "$toggle_view_binding_name": "toggle_binding_31",
+                      "$toggle_group_forced_index": 4
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "toggle_row_8@sp_smithing_table.toggle_row": {
+                "controls": [
+                  {
+                    "item_picker_toggle_33@sp_smithing_table.item_picker_toggle": {
+                      "$item_id": "$wayfinder_trim_item_id",
+                      "$toggle_view_binding_name": "toggle_binding_32",
+                      "$toggle_group_forced_index": 5
+                    }
+                  },
+                  {
+                    "item_picker_toggle_34@sp_smithing_table.item_picker_toggle": {
+                      "$item_id": "$shaper_trim_item_id",
+                      "$toggle_view_binding_name": "toggle_binding_33",
+                      "$toggle_group_forced_index": 6
+                    }
+                  },
+                  {
+                    "item_picker_toggle_35@sp_smithing_table.item_picker_toggle": {
+                      "$item_id": "$raiser_trim_item_id",
+                      "$toggle_view_binding_name": "toggle_binding_34",
+                      "$toggle_group_forced_index": 7
+                    }
+                  },
+                  {
+                    "item_picker_toggle_36@sp_smithing_table.item_picker_toggle": {
+                      "$item_id": "$host_trim_item_id",
+                      "$toggle_view_binding_name": "toggle_binding_35",
+                      "$toggle_group_forced_index": 8
+                    }
+                  },
+                  {
+                    "item_picker_toggle_37@sp_smithing_table.item_picker_toggle": {
+                      "$item_id": "$ward_trim_item_id",
+                      "$toggle_view_binding_name": "toggle_binding_36",
+                      "$toggle_group_forced_index": 9
+                    }
+                  },
+                  {
+                    "item_picker_toggle_38@sp_smithing_table.item_picker_toggle": {
+                      "$item_id": "$silence_trim_item_id",
+                      "$toggle_view_binding_name": "toggle_binding_37",
+                      "$toggle_group_forced_index": 10
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "toggle_row_9@sp_smithing_table.toggle_row": {
+                "controls": [
+                  {
+                    "item_picker_toggle_39@sp_smithing_table.item_picker_toggle": {
+                      "$item_id": "$tide_trim_item_id",
+                      "$toggle_view_binding_name": "ilm_4",
+                      "$toggle_group_forced_index": 11
+                    }
+                  },
+                  {
+                    "item_picker_toggle_40@sp_smithing_table.item_picker_toggle": {
+                      "$item_id": "$snout_trim_item_id",
+                      "$toggle_view_binding_name": "toggle_binding_38",
+                      "$toggle_group_forced_index": 12
+                    }
+                  },
+                  {
+                    "item_picker_toggle_41@sp_smithing_table.item_picker_toggle": {
+                      "$item_id": "$rib_trim_item_id",
+                      "$toggle_view_binding_name": "toggle_binding_39",
+                      "$toggle_group_forced_index": 13
+                    }
+                  },
+                  {
+                    "wkb_51@sp_smithing_table.item_picker_toggle": {
+                      "$item_id": "$eye_trim_item_id",
+                      "$toggle_view_binding_name": "toggle_binding_40",
+                      "$toggle_group_forced_index": 14
+                    }
+                  },
+                  {
+                    "item_picker_toggle_42@sp_smithing_table.item_picker_toggle": {
+                      "$item_id": "$spire_trim_item_id",
+                      "$toggle_view_binding_name": "toggle_binding_41",
+                      "$toggle_group_forced_index": 15
+                    }
+                  },
+                  {
+                    "item_picker_toggle_43@sp_smithing_table.item_picker_toggle": {
+                      "$item_id": "$flow_trim_item_id",
+                      "$toggle_view_binding_name": "toggle_binding_42",
+                      "$toggle_group_forced_index": 16
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "toggle_row_10@sp_smithing_table.toggle_row": {
+                "controls": [
+                  {
+                    "item_picker_toggle_44@sp_smithing_table.item_picker_toggle": {
+                      "$item_id": "$bolt_trim_item_id",
+                      "$toggle_view_binding_name": "ojk_43",
+                      "$toggle_group_forced_index": 17
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "tab_binding_02",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "gny_5": {
+          "type": "stack_panel",
+          "size": [
+            "100% - 4px",
+            "100%c"
+          ],
+          "$toggle_name": "saa_4",
+          "controls": [
+            {
+              "toggle_row_11@sp_smithing_table.toggle_row": {
+                "controls": [
+                  {
+                    "item_picker_toggle_45@sp_smithing_table.item_picker_toggle": {
+                      "$item_id": "$amethyst_shard_item_id",
+                      "$toggle_view_binding_name": "toggle_binding_43",
+                      "$toggle_group_forced_index": 0
+                    }
+                  },
+                  {
+                    "item_picker_toggle_46@sp_smithing_table.item_picker_toggle": {
+                      "$item_id": "$copper_ingot_item_id",
+                      "$toggle_view_binding_name": "toggle_binding_44",
+                      "$toggle_group_forced_index": 1
+                    }
+                  },
+                  {
+                    "item_picker_toggle_47@sp_smithing_table.item_picker_toggle": {
+                      "$item_id": "$diamond_item_id",
+                      "$toggle_view_binding_name": "toggle_binding_45",
+                      "$toggle_group_forced_index": 2
+                    }
+                  },
+                  {
+                    "item_picker_toggle_48@sp_smithing_table.item_picker_toggle": {
+                      "$item_id": "$emerald_item_id",
+                      "$toggle_view_binding_name": "toggle_binding_46",
+                      "$toggle_group_forced_index": 3
+                    }
+                  },
+                  {
+                    "item_picker_toggle_49@sp_smithing_table.item_picker_toggle": {
+                      "$item_id": "$gold_ingot_item_id",
+                      "$toggle_view_binding_name": "toggle_binding_47",
+                      "$toggle_group_forced_index": 4
+                    }
+                  },
+                  {
+                    "item_picker_toggle_50@sp_smithing_table.item_picker_toggle": {
+                      "$item_id": "$iron_ingot_item_id",
+                      "$toggle_view_binding_name": "toggle_binding_48",
+                      "$toggle_group_forced_index": 5
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "toggle_row_12@sp_smithing_table.toggle_row": {
+                "controls": [
+                  {
+                    "item_picker_toggle_51@sp_smithing_table.item_picker_toggle": {
+                      "$item_id": "$lapis_lazuli_item_id",
+                      "$toggle_view_binding_name": "toggle_binding_49",
+                      "$toggle_group_forced_index": 6
+                    }
+                  },
+                  {
+                    "item_picker_toggle_52@sp_smithing_table.item_picker_toggle": {
+                      "$item_id": "$nether_quartz_item_id",
+                      "$toggle_view_binding_name": "toggle_binding_50",
+                      "$toggle_group_forced_index": 7
+                    }
+                  },
+                  {
+                    "item_picker_toggle_53@sp_smithing_table.item_picker_toggle": {
+                      "$item_id": "$netherite_ingot_item_id",
+                      "$toggle_view_binding_name": "toggle_binding_51",
+                      "$toggle_group_forced_index": 8
+                    }
+                  },
+                  {
+                    "item_picker_toggle_54@sp_smithing_table.item_picker_toggle": {
+                      "$item_id": "$redstone_dust_item_id",
+                      "$toggle_view_binding_name": "toggle_binding_52",
+                      "$toggle_group_forced_index": 9
+                    }
+                  },
+                  {
+                    "item_picker_toggle_55@sp_smithing_table.item_picker_toggle": {
+                      "$item_id": "$resin_brick_item_id",
+                      "$toggle_view_binding_name": "toggle_binding_53",
+                      "$toggle_group_forced_index": 10
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "tab_binding_03",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "armor_tab_icon@crafting.item_renderer": {
+    "layer": 3,
+    "property_bag": {
+      "#item_id_aux": "($armor_items_tab_item_id * 65536)"
+    }
+  },
+  "template_tab_icon@crafting.item_renderer": {
+    "layer": 3,
+    "property_bag": {
+      "#item_id_aux": "($smithing_template_tab_item_id * 65536)"
+    }
+  },
+  "mineral_tab_icon@crafting.item_renderer": {
+    "layer": 3,
+    "property_bag": {
+      "#item_id_aux": "($mineral_items_tab_item_id * 65536)"
+    }
+  },
+  "smithing_tabs": {
+    "$toggle_name": "toggle_group_03",
+    "$toggle_group_default_selected": 0,
+    "controls": [
+      {
+        "ozb_3@sp_navigation.tab_left_button": {
+          "$is_top_most_tab": true,
+          "$tab_view_binding_name": "tab_binding_01",
+          "$tab_icon": "sp_smithing_table.armor_tab_icon",
+          "$toggle_group_forced_index": 0,
+          "$toggle_default_state": true
+        }
+      },
+      {
+        "tab_left_button@sp_navigation.tab_left_button": {
+          "$tab_view_binding_name": "tab_binding_02",
+          "$tab_icon": "sp_smithing_table.template_tab_icon",
+          "$toggle_group_forced_index": 1
+        }
+      },
+      {
+        "tab_left_button_2@sp_navigation.tab_left_button": {
+          "$tab_view_binding_name": "tab_binding_03",
+          "$tab_icon": "sp_smithing_table.mineral_tab_icon",
+          "$toggle_group_forced_index": 2
+        }
+      }
+    ]
+  },
+  "tab_text_stack": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "size": [
+      "100%",
+      "100%cm"
+    ],
+    "controls": [
+      {
+        "panel": {
+          "type": "panel",
+          "size": [
+            "fill",
+            10
+          ],
+          "controls": [
+            {
+              "title_label@sp_navigation.title_label": {
+                "text": "Armor Items",
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "tab_binding_01",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "title_label_2@sp_navigation.title_label": {
+                "text": "Smithing Template Items",
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "tab_binding_02",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "title_label_3@sp_navigation.title_label": {
+                "text": "Mineral Items",
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "tab_binding_03",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "armor_arc_group": {
+    "type": "panel",
+    "size": [
+      "100% - 14px",
+      "100% - 14px"
+    ],
+    "layer": 2,
+    "controls": [
+      {
+        "arc_secondary@sp_armor_arc.arc_secondary": {
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "panel_4",
+              "source_property_name": "(not (#armor_item_id = 0))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "arc_primary@sp_armor_arc.arc_primary": {
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "panel_4",
+              "source_property_name": "(#armor_item_id = 0)",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "arc_slider@sp_armor_arc.arc_slider": {}
+      }
+    ]
+  },
+  "armor_preview_button@crafting.item_renderer": {
+    "size": [
+      14,
+      14
+    ],
+    "layer": 3,
+    "property_bag": {
+      "#item_id_aux": "($armor_preview_button_item_id * 65536)"
+    }
+  },
+  "smithing_table_screen": {
+    "type": "stack_panel",
+    "size": [
+      "100%c",
+      "100%cm"
+    ],
+    "orientation": "horizontal",
+    "controls": [
+      {
+        "tabbed_text_screen@sp_navigation.tabbed_text_screen": {
+          "$navigation_tabs": "sp_smithing_table.smithing_tabs",
+          "$tab_text_panel": "sp_smithing_table.tab_text_stack",
+          "$scroll_content": "sp_smithing_table.item_picker_panel",
+          "size": [
+            150,
+            "100%sm"
+          ],
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "toggle_binding_01",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "title_bar@sp_navigation.title_bar": {
+          "size": [
+            4,
+            166
+          ],
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "toggle_binding_01",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "root_panel@common.root_panel": {
+          "layer": 1,
+          "controls": [
+            {
+              "tab_toolbar@sp_navigation.tab_toolbar": {
+                "layer": 0
+              }
+            },
+            {
+              "common_panel@common.common_panel": {
+                "$show_close_button": false
+              }
+            },
+            {
+              "light_content_toggle@common_toggles.light_content_toggle": {
+                "$toggle_name": "toggle_group_04",
+                "$toggle_view_binding_name": "toggle_binding_54",
+                "$button_content": "sp_smithing_table.armor_preview_button",
+                "$hover_texture": "textures/ui/button_borderless_light",
+                "$pressed_no_hover_texture": "textures/ui/button_borderless_light",
+                "$hover_checked_texture_color": "$2_color_format",
+                "size": [
+                  20,
+                  20
+                ],
+                "anchor_from": "top_right",
+                "anchor_to": "top_right",
+                "offset": [
+                  -6.5,
+                  6.5
+                ],
+                "layer": 4
+              }
+            },
+            {
+              "panel_2": {
+                "type": "panel",
+                "layer": 2,
+                "controls": [
+                  {
+                    "armor_arc_group_2@sp_smithing_table.armor_arc_group": {}
+                  }
+                ],
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "toggle_binding_54",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "panel_3": {
+                "type": "panel",
+                "layer": 2,
+                "controls": [
+                  {
+                    "top_half_panel@smithing_table_2.top_half_panel": {}
+                  },
+                  {
+                    "inventory_panel_bottom_half_with_label@common.inventory_panel_bottom_half_with_label": {}
+                  },
+                  {
+                    "hotbar_grid_template@common.hotbar_grid_template": {}
+                  },
+                  {
+                    "inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {}
+                  }
+                ],
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "toggle_binding_54",
+                    "source_property_name": "(not #toggle_state)",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "inventory_selected_icon_button@common.inventory_selected_icon_button": {}
+            },
+            {
+              "gamepad_cursor_button@common.gamepad_cursor_button": {}
+            }
+          ]
+        }
+      },
+      {
+        "panel_4": {
+          "type": "panel",
+          "size": [
+            0,
+            0
+          ],
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "toggle_binding_03",
+              "source_property_name": "(#toggle_state * $leather_helmet_item_id)",
+              "target_property_name": "#leather_helmet_item_id"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "toggle_binding_08",
+              "source_property_name": "(#toggle_state * $leather_chestplate_item_id)",
+              "target_property_name": "#leather_chestplate_item_id"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "toggle_binding_13",
+              "source_property_name": "(#toggle_state * $leather_leggings_item_id)",
+              "target_property_name": "#leather_leggings_item_id"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "toggle_binding_19",
+              "source_property_name": "(#toggle_state * $leather_boots_item_id)",
+              "target_property_name": "#leather_boots_item_id"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "eng_2",
+              "source_property_name": "(#toggle_state * $chainmail_helmet_item_id)",
+              "target_property_name": "#chainmail_helmet_item_id"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "toggle_binding_09",
+              "source_property_name": "(#toggle_state * $chainmail_chestplate_item_id)",
+              "target_property_name": "#chainmail_chestplate_item_id"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "toggle_binding_14",
+              "source_property_name": "(#toggle_state * $chainmail_leggings_item_id)",
+              "target_property_name": "#chainmail_leggings_item_id"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "toggle_binding_20",
+              "source_property_name": "(#toggle_state * $chainmail_boots_item_id)",
+              "target_property_name": "#chainmail_boots_item_id"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "toggle_binding_04",
+              "source_property_name": "(#toggle_state * $iron_helmet_item_id)",
+              "target_property_name": "#iron_helmet_item_id"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "toggle_binding_10",
+              "source_property_name": "(#toggle_state * $iron_chestplate_item_id)",
+              "target_property_name": "#iron_chestplate_item_id"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "toggle_binding_15",
+              "source_property_name": "(#toggle_state * $iron_leggings_item_id)",
+              "target_property_name": "#iron_leggings_item_id"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "toggle_binding_21",
+              "source_property_name": "(#toggle_state * $iron_boots_item_id)",
+              "target_property_name": "#iron_boots_item_id"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "toggle_binding_05",
+              "source_property_name": "(#toggle_state * $golden_helmet_item_id)",
+              "target_property_name": "#golden_helmet_item_id"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "toggle_binding_11",
+              "source_property_name": "(#toggle_state * $golden_chestplate_item_id)",
+              "target_property_name": "#golden_chestplate_item_id"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "toggle_binding_16",
+              "source_property_name": "(#toggle_state * $golden_leggings_item_id)",
+              "target_property_name": "#golden_leggings_item_id"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "toggle_binding_22",
+              "source_property_name": "(#toggle_state * $golden_boots_item_id)",
+              "target_property_name": "#golden_boots_item_id"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "toggle_binding_06",
+              "source_property_name": "(#toggle_state * $diamond_helmet_item_id)",
+              "target_property_name": "#diamond_helmet_item_id"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "toggle_binding_12",
+              "source_property_name": "(#toggle_state * $diamond_chestplate_item_id)",
+              "target_property_name": "#diamond_chestplate_item_id"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "toggle_binding_17",
+              "source_property_name": "(#toggle_state * $diamond_leggings_item_id)",
+              "target_property_name": "#diamond_leggings_item_id"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "toggle_binding_23",
+              "source_property_name": "(#toggle_state * $diamond_boots_item_id)",
+              "target_property_name": "#diamond_boots_item_id"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "toggle_binding_07",
+              "source_property_name": "(#toggle_state * $netherite_helmet_item_id)",
+              "target_property_name": "#netherite_helmet_item_id"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "jtv_1",
+              "source_property_name": "(#toggle_state * $netherite_chestplate_item_id)",
+              "target_property_name": "#netherite_chestplate_item_id"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "toggle_binding_18",
+              "source_property_name": "(#toggle_state * $netherite_leggings_item_id)",
+              "target_property_name": "#netherite_leggings_item_id"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "toggle_binding_24",
+              "source_property_name": "(#toggle_state * $netherite_boots_item_id)",
+              "target_property_name": "#netherite_boots_item_id"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "toggle_binding_25",
+              "source_property_name": "(#toggle_state * $turtle_shell_item_id)",
+              "target_property_name": "#turtle_shell_item_id"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(#leather_helmet_item_id + #leather_chestplate_item_id + #leather_leggings_item_id + #leather_boots_item_id + #chainmail_helmet_item_id + #chainmail_chestplate_item_id + #chainmail_leggings_item_id + #chainmail_boots_item_id + #iron_helmet_item_id + #iron_chestplate_item_id + #iron_leggings_item_id + #iron_boots_item_id + #golden_helmet_item_id + #golden_chestplate_item_id + #golden_leggings_item_id + #golden_boots_item_id + #diamond_helmet_item_id + #diamond_chestplate_item_id + #diamond_leggings_item_id + #diamond_boots_item_id + #netherite_helmet_item_id + #netherite_chestplate_item_id + #netherite_leggings_item_id + #netherite_boots_item_id + #turtle_shell_item_id)",
+              "target_property_name": "#armor_item_id"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "toggle_binding_27",
+              "source_property_name": "(('%.' + (#toggle_state * 50) + 's') * 'sentry')",
+              "target_property_name": "#sentry_trim_item"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "toggle_binding_28",
+              "source_property_name": "(('%.' + (#toggle_state * 50) + 's') * 'vex')",
+              "target_property_name": "#vex_trim_item"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "toggle_binding_29",
+              "source_property_name": "(('%.' + (#toggle_state * 50) + 's') * 'wild')",
+              "target_property_name": "#wild_trim_item"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "toggle_binding_30",
+              "source_property_name": "(('%.' + (#toggle_state * 50) + 's') * 'coast')",
+              "target_property_name": "#coast_trim_item"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "toggle_binding_31",
+              "source_property_name": "(('%.' + (#toggle_state * 50) + 's') * 'dune')",
+              "target_property_name": "#dune_trim_item"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "toggle_binding_32",
+              "source_property_name": "(('%.' + (#toggle_state * 50) + 's') * 'wayfinder')",
+              "target_property_name": "#wayfinder_trim_item"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "toggle_binding_33",
+              "source_property_name": "(('%.' + (#toggle_state * 50) + 's') * 'shaper')",
+              "target_property_name": "#shaper_trim_item"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "toggle_binding_34",
+              "source_property_name": "(('%.' + (#toggle_state * 50) + 's') * 'raiser')",
+              "target_property_name": "#raiser_trim_item"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "toggle_binding_35",
+              "source_property_name": "(('%.' + (#toggle_state * 50) + 's') * 'host')",
+              "target_property_name": "#host_trim_item"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "toggle_binding_36",
+              "source_property_name": "(('%.' + (#toggle_state * 50) + 's') * 'ward')",
+              "target_property_name": "#ward_trim_item"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "toggle_binding_37",
+              "source_property_name": "(('%.' + (#toggle_state * 50) + 's') * 'silence')",
+              "target_property_name": "#silence_trim_item"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "ilm_4",
+              "source_property_name": "(('%.' + (#toggle_state * 50) + 's') * 'tide')",
+              "target_property_name": "#tide_trim_item"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "toggle_binding_38",
+              "source_property_name": "(('%.' + (#toggle_state * 50) + 's') * 'snout')",
+              "target_property_name": "#snout_trim_item"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "toggle_binding_39",
+              "source_property_name": "(('%.' + (#toggle_state * 50) + 's') * 'rib')",
+              "target_property_name": "#rib_trim_item"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "toggle_binding_40",
+              "source_property_name": "(('%.' + (#toggle_state * 50) + 's') * 'eye')",
+              "target_property_name": "#eye_trim_item"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "toggle_binding_41",
+              "source_property_name": "(('%.' + (#toggle_state * 50) + 's') * 'spire')",
+              "target_property_name": "#spire_trim_item"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "toggle_binding_42",
+              "source_property_name": "(('%.' + (#toggle_state * 50) + 's') * 'flow')",
+              "target_property_name": "#flow_trim_item"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "ojk_43",
+              "source_property_name": "(('%.' + (#toggle_state * 50) + 's') * 'bolt')",
+              "target_property_name": "#bolt_trim_item"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(#sentry_trim_item + #vex_trim_item + #wild_trim_item + #coast_trim_item + #dune_trim_item + #wayfinder_trim_item + #shaper_trim_item + #raiser_trim_item + #host_trim_item + #ward_trim_item + #silence_trim_item + #tide_trim_item + #snout_trim_item + #rib_trim_item + #eye_trim_item + #spire_trim_item + #flow_trim_item + #bolt_trim_item)",
+              "target_property_name": "#smithing_template_item_id"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "toggle_binding_43",
+              "source_property_name": "(('%.' + (#toggle_state * 50) + 's') * 'amethyst')",
+              "target_property_name": "#amethyst_shard_item"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "toggle_binding_44",
+              "source_property_name": "(('%.' + (#toggle_state * 50) + 's') * 'copper')",
+              "target_property_name": "#copper_ingot_item"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "toggle_binding_45",
+              "source_property_name": "(('%.' + (#toggle_state * 50) + 's') * 'diamond')",
+              "target_property_name": "#diamond_item"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "toggle_binding_46",
+              "source_property_name": "(('%.' + (#toggle_state * 50) + 's') * 'emerald')",
+              "target_property_name": "#emerald_item"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "toggle_binding_47",
+              "source_property_name": "(('%.' + (#toggle_state * 50) + 's') * 'gold')",
+              "target_property_name": "#gold_ingot_item"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "toggle_binding_48",
+              "source_property_name": "(('%.' + (#toggle_state * 50) + 's') * 'iron')",
+              "target_property_name": "#iron_ingot_item"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "toggle_binding_49",
+              "source_property_name": "(('%.' + (#toggle_state * 50) + 's') * 'lapis')",
+              "target_property_name": "#lapis_lazuli_item"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "toggle_binding_50",
+              "source_property_name": "(('%.' + (#toggle_state * 50) + 's') * 'quartz')",
+              "target_property_name": "#nether_quartz_item"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "toggle_binding_51",
+              "source_property_name": "(('%.' + (#toggle_state * 50) + 's') * 'netherite')",
+              "target_property_name": "#netherite_ingot_item"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "toggle_binding_52",
+              "source_property_name": "(('%.' + (#toggle_state * 50) + 's') * 'redstone')",
+              "target_property_name": "#redstone_dust_item"
+            },
+            {
+              "binding_type": "view",
+              "source_control_name": "toggle_binding_53",
+              "source_property_name": "(('%.' + (#toggle_state * 50) + 's') * 'resin')",
+              "target_property_name": "#resin_brick_item"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(#amethyst_shard_item + #copper_ingot_item + #diamond_item + #emerald_item + #gold_ingot_item + #iron_ingot_item + #lapis_lazuli_item + #nether_quartz_item + #netherite_ingot_item + #redstone_dust_item + #resin_brick_item)",
+              "target_property_name": "#mineral_item_id"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

@@ -21,7 +21,7 @@
               ],
               "controls": [
                 {
-                  "recipe_book_panel@brewing_recipe_book.recipe_book": {}
+                  "recipe_book_panel@sp_brewing_recipe_book.recipe_book": {}
                 },
                 {
                   "brewing_inventory_half@common.root_panel": {
@@ -36,7 +36,7 @@
                           "layer": 5,
                           "controls": [
                             {
-                              "layout_toggle@brewing_recipe_book.layout_toggle": {}
+                              "layout_toggle@sp_brewing_recipe_book.layout_toggle": {}
                             },
                             {
                               "brewing_panel_top_half@brewing_stand.brewing_panel_top_half": {}
@@ -89,7 +89,7 @@
             ],
             "controls": [
               {
-                "primary_elements@toggle_manager.primary_management_toggles": {
+                "primary_elements@sp_management_toggles.primary_management_toggles": {
                   "$toggle_position": "right"
                 }
               }

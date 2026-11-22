@@ -6,7 +6,7 @@
         "operation": "insert_front",
         "value": [
           {
-            "elements@_global.redstone_content": {}
+            "elements@sp_shared.redstone_content": {}
           }
         ]
       }
@@ -19,7 +19,7 @@
         "operation": "insert_front",
         "value": [
           {
-            "elements@_global.redstone_content": {}
+            "elements@sp_shared.redstone_content": {}
           }
         ]
       }

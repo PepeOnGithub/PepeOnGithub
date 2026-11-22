@@ -8,7 +8,7 @@
         "array_name": "controls",
         "operation": "insert_front",
         "value": {
-          "container_elements@single_chest_content.container_elements": {}
+          "container_elements@sp_chest_single.container_elements": {}
         }
       }
     ]
@@ -19,7 +19,7 @@
         "array_name": "controls",
         "operation": "insert_front",
         "value": {
-          "container_elements@double_chest_content.container_elements": {}
+          "container_elements@sp_chest_double.container_elements": {}
         }
       }
     ]

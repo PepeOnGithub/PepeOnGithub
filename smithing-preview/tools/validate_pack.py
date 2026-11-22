@@ -19,6 +19,13 @@ import re
 import sys
 
 ERRORS, WARNINGS = [], []
+# Files that are intentionally kept as uploaded (not reformatted); duplicates there are known.
+KNOWN_DUPLICATE_FILES = {'ui/smithing_preview/compat/legacy_container_item.json'}
+# Old namespace names that no longer exist. Vanilla-looking names (_global, uic, smithing) are excluded.
+RETIRED_NAMESPACES = {'single_chest_content', 'double_chest_content', 'item_data', 'toggle_manager',
+                      'brewing_global', 'factory_bindings', 'brewing_toggle', 'brewing_potion_slot',
+                      'modifier_brewing_potion_slot', 'brewing_recipe_book', 'brewing_recipe_book_grid',
+                      'smithing_arc', 'bd-h1', 'f-ez18', 'es1e-'}
 VANILLA_TEX = set()
 UNRESOLVED = set()
 
@@ -83,7 +90,7 @@ def main(root):
     else:
         ERRORS.append('ui/_ui_defs.json is missing')
     for f in sorted(docs):
-        if f.startswith('ui/pepe/') and f not in listed:
+        if f.startswith('ui/smithing_preview/') and f not in listed:
             WARNINGS.append(f'not listed in _ui_defs: {f}')
 
     # 3. textures referenced by path
@@ -95,7 +102,7 @@ def main(root):
         base = os.path.join(root, ref)
         if os.path.exists(base) or os.path.exists(base + '.png') or os.path.exists(base + '.tga'):
             continue
-        if ref.startswith('textures/ui/') and not ref.startswith('textures/ui/pepe/') and not ref.startswith('textures/ui/ashur/'):
+        if ref.startswith('textures/ui/'):
             VANILLA_TEX.add(ref)
         else:
             ERRORS.append(f'{f}: texture not found: {ref}')
@@ -129,6 +136,33 @@ def main(root):
             if key not in ref_keys:
                 ERRORS.append(f'{f}: lang key %{key} is not defined in texts/en_US.lang')
 
+    # 4c. duplicate keys inside one object silently drop a value in JSON parsers
+    dup_hits = []
+    for p in glob.glob(os.path.join(root, '**', '*.json'), recursive=True):
+        with open(p, encoding='utf-8') as f:
+            text = strip_comments(f.read())
+        def hook(pairs, _f=rel(p)):
+            keys = [k for k, _ in pairs]
+            seen = {k for k in keys if keys.count(k) > 1}
+            if seen:
+                dup_hits.append((_f, sorted(seen)))
+            return dict(pairs)
+        try:
+            json.loads(text, object_pairs_hook=hook)
+        except ValueError:
+            pass
+    for f, keys in dup_hits:
+        if f in KNOWN_DUPLICATE_FILES:
+            WARNINGS.append(f'{f}: duplicate key(s) {keys} (known, see docs/21)')
+        else:
+            ERRORS.append(f'{f}: duplicate key(s) {keys}')
+
+    # 4d. references to namespaces that were renamed away (names unlikely to be vanilla)
+    for f, doc in docs.items():
+        for ns in set(re.findall(r'"[^"@]*@?([A-Za-z0-9_\-]+)\.[A-Za-z0-9_\-]+', json.dumps(doc))):
+            if ns in RETIRED_NAMESPACES and ns not in namespaces:
+                ERRORS.append(f'{f}: references retired namespace "{ns}" (renamed; see docs/02)')
+
     # 5. "@" references into pack namespaces
     namespaces = {}
     for f, doc in docs.items():
@@ -149,6 +183,32 @@ def main(root):
         WARNINGS.append(f'{len(VANILLA_TEX)} vanilla texture path(s) not shipped in the pack, assumed present in vanilla (e.g. {sorted(VANILLA_TEX)[0]})')
     if UNRESOLVED:
         WARNINGS.append(f'{len(UNRESOLVED)} @-reference(s) not defined in the pack namespace; likely provided by a same-named vanilla namespace')
+    # 6. local control references (source_control_name / control_name) that match no key in the pack.
+    #    Some are vanilla controls or names built at runtime, so this is a warning with a count.
+    key_names = set()
+    for doc in docs.values():
+        def _walk(o):
+            if isinstance(o, dict):
+                for k, v in o.items():
+                    key_names.add(k.split('@')[0]); _walk(v)
+            elif isinstance(o, list):
+                for x in o: _walk(x)
+        _walk(doc)
+    local_refs = set()
+    for doc in docs.values():
+        def _refs(o):
+            if isinstance(o, dict):
+                for k, v in o.items():
+                    if k in ('source_control_name', 'control_name') and isinstance(v, str):
+                        local_refs.add(v)
+                    _refs(v)
+            elif isinstance(o, list):
+                for x in o: _refs(x)
+        _refs(doc)
+    unknown = [r for r in local_refs if r not in key_names and '/' not in r and not r.startswith('$') and "'" not in r]
+    if unknown:
+        WARNINGS.append(f'{len(unknown)} control reference(s) match no pack control (vanilla or built at runtime), e.g. {sorted(unknown)[0]}')
+
     print(f'Checked {len(docs)} JSON files, {len(texture_refs)} texture refs, {len(namespaces)} pack namespaces.')
     for w in WARNINGS:
         print('WARN ', w)

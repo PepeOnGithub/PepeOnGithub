@@ -1,52 +1,67 @@
 # Smithing Preview — JSON UI resource pack
 
-A Minecraft Bedrock resource pack that reworks the **smithing table**, **chest / double chest**,
-and **brewing stand** (with a brewing guide and recipe book) interfaces.
+A Minecraft Bedrock resource pack that restyles the **smithing table**, the **chest and double chest**, and the
+**brewing stand**, with a brewing guide and recipe book.
 
-This repository holds the pack source in `pack/`, the guides in `docs/`, and the
-tools in `tools/`.
+## Repository layout
 
 ```
 smithing-preview/
-├── pack/          ← resource pack source (this folder is what gets zipped)
-├── docs/          ← guides (start with docs/01-getting-started.md)
+├── pack/          resource pack source (the folder that gets zipped)
+│   ├── manifest.json
+│   ├── font/
+│   ├── texts/             translations (28 locales)
+│   ├── textures/smithing_preview/   every texture this pack adds, by type
+│   └── ui/
+│       ├── _global_variables.json, _ui_defs.json
+│       ├── <vanilla>_screen.json    vanilla hooks (names must match the game)
+│       └── smithing_preview/        everything this pack defines, by feature
+├── docs/          guides (start at 01)
 ├── tools/
-│   ├── validate_pack.py   checks JSON, references, textures, lang keys
+│   ├── validate_pack.py   checks JSON, references, textures, language keys
 │   └── build_mcpack.py    validates, then zips pack/ into dist/*.mcpack
-└── dist/          ← built .mcpack output (created by the build script)
+└── dist/          built packs (not committed)
 ```
 
 ## Quick start
 
 ```bash
-python3 tools/validate_pack.py pack          # must print "0 error(s)"
-python3 tools/build_mcpack.py                # writes dist/Smithing-Preview.mcpack
+python3 tools/validate_pack.py pack        # must report "0 error(s)"
+python3 tools/build_mcpack.py              # writes dist/Smithing-Preview.mcpack
 ```
 
-Then open the `.mcpack` on your device to import it, and enable it on a world.
+Import the `.mcpack` on your device, enable it under **Resource Packs** on a world, then test the smithing table,
+chests, the brewing stand, and the recipe book.
 
 ## Guides
 
-| # | Guide | What it covers |
-|---|-------|----------------|
-| 01 | [Getting started](docs/01-getting-started.md) | Install, build, test in game, where to start editing |
-| 02 | [Pack layout](docs/02-pack-layout.md) | Folder structure and the old → new file map |
-| 03 | [JSON UI concepts](docs/03-json-ui-concepts.md) | Namespaces, `@` inheritance, `$variables`, modifications, bindings |
-| 04 | [Smithing screen](docs/04-smithing-screen.md) | Smithing table panels, the armor arc, the namespace rename |
-| 05 | [Chests and containers](docs/05-chests-and-containers.md) | Chest layouts, overlays, collections, vanilla screen hooks |
-| 06 | [Toggles, item data and common](docs/06-toggles-item-data-common.md) | Toggle manager, item movement buttons, shared controls |
-| 07 | [Brewing guide](docs/07-brewing-guide.md) | Brewing stand panels, recipe book, factories and bindings |
-| 08 | [Variables and item IDs](docs/08-variables-and-item-ids.md) | `_global_variables.json`, item ID tables, brewing mappings |
-| 09 | [Textures, fonts and assets](docs/09-textures-fonts-assets.md) | Texture path rules, the `assets/` folder, the glyph font |
-| 10 | [Localization](docs/10-localization.md) | Lang files, key parity, adding a language |
-| 11 | [Validation and building](docs/11-validation-and-building.md) | What the validator checks and how to read its output |
-| 12 | [Troubleshooting](docs/12-troubleshooting.md) | Common problems and fixes |
-| 13 | [Known issues and roadmap](docs/13-known-issues-and-roadmap.md) | Open problems, what was not changed, next steps |
+| # | Guide | Covers |
+|---|---|---|
+| 01 | [Getting started](docs/01-getting-started.md) | Install, build, and the edit loop |
+| 02 | [Folder structure](docs/02-folder-structure.md) | Where every file and texture lives, and why |
+| 03 | [Naming conventions](docs/03-naming-conventions.md) | Namespaces, controls, variables, files, and textures |
+| 04 | [Migration map](docs/04-migration-map.md) | Every old name → new name, from the original upload |
+| 05 | [JSON UI concepts](docs/05-json-ui-concepts.md) | Namespaces, templates, variables, bindings, modifications |
+| 06 | [Template catalog](docs/06-template-catalog.md) | Main templates and a generated index of every control |
+| 07 | [Smithing table](docs/07-smithing-table.md) | The smithing screen, its hook, and its controls |
+| 08 | [Armor arc](docs/08-armor-arc.md) | The two arcs, their slots, and the slider |
+| 09 | [Chests](docs/09-chests.md) | Single and double chest layouts, overlays, and hooks |
+| 10 | [Shared controls](docs/10-shared-controls.md) | Buttons, toggles, tabs, move and drop buttons |
+| 11 | [Brewing guide overview](docs/11-brewing-guide-overview.md) | How the brewing guide is put together |
+| 12 | [Potions and factories](docs/12-brewing-factories-and-potions.md) | Potion factories, flags, and their bindings |
+| 13 | [Recipe book](docs/13-brewing-recipe-book.md) | Recipe book, grid, tabs, and layout |
+| 14 | [Variables and item IDs](docs/14-variables-and-item-ids.md) | `_global_variables.json` and how to add an item |
+| 15 | [Textures and fonts](docs/15-textures-and-fonts.md) | The texture tree, path rules, nine-slice, and fonts |
+| 16 | [Localization](docs/16-localization.md) | Language files, key parity, adding a language |
+| 17 | [Validation and building](docs/17-validation-and-building.md) | What the validator checks and how to read its output |
+| 18 | [How to add a potion](docs/18-how-to-add-a-potion.md) | Step-by-step checklist |
+| 19 | [How to hook a vanilla screen](docs/19-how-to-hook-a-vanilla-screen.md) | Vanilla hooks, with examples and the existing ones |
+| 20 | [Troubleshooting](docs/20-troubleshooting.md) | Common problems and fixes |
+| 21 | [Known issues and roadmap](docs/21-known-issues-and-roadmap.md) | What changed, what didn't, and next steps |
+| 22 | [Glossary](docs/22-glossary.md) | Definitions of the terms used in these guides |
 
 ## Status
 
-- The restructuring, namespace renames, and JSON formatting were checked with the validator
-  (0 errors). The validator can't run the game, so **in-game behavior still needs to be
-  tested** after each change.
-- The changes in this rework are meant to leave the UI's behavior the same. See
-  [13 — Known issues](docs/13-known-issues-and-roadmap.md) for what was deliberately left alone.
+- Verified by the validator: 0 errors. It checks structure and references, not visuals.
+- The renames preserve every reference. They have not yet been checked in Minecraft.
+  Start with [21 — Known issues](docs/21-known-issues-and-roadmap.md).

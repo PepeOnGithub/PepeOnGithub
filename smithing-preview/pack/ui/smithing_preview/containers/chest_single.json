@@ -1,0 +1,431 @@
+{
+  "namespace": "sp_chest_single",
+  "container_elements": {
+    "type": "panel",
+    "$row_index_offset|default": 0,
+    "$container_overlay_offset|default": [
+      0,
+      12
+    ],
+    "$container_slot_pressed_control|default": "sp_chest_single.default_cell_control",
+    "$container_slot_highlight_control|default": "sp_chest_single.row_highlight_control",
+    "$inventory_overlay_offset|default": [
+      0,
+      -35
+    ],
+    "$inventory_slot_pressed_control|default": "sp_chest_single.default_cell_control",
+    "$inventory_slot_highlight_control|default": "sp_chest_single.row_highlight_control",
+    "$hotbar_overlay_offset|default": [
+      0,
+      -14
+    ],
+    "$hotbar_slot_pressed_control|default": "sp_chest_single.default_cell_control",
+    "$hotbar_slot_highlight_control|default": "sp_chest_single.row_highlight_control",
+    "$search_field_hover_control|default": "common.edit_box_indent_hover",
+    "$search_field_default_control|default": "common.edit_box_indent",
+    "controls": [
+      {
+        "primary_elements@sp_management_toggles.primary_management_toggles": {
+          "$toggle_position": "left"
+        }
+      },
+      {
+        "right_elements@sp_management_toggles.right_row_toggles": {}
+      },
+      {
+        "chest_top_overlays@sp_chest_single.9x3_overlays": {
+          "$slot_pressed_control": "$container_slot_pressed_control",
+          "$slot_highlight_control": "$container_slot_highlight_control",
+          "offset": "$container_overlay_offset"
+        }
+      },
+      {
+        "inventory_overlay@sp_chest_single.9x3_overlays": {
+          "anchor_from": "bottom_left",
+          "anchor_to": "bottom_left",
+          "offset": "$inventory_overlay_offset",
+          "$slot_pressed_control": "$inventory_slot_pressed_control",
+          "$slot_highlight_control": "$inventory_slot_highlight_control",
+          "size": [
+            162,
+            54
+          ],
+          "$item_collection_name": "inventory_items"
+        }
+      },
+      {
+        "hotbar_overlay@sp_chest_single.9x1_overlays": {
+          "anchor_from": "bottom_left",
+          "anchor_to": "bottom_left",
+          "$slot_pressed_control": "$hotbar_slot_pressed_control",
+          "$slot_highlight_control": "$hotbar_slot_highlight_control",
+          "offset": "$hotbar_overlay_offset",
+          "size": [
+            162,
+            18
+          ]
+        }
+      },
+      {
+        "text_box@sp_shared.text_edit_control": {}
+      }
+    ]
+  },
+  "9x1_overlays": {
+    "type": "panel",
+    "$item_collection_name|default": "hotbar_items",
+    "controls": [
+      {
+        "drop_all_horizontal_overlay@sp_chest_single.hotbar_row_drop_all_overlay": {}
+      },
+      {
+        "move_all_horizontal_overlay@sp_chest_single.hotbar_row_move_all_overlay": {}
+      },
+      {
+        "move_one_horizontal_overlay@sp_chest_single.hotbar_row_move_one_overlay": {}
+      },
+      {
+        "move_two_horizontal_overlay@sp_chest_single.hotbar_row_move_two_overlay": {}
+      }
+    ]
+  },
+  "9x3_overlays": {
+    "type": "panel",
+    "$item_collection_name|default": "container_items",
+    "controls": [
+      {
+        "drop_all_horizontal_overlay@sp_chest_single.row_drop_all_overlay": {}
+      },
+      {
+        "move_all_horizontal_overlay@sp_chest_single.row_move_all_overlay": {}
+      },
+      {
+        "move_one_horizontal_overlay@sp_chest_single.row_move_one_overlay": {}
+      },
+      {
+        "move_two_horizontal_overlay@sp_chest_single.row_move_two_overlay": {}
+      }
+    ]
+  },
+  "row_move_two_overlay@sp_chest_single.row_drop_all_overlay": {
+    "$output_action": "button.container_auto_place_one",
+    "controls": [
+      {
+        "row_1@sp_chest_single.grid_row": {
+          "$row_index_offset": 0
+        }
+      },
+      {
+        "row_2@sp_chest_single.grid_row": {
+          "$row_index_offset": 9,
+          "offset": [
+            0,
+            18
+          ]
+        }
+      },
+      {
+        "row_3@sp_chest_single.grid_row": {
+          "$row_index_offset": 18,
+          "offset": [
+            0,
+            36
+          ]
+        }
+      },
+      {
+        "row_4@sp_chest_single.grid_row": {
+          "$row_index_offset": 0
+        }
+      },
+      {
+        "row_5@sp_chest_single.grid_row": {
+          "$row_index_offset": 9,
+          "offset": [
+            0,
+            18
+          ]
+        }
+      },
+      {
+        "row_6@sp_chest_single.grid_row": {
+          "$row_index_offset": 18,
+          "offset": [
+            0,
+            36
+          ]
+        }
+      }
+    ],
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "move_two_row",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+  "row_move_one_overlay@sp_chest_single.row_drop_all_overlay": {
+    "$output_action": "button.container_auto_place_one",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "move_one_row",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+  "row_move_all_overlay@sp_chest_single.row_drop_all_overlay": {
+    "$output_action": "button.container_auto_place",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "move_all_row",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+  "row_drop_all_overlay": {
+    "type": "panel",
+    "offset": [
+      7,
+      9
+    ],
+    "size": [
+      162,
+      54
+    ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "$collection_index|default": 0,
+    "$row_index_offset|default": 0,
+    "$output_action|default": "button.drop_all",
+    "controls": [
+      {
+        "row_1@sp_chest_single.grid_row": {}
+      },
+      {
+        "row_2@sp_chest_single.grid_row": {
+          "$row_index_offset": 9,
+          "offset": [
+            0,
+            18
+          ]
+        }
+      },
+      {
+        "row_3@sp_chest_single.grid_row": {
+          "$row_index_offset": 18,
+          "offset": [
+            0,
+            36
+          ]
+        }
+      }
+    ],
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "drop_all_row",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+  "hotbar_row_move_two_overlay@sp_chest_single.hotbar_row_drop_all_overlay": {
+    "$output_action": "button.container_auto_place_one",
+    "controls": [
+      {
+        "row_1@sp_chest_single.grid_row": {
+          "$row_index_offset": 0
+        }
+      },
+      {
+        "row_4@sp_chest_single.grid_row": {
+          "$row_index_offset": 0
+        }
+      }
+    ],
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "move_two_row",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+  "hotbar_row_move_one_overlay@sp_chest_single.hotbar_row_drop_all_overlay": {
+    "$output_action": "button.container_auto_place_one",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "move_one_row",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+  "hotbar_row_move_all_overlay@sp_chest_single.hotbar_row_drop_all_overlay": {
+    "$output_action": "button.container_auto_place",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "move_all_row",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+  "hotbar_row_drop_all_overlay": {
+    "type": "panel",
+    "offset": [
+      7,
+      9
+    ],
+    "size": [
+      162,
+      54
+    ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "$collection_index|default": 0,
+    "$row_index_offset|default": 0,
+    "$output_action|default": "button.drop_all",
+    "controls": [
+      {
+        "row_1@sp_chest_single.grid_row": {}
+      }
+    ],
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "drop_all_row",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+  "grid_row": {
+    "type": "collection_panel",
+    "size": [
+      "100%",
+      18
+    ],
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "collection_name": "$item_collection_name",
+    "controls": [
+      {
+        "hover_button@sp_shared.button": {
+          "layer": 100,
+          "pressed_control": "pressed_highlight",
+          "bindings": [],
+          "button_mappings": [
+            {
+              "from_button_id": "button.menu_select",
+              "to_button_id": "button.menu_ok",
+              "mapping_type": "pressed"
+            },
+            {
+              "from_button_id": "button.menu_ok",
+              "to_button_id": "button.menu_ok",
+              "mapping_type": "focused"
+            }
+          ],
+          "controls": [
+            {
+              "highlight@$slot_highlight_control": {}
+            },
+            {
+              "pressed_highlight@$slot_pressed_control": {}
+            }
+          ]
+        }
+      },
+      {
+        "slot_0@sp_shared.input_panel_with_index": {
+          "$collection_index": 0
+        }
+      },
+      {
+        "slot_1@sp_shared.input_panel_with_index": {
+          "$collection_index": 1
+        }
+      },
+      {
+        "slot_2@sp_shared.input_panel_with_index": {
+          "$collection_index": 2
+        }
+      },
+      {
+        "slot_3@sp_shared.input_panel_with_index": {
+          "$collection_index": 3
+        }
+      },
+      {
+        "slot_4@sp_shared.input_panel_with_index": {
+          "$collection_index": 4
+        }
+      },
+      {
+        "slot_5@sp_shared.input_panel_with_index": {
+          "$collection_index": 5
+        }
+      },
+      {
+        "slot_6@sp_shared.input_panel_with_index": {
+          "$collection_index": 6
+        }
+      },
+      {
+        "slot_7@sp_shared.input_panel_with_index": {
+          "$collection_index": 7
+        }
+      },
+      {
+        "slot_8@sp_shared.input_panel_with_index": {
+          "$collection_index": 8
+        }
+      }
+    ]
+  },
+  "default_cell_control": {
+    "type": "image",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "texture": "textures/ui/cell_image",
+    "nineslice_size": 1,
+    "layer": -92
+  },
+  "row_highlight_control@sp_chest_single.default_cell_control": {
+    "controls": [
+      {
+        "highlight_slot": {
+          "type": "image",
+          "texture": "textures/ui/highlight_slot",
+          "size": [
+            "100% - 2px",
+            "100% - 2px"
+          ],
+          "alpha": 0.8
+        }
+      },
+      {
+        "white_border_slot": {
+          "type": "image",
+          "texture": "textures/ui/focus_border_white",
+          "size": [
+            "100%",
+            "100%"
+          ]
+        }
+      }
+    ]
+  }
+}
