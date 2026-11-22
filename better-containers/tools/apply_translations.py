@@ -29,9 +29,9 @@ def codes(s):
     return re.findall(r'§.', s)
 
 
-def check(loc, data, en):
+def check(loc, data, en, full=True):
     problems = []
-    if set(data) != set(en):
+    if full and set(data) != set(en):
         problems.append(f'key mismatch: {len(set(en) - set(data))} missing, {len(set(data) - set(en))} extra')
     for k, v in data.items():
         if k in en:
@@ -62,8 +62,8 @@ def main():
     for path in sorted(glob.glob(os.path.join(STORE, '*.json'))):
         loc = os.path.basename(path)[:-5]
         data = json.load(open(path, encoding='utf-8'))
-        if check(loc, data, en):
-            continue  # stale file after the English text changed: keep English
+        data = {k: v for k, v in data.items() if k in en and not check(loc, {k: v}, {k: en[k]}, full=False)}
+        # keys added or changed in English after the translation stay English
         lang = os.path.join(ROOT, 'pack', 'texts', loc + '.lang')
         text = open(lang, encoding='utf-8').read()
         for k, v in data.items():

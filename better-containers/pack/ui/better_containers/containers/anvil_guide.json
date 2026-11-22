@@ -232,6 +232,46 @@
                     "wolf_armor_line@bc_anvil_guide.text_row": {
                       "$line_text": "%bc_anvil_guide.group.wolf_armor"
                     }
+                  },
+                  {
+                    "spears_line@bc_anvil_guide.text_row": {
+                      "$line_text": "%bc_anvil_guide.group.spears"
+                    }
+                  },
+                  {
+                    "copper_gear_line@bc_anvil_guide.text_row": {
+                      "$line_text": "%bc_anvil_guide.group.copper_gear"
+                    }
+                  },
+                  {
+                    "iron_armors_line@bc_anvil_guide.text_row": {
+                      "$line_text": "%bc_anvil_guide.group.iron_armors"
+                    }
+                  },
+                  {
+                    "golden_armors_line@bc_anvil_guide.text_row": {
+                      "$line_text": "%bc_anvil_guide.group.golden_armors"
+                    }
+                  },
+                  {
+                    "diamond_armors_line@bc_anvil_guide.text_row": {
+                      "$line_text": "%bc_anvil_guide.group.diamond_armors"
+                    }
+                  },
+                  {
+                    "netherite_armors_line@bc_anvil_guide.text_row": {
+                      "$line_text": "%bc_anvil_guide.group.netherite_armors"
+                    }
+                  },
+                  {
+                    "repair_materials_line@bc_anvil_guide.text_row": {
+                      "$line_text": "%bc_anvil_guide.group.repair_materials"
+                    }
+                  },
+                  {
+                    "repair_amount_line@bc_anvil_guide.text_row": {
+                      "$line_text": "%bc_anvil_guide.group.repair_amount"
+                    }
                   }
                 ],
                 "bindings": [

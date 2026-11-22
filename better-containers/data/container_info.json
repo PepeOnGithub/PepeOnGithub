@@ -72,6 +72,16 @@
         "Pick a trade from the list. Each trade shows what you pay and what you get.",
         "A trade runs out after its uses and restocks as the villager's day goes on."
       ]
+    },
+    "stonecutter": {
+      "title": "Stonecutter",
+      "lines": [
+        "Put one block into the input slot and the list of everything it can be cut into appears.",
+        "Every recipe takes a single ingredient and gives a fixed amount, so there is no pattern to place.",
+        "Stairs, walls and chiseled variants cost one block each, and slabs give two per block.",
+        "It can cut stone, cobblestone, deepslate, bricks and copper, and can skip crafting steps.",
+        "Stone can be cut straight into cobblestone or stone bricks, which a crafting table cannot do."
+      ]
     }
   }
 }

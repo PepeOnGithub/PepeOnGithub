@@ -27,6 +27,7 @@
     "ui/better_containers/containers/horse_info.json",
     "ui/better_containers/containers/inventory_info.json",
     "ui/better_containers/containers/loom_info.json",
-    "ui/better_containers/containers/trade_info.json"
+    "ui/better_containers/containers/trade_info.json",
+    "ui/better_containers/containers/stonecutter_info.json"
   ]
 }

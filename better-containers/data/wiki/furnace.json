@@ -1,0 +1,2386 @@
+{
+ "source": "minecraft.wiki Smelting/Blast_Furnace/Smoker (Fuel redirects to Smelting#Fuel), Bedrock values, fetched 2026-11-22; ids checked against data/item_ids/stable-1.26.60.json",
+ "notes": [
+  "burn_seconds are furnace seconds; items_smelted = burn_seconds/10 in furnace (blast furnace/smoker burn faster so count is 2x)",
+  "JE-only fuels excluded: wool, wool carpet, wool slab, wool stairs",
+  "Wooden slab and bamboo mosaic slab burn 15s in Bedrock (bug MCPE-9436)",
+  "Bedrock: crossbow 10s, bowl 10s"
+ ],
+ "stations": {
+  "foods": "smoker+furnace",
+  "ores": "blast_furnace+furnace",
+  "gear": "blast_furnace+furnace (recycle to nuggets)",
+  "blocks": "furnace only",
+  "nature": "furnace only"
+ },
+ "smeltable": {
+  "foods": [
+   {
+    "item": "beef",
+    "output": "cooked_beef",
+    "exp": 0.35
+   },
+   {
+    "item": "porkchop",
+    "output": "cooked_porkchop",
+    "exp": 0.35
+   },
+   {
+    "item": "chicken",
+    "output": "cooked_chicken",
+    "exp": 0.35
+   },
+   {
+    "item": "mutton",
+    "output": "cooked_mutton",
+    "exp": 0.35
+   },
+   {
+    "item": "rabbit",
+    "output": "cooked_rabbit",
+    "exp": 0.35
+   },
+   {
+    "item": "cod",
+    "output": "cooked_cod",
+    "exp": 0.35
+   },
+   {
+    "item": "salmon",
+    "output": "cooked_salmon",
+    "exp": 0.35
+   },
+   {
+    "item": "potato",
+    "output": "baked_potato",
+    "exp": 0.35
+   },
+   {
+    "item": "kelp",
+    "output": "dried_kelp",
+    "exp": 0.1
+   }
+  ],
+  "ores_and_metal": {
+   "ores": [
+    {
+     "item": "raw_iron",
+     "output": "iron_ingot",
+     "exp": 0.7
+    },
+    {
+     "item": "raw_copper",
+     "output": "copper_ingot",
+     "exp": 0.7
+    },
+    {
+     "item": "raw_gold",
+     "output": "gold_ingot",
+     "exp": 1
+    },
+    {
+     "item": "nether_gold_ore",
+     "output": "gold_ingot",
+     "exp": 1
+    },
+    {
+     "item": "ancient_debris",
+     "output": "netherite_scrap",
+     "exp": 2
+    },
+    {
+     "item": "iron_ore",
+     "output": "iron_ingot",
+     "exp": 0.7
+    },
+    {
+     "item": "deepslate_iron_ore",
+     "output": "iron_ingot",
+     "exp": 0.7
+    },
+    {
+     "item": "copper_ore",
+     "output": "copper_ingot",
+     "exp": 0.7
+    },
+    {
+     "item": "deepslate_copper_ore",
+     "output": "copper_ingot",
+     "exp": 0.7
+    },
+    {
+     "item": "gold_ore",
+     "output": "gold_ingot",
+     "exp": 1
+    },
+    {
+     "item": "deepslate_gold_ore",
+     "output": "gold_ingot",
+     "exp": 1
+    },
+    {
+     "item": "redstone_ore",
+     "output": "redstone",
+     "exp": 0.7
+    },
+    {
+     "item": "deepslate_redstone_ore",
+     "output": "redstone",
+     "exp": 0.7
+    },
+    {
+     "item": "coal_ore",
+     "output": "coal",
+     "exp": 0.1
+    },
+    {
+     "item": "deepslate_coal_ore",
+     "output": "coal",
+     "exp": 0.1
+    },
+    {
+     "item": "emerald_ore",
+     "output": "emerald",
+     "exp": 1
+    },
+    {
+     "item": "deepslate_emerald_ore",
+     "output": "emerald",
+     "exp": 1
+    },
+    {
+     "item": "lapis_ore",
+     "output": "lapis_lazuli",
+     "exp": 0.2
+    },
+    {
+     "item": "deepslate_lapis_ore",
+     "output": "lapis_lazuli",
+     "exp": 0.2
+    },
+    {
+     "item": "diamond_ore",
+     "output": "diamond",
+     "exp": 1
+    },
+    {
+     "item": "deepslate_diamond_ore",
+     "output": "diamond",
+     "exp": 1
+    },
+    {
+     "item": "quartz_ore",
+     "output": "quartz",
+     "exp": 0.2
+    }
+   ],
+   "gear_to_nuggets": [
+    {
+     "item": "iron_pickaxe",
+     "output": "iron_nugget",
+     "exp": 0.1
+    },
+    {
+     "item": "iron_axe",
+     "output": "iron_nugget",
+     "exp": 0.1
+    },
+    {
+     "item": "iron_shovel",
+     "output": "iron_nugget",
+     "exp": 0.1
+    },
+    {
+     "item": "iron_hoe",
+     "output": "iron_nugget",
+     "exp": 0.1
+    },
+    {
+     "item": "iron_sword",
+     "output": "iron_nugget",
+     "exp": 0.1
+    },
+    {
+     "item": "iron_helmet",
+     "output": "iron_nugget",
+     "exp": 0.1
+    },
+    {
+     "item": "iron_chestplate",
+     "output": "iron_nugget",
+     "exp": 0.1
+    },
+    {
+     "item": "iron_leggings",
+     "output": "iron_nugget",
+     "exp": 0.1
+    },
+    {
+     "item": "iron_boots",
+     "output": "iron_nugget",
+     "exp": 0.1
+    },
+    {
+     "item": "iron_horse_armor",
+     "output": "iron_nugget",
+     "exp": 0.1
+    },
+    {
+     "item": "iron_nautilus_armor",
+     "output": "iron_nugget",
+     "exp": 0.1
+    },
+    {
+     "item": "iron_spear",
+     "output": "iron_nugget",
+     "exp": 0.1
+    },
+    {
+     "item": "golden_pickaxe",
+     "output": "gold_nugget",
+     "exp": 0.1
+    },
+    {
+     "item": "golden_axe",
+     "output": "gold_nugget",
+     "exp": 0.1
+    },
+    {
+     "item": "golden_shovel",
+     "output": "gold_nugget",
+     "exp": 0.1
+    },
+    {
+     "item": "golden_hoe",
+     "output": "gold_nugget",
+     "exp": 0.1
+    },
+    {
+     "item": "golden_sword",
+     "output": "gold_nugget",
+     "exp": 0.1
+    },
+    {
+     "item": "golden_helmet",
+     "output": "gold_nugget",
+     "exp": 0.1
+    },
+    {
+     "item": "golden_chestplate",
+     "output": "gold_nugget",
+     "exp": 0.1
+    },
+    {
+     "item": "golden_leggings",
+     "output": "gold_nugget",
+     "exp": 0.1
+    },
+    {
+     "item": "golden_boots",
+     "output": "gold_nugget",
+     "exp": 0.1
+    },
+    {
+     "item": "golden_horse_armor",
+     "output": "gold_nugget",
+     "exp": 0.1
+    },
+    {
+     "item": "golden_nautilus_armor",
+     "output": "gold_nugget",
+     "exp": 0.1
+    },
+    {
+     "item": "golden_spear",
+     "output": "gold_nugget",
+     "exp": 0.1
+    },
+    {
+     "item": "copper_pickaxe",
+     "output": "copper_nugget",
+     "exp": 0.1
+    },
+    {
+     "item": "copper_axe",
+     "output": "copper_nugget",
+     "exp": 0.1
+    },
+    {
+     "item": "copper_shovel",
+     "output": "copper_nugget",
+     "exp": 0.1
+    },
+    {
+     "item": "copper_hoe",
+     "output": "copper_nugget",
+     "exp": 0.1
+    },
+    {
+     "item": "copper_sword",
+     "output": "copper_nugget",
+     "exp": 0.1
+    },
+    {
+     "item": "copper_helmet",
+     "output": "copper_nugget",
+     "exp": 0.1
+    },
+    {
+     "item": "copper_chestplate",
+     "output": "copper_nugget",
+     "exp": 0.1
+    },
+    {
+     "item": "copper_leggings",
+     "output": "copper_nugget",
+     "exp": 0.1
+    },
+    {
+     "item": "copper_boots",
+     "output": "copper_nugget",
+     "exp": 0.1
+    },
+    {
+     "item": "copper_horse_armor",
+     "output": "copper_nugget",
+     "exp": 0.1
+    },
+    {
+     "item": "copper_nautilus_armor",
+     "output": "copper_nugget",
+     "exp": 0.1
+    },
+    {
+     "item": "copper_spear",
+     "output": "copper_nugget",
+     "exp": 0.1
+    },
+    {
+     "item": "chainmail_helmet",
+     "output": "iron_nugget",
+     "exp": 0.1
+    },
+    {
+     "item": "chainmail_chestplate",
+     "output": "iron_nugget",
+     "exp": 0.1
+    },
+    {
+     "item": "chainmail_leggings",
+     "output": "iron_nugget",
+     "exp": 0.1
+    },
+    {
+     "item": "chainmail_boots",
+     "output": "iron_nugget",
+     "exp": 0.1
+    }
+   ]
+  },
+  "blocks": [
+   {
+    "item": "cobblestone",
+    "output": "stone",
+    "exp": 0.1
+   },
+   {
+    "item": "stone",
+    "output": "smooth_stone",
+    "exp": 0.1
+   },
+   {
+    "item": "stone_bricks",
+    "output": "cracked_stone_bricks",
+    "exp": 0.1
+   },
+   {
+    "item": "cobbled_deepslate",
+    "output": "deepslate",
+    "exp": 0.1
+   },
+   {
+    "item": "deepslate_bricks",
+    "output": "cracked_deepslate_bricks",
+    "exp": 0.1
+   },
+   {
+    "item": "deepslate_tiles",
+    "output": "cracked_deepslate_tiles",
+    "exp": 0.1
+   },
+   {
+    "item": "sandstone",
+    "output": "smooth_sandstone",
+    "exp": 0.1
+   },
+   {
+    "item": "red_sandstone",
+    "output": "smooth_red_sandstone",
+    "exp": 0.1
+   },
+   {
+    "item": "nether_brick",
+    "output": "cracked_nether_bricks",
+    "exp": 0.1
+   },
+   {
+    "item": "basalt",
+    "output": "smooth_basalt",
+    "exp": 0.1
+   },
+   {
+    "item": "polished_blackstone_bricks",
+    "output": "cracked_polished_blackstone_bricks",
+    "exp": 0.1
+   },
+   {
+    "item": "quartz_block",
+    "output": "smooth_quartz",
+    "exp": 0.1
+   },
+   {
+    "item": "clay",
+    "output": "hardened_clay",
+    "exp": 0.35
+   },
+   {
+    "item": "sand",
+    "output": "glass",
+    "exp": 0.1
+   },
+   {
+    "item": "wet_sponge",
+    "output": "sponge",
+    "exp": 0.15
+   },
+   {
+    "item": "netherrack",
+    "output": "netherbrick",
+    "exp": 0.1
+   },
+   {
+    "item": "white_terracotta",
+    "output": "white_glazed_terracotta",
+    "exp": 0.1
+   },
+   {
+    "item": "orange_terracotta",
+    "output": "orange_glazed_terracotta",
+    "exp": 0.1
+   },
+   {
+    "item": "magenta_terracotta",
+    "output": "magenta_glazed_terracotta",
+    "exp": 0.1
+   },
+   {
+    "item": "light_blue_terracotta",
+    "output": "light_blue_glazed_terracotta",
+    "exp": 0.1
+   },
+   {
+    "item": "yellow_terracotta",
+    "output": "yellow_glazed_terracotta",
+    "exp": 0.1
+   },
+   {
+    "item": "lime_terracotta",
+    "output": "lime_glazed_terracotta",
+    "exp": 0.1
+   },
+   {
+    "item": "pink_terracotta",
+    "output": "pink_glazed_terracotta",
+    "exp": 0.1
+   },
+   {
+    "item": "gray_terracotta",
+    "output": "gray_glazed_terracotta",
+    "exp": 0.1
+   },
+   {
+    "item": "light_gray_terracotta",
+    "output": "silver_glazed_terracotta",
+    "exp": 0.1
+   },
+   {
+    "item": "cyan_terracotta",
+    "output": "cyan_glazed_terracotta",
+    "exp": 0.1
+   },
+   {
+    "item": "purple_terracotta",
+    "output": "purple_glazed_terracotta",
+    "exp": 0.1
+   },
+   {
+    "item": "blue_terracotta",
+    "output": "blue_glazed_terracotta",
+    "exp": 0.1
+   },
+   {
+    "item": "brown_terracotta",
+    "output": "brown_glazed_terracotta",
+    "exp": 0.1
+   },
+   {
+    "item": "green_terracotta",
+    "output": "green_glazed_terracotta",
+    "exp": 0.1
+   },
+   {
+    "item": "red_terracotta",
+    "output": "red_glazed_terracotta",
+    "exp": 0.1
+   },
+   {
+    "item": "black_terracotta",
+    "output": "black_glazed_terracotta",
+    "exp": 0.1
+   }
+  ],
+  "nature_other": [
+   {
+    "item": "chorus_fruit",
+    "output": "popped_chorus_fruit",
+    "exp": 0.1
+   },
+   {
+    "item": "sea_pickle",
+    "output": "lime_dye",
+    "exp": 0.2,
+    "note": "JE 0.1, BE 0.2"
+   },
+   {
+    "item": "cactus",
+    "output": "green_dye",
+    "exp": 0.2,
+    "note": "JE 1, BE 0.2"
+   },
+   {
+    "item": "clay_ball",
+    "output": "brick",
+    "exp": 0.3
+   },
+   {
+    "item": "resin_clump",
+    "output": "resin_brick",
+    "exp": 0.1
+   },
+   {
+    "item": "oak_log",
+    "output": "charcoal",
+    "exp": 0.15
+   },
+   {
+    "item": "stripped_oak_log",
+    "output": "charcoal",
+    "exp": 0.15
+   },
+   {
+    "item": "oak_wood",
+    "output": "charcoal",
+    "exp": 0.15
+   },
+   {
+    "item": "stripped_oak_wood",
+    "output": "charcoal",
+    "exp": 0.15
+   },
+   {
+    "item": "spruce_log",
+    "output": "charcoal",
+    "exp": 0.15
+   },
+   {
+    "item": "stripped_spruce_log",
+    "output": "charcoal",
+    "exp": 0.15
+   },
+   {
+    "item": "spruce_wood",
+    "output": "charcoal",
+    "exp": 0.15
+   },
+   {
+    "item": "stripped_spruce_wood",
+    "output": "charcoal",
+    "exp": 0.15
+   },
+   {
+    "item": "birch_log",
+    "output": "charcoal",
+    "exp": 0.15
+   },
+   {
+    "item": "stripped_birch_log",
+    "output": "charcoal",
+    "exp": 0.15
+   },
+   {
+    "item": "birch_wood",
+    "output": "charcoal",
+    "exp": 0.15
+   },
+   {
+    "item": "stripped_birch_wood",
+    "output": "charcoal",
+    "exp": 0.15
+   },
+   {
+    "item": "jungle_log",
+    "output": "charcoal",
+    "exp": 0.15
+   },
+   {
+    "item": "stripped_jungle_log",
+    "output": "charcoal",
+    "exp": 0.15
+   },
+   {
+    "item": "jungle_wood",
+    "output": "charcoal",
+    "exp": 0.15
+   },
+   {
+    "item": "stripped_jungle_wood",
+    "output": "charcoal",
+    "exp": 0.15
+   },
+   {
+    "item": "acacia_log",
+    "output": "charcoal",
+    "exp": 0.15
+   },
+   {
+    "item": "stripped_acacia_log",
+    "output": "charcoal",
+    "exp": 0.15
+   },
+   {
+    "item": "acacia_wood",
+    "output": "charcoal",
+    "exp": 0.15
+   },
+   {
+    "item": "stripped_acacia_wood",
+    "output": "charcoal",
+    "exp": 0.15
+   },
+   {
+    "item": "dark_oak_log",
+    "output": "charcoal",
+    "exp": 0.15
+   },
+   {
+    "item": "stripped_dark_oak_log",
+    "output": "charcoal",
+    "exp": 0.15
+   },
+   {
+    "item": "dark_oak_wood",
+    "output": "charcoal",
+    "exp": 0.15
+   },
+   {
+    "item": "stripped_dark_oak_wood",
+    "output": "charcoal",
+    "exp": 0.15
+   },
+   {
+    "item": "mangrove_log",
+    "output": "charcoal",
+    "exp": 0.15
+   },
+   {
+    "item": "stripped_mangrove_log",
+    "output": "charcoal",
+    "exp": 0.15
+   },
+   {
+    "item": "mangrove_wood",
+    "output": "charcoal",
+    "exp": 0.15
+   },
+   {
+    "item": "stripped_mangrove_wood",
+    "output": "charcoal",
+    "exp": 0.15
+   },
+   {
+    "item": "cherry_log",
+    "output": "charcoal",
+    "exp": 0.15
+   },
+   {
+    "item": "stripped_cherry_log",
+    "output": "charcoal",
+    "exp": 0.15
+   },
+   {
+    "item": "cherry_wood",
+    "output": "charcoal",
+    "exp": 0.15
+   },
+   {
+    "item": "stripped_cherry_wood",
+    "output": "charcoal",
+    "exp": 0.15
+   },
+   {
+    "item": "pale_oak_log",
+    "output": "charcoal",
+    "exp": 0.15
+   },
+   {
+    "item": "stripped_pale_oak_log",
+    "output": "charcoal",
+    "exp": 0.15
+   },
+   {
+    "item": "pale_oak_wood",
+    "output": "charcoal",
+    "exp": 0.15
+   },
+   {
+    "item": "stripped_pale_oak_wood",
+    "output": "charcoal",
+    "exp": 0.15
+   },
+   {
+    "item": "poplar_log",
+    "output": "charcoal",
+    "exp": 0.15,
+    "note": "poplar not on wiki yet; assumed Overworld wood"
+   },
+   {
+    "item": "stripped_poplar_log",
+    "output": "charcoal",
+    "exp": 0.15,
+    "note": "poplar not on wiki yet; assumed Overworld wood"
+   },
+   {
+    "item": "poplar_wood",
+    "output": "charcoal",
+    "exp": 0.15,
+    "note": "poplar not on wiki yet; assumed Overworld wood"
+   },
+   {
+    "item": "stripped_poplar_wood",
+    "output": "charcoal",
+    "exp": 0.15,
+    "note": "poplar not on wiki yet; assumed Overworld wood"
+   }
+  ]
+ },
+ "fuel_bedrock": [
+  {
+   "item": "lava_bucket",
+   "burn_seconds": 1000,
+   "items_smelted": 100.0
+  },
+  {
+   "item": "coal_block",
+   "burn_seconds": 800,
+   "items_smelted": 80.0
+  },
+  {
+   "item": "dried_kelp_block",
+   "burn_seconds": 200,
+   "items_smelted": 20.0
+  },
+  {
+   "item": "blaze_rod",
+   "burn_seconds": 120,
+   "items_smelted": 12.0
+  },
+  {
+   "item": "coal",
+   "burn_seconds": 80,
+   "items_smelted": 8.0
+  },
+  {
+   "item": "charcoal",
+   "burn_seconds": 80,
+   "items_smelted": 8.0
+  },
+  {
+   "item": "oak_boat",
+   "burn_seconds": 60,
+   "items_smelted": 6.0
+  },
+  {
+   "item": "oak_chest_boat",
+   "burn_seconds": 60,
+   "items_smelted": 6.0
+  },
+  {
+   "item": "spruce_boat",
+   "burn_seconds": 60,
+   "items_smelted": 6.0
+  },
+  {
+   "item": "spruce_chest_boat",
+   "burn_seconds": 60,
+   "items_smelted": 6.0
+  },
+  {
+   "item": "birch_boat",
+   "burn_seconds": 60,
+   "items_smelted": 6.0
+  },
+  {
+   "item": "birch_chest_boat",
+   "burn_seconds": 60,
+   "items_smelted": 6.0
+  },
+  {
+   "item": "jungle_boat",
+   "burn_seconds": 60,
+   "items_smelted": 6.0
+  },
+  {
+   "item": "jungle_chest_boat",
+   "burn_seconds": 60,
+   "items_smelted": 6.0
+  },
+  {
+   "item": "acacia_boat",
+   "burn_seconds": 60,
+   "items_smelted": 6.0
+  },
+  {
+   "item": "acacia_chest_boat",
+   "burn_seconds": 60,
+   "items_smelted": 6.0
+  },
+  {
+   "item": "dark_oak_boat",
+   "burn_seconds": 60,
+   "items_smelted": 6.0
+  },
+  {
+   "item": "dark_oak_chest_boat",
+   "burn_seconds": 60,
+   "items_smelted": 6.0
+  },
+  {
+   "item": "mangrove_boat",
+   "burn_seconds": 60,
+   "items_smelted": 6.0
+  },
+  {
+   "item": "mangrove_chest_boat",
+   "burn_seconds": 60,
+   "items_smelted": 6.0
+  },
+  {
+   "item": "cherry_boat",
+   "burn_seconds": 60,
+   "items_smelted": 6.0
+  },
+  {
+   "item": "cherry_chest_boat",
+   "burn_seconds": 60,
+   "items_smelted": 6.0
+  },
+  {
+   "item": "pale_oak_boat",
+   "burn_seconds": 60,
+   "items_smelted": 6.0
+  },
+  {
+   "item": "pale_oak_chest_boat",
+   "burn_seconds": 60,
+   "items_smelted": 6.0
+  },
+  {
+   "item": "poplar_boat",
+   "burn_seconds": 60,
+   "items_smelted": 6.0,
+   "note": "poplar assumed Overworld wood"
+  },
+  {
+   "item": "poplar_chest_boat",
+   "burn_seconds": 60,
+   "items_smelted": 6.0,
+   "note": "poplar assumed Overworld wood"
+  },
+  {
+   "item": "bamboo_raft",
+   "burn_seconds": 60,
+   "items_smelted": 6.0
+  },
+  {
+   "item": "bamboo_chest_raft",
+   "burn_seconds": 60,
+   "items_smelted": 6.0
+  },
+  {
+   "item": "bamboo_mosaic",
+   "burn_seconds": 15,
+   "items_smelted": 1.5
+  },
+  {
+   "item": "bamboo_mosaic_slab",
+   "burn_seconds": 15,
+   "items_smelted": 1.5,
+   "note": "BE bug MCPE-9436 same as planks"
+  },
+  {
+   "item": "bamboo_mosaic_stairs",
+   "burn_seconds": 15,
+   "items_smelted": 1.5
+  },
+  {
+   "item": "chiseled_bookshelf",
+   "burn_seconds": 15,
+   "items_smelted": 1.5
+  },
+  {
+   "item": "bamboo_block",
+   "burn_seconds": 15,
+   "items_smelted": 1.5
+  },
+  {
+   "item": "stripped_bamboo_block",
+   "burn_seconds": 15,
+   "items_smelted": 1.5
+  },
+  {
+   "item": "oak_planks",
+   "burn_seconds": 15,
+   "items_smelted": 1.5
+  },
+  {
+   "item": "oak_slab",
+   "burn_seconds": 15,
+   "items_smelted": 1.5
+  },
+  {
+   "item": "oak_fence",
+   "burn_seconds": 15,
+   "items_smelted": 1.5
+  },
+  {
+   "item": "oak_log",
+   "burn_seconds": 15,
+   "items_smelted": 1.5
+  },
+  {
+   "item": "stripped_oak_log",
+   "burn_seconds": 15,
+   "items_smelted": 1.5
+  },
+  {
+   "item": "oak_wood",
+   "burn_seconds": 15,
+   "items_smelted": 1.5
+  },
+  {
+   "item": "stripped_oak_wood",
+   "burn_seconds": 15,
+   "items_smelted": 1.5
+  },
+  {
+   "item": "oak_shelf",
+   "burn_seconds": 15,
+   "items_smelted": 1.5
+  },
+  {
+   "item": "spruce_planks",
+   "burn_seconds": 15,
+   "items_smelted": 1.5
+  },
+  {
+   "item": "spruce_slab",
+   "burn_seconds": 15,
+   "items_smelted": 1.5
+  },
+  {
+   "item": "spruce_fence",
+   "burn_seconds": 15,
+   "items_smelted": 1.5
+  },
+  {
+   "item": "spruce_fence_gate",
+   "burn_seconds": 15,
+   "items_smelted": 1.5
+  },
+  {
+   "item": "spruce_trapdoor",
+   "burn_seconds": 15,
+   "items_smelted": 1.5
+  },
+  {
+   "item": "spruce_pressure_plate",
+   "burn_seconds": 15,
+   "items_smelted": 1.5
+  },
+  {
+   "item": "spruce_log",
+   "burn_seconds": 15,
+   "items_smelted": 1.5
+  },
+  {
+   "item": "stripped_spruce_log",
+   "burn_seconds": 15,
+   "items_smelted": 1.5
+  },
+  {
+   "item": "spruce_wood",
+   "burn_seconds": 15,
+   "items_smelted": 1.5
+  },
+  {
+   "item": "stripped_spruce_wood",
+   "burn_seconds": 15,
+   "items_smelted": 1.5
+  },
+  {
+   "item": "spruce_shelf",
+   "burn_seconds": 15,
+   "items_smelted": 1.5
+  },
+  {
+   "item": "birch_planks",
+   "burn_seconds": 15,
+   "items_smelted": 1.5
+  },
+  {
+   "item": "birch_slab",
+   "burn_seconds": 15,
+   "items_smelted": 1.5
+  },
+  {
+   "item": "birch_fence",
+   "burn_seconds": 15,
+   "items_smelted": 1.5
+  },
+  {
+   "item": "birch_fence_gate",
+   "burn_seconds": 15,
+   "items_smelted": 1.5
+  },
+  {
+   "item": "birch_trapdoor",
+   "burn_seconds": 15,
+   "items_smelted": 1.5
+  },
+  {
+   "item": "birch_pressure_plate",
+   "burn_seconds": 15,
+   "items_smelted": 1.5
+  },
+  {
+   "item": "birch_log",
+   "burn_seconds": 15,
+   "items_smelted": 1.5
+  },
+  {
+   "item": "stripped_birch_log",
+   "burn_seconds": 15,
+   "items_smelted": 1.5
+  },
+  {
+   "item": "birch_wood",
+   "burn_seconds": 15,
+   "items_smelted": 1.5
+  },
+  {
+   "item": "stripped_birch_wood",
+   "burn_seconds": 15,
+   "items_smelted": 1.5
+  },
+  {
+   "item": "birch_shelf",
+   "burn_seconds": 15,
+   "items_smelted": 1.5
+  },
+  {
+   "item": "jungle_planks",
+   "burn_seconds": 15,
+   "items_smelted": 1.5
+  },
+  {
+   "item": "jungle_slab",
+   "burn_seconds": 15,
+   "items_smelted": 1.5
+  },
+  {
+   "item": "jungle_fence",
+   "burn_seconds": 15,
+   "items_smelted": 1.5
+  },
+  {
+   "item": "jungle_fence_gate",
+   "burn_seconds": 15,
+   "items_smelted": 1.5
+  },
+  {
+   "item": "jungle_trapdoor",
+   "burn_seconds": 15,
+   "items_smelted": 1.5
+  },
+  {
+   "item": "jungle_pressure_plate",
+   "burn_seconds": 15,
+   "items_smelted": 1.5
+  },
+  {
+   "item": "jungle_log",
+   "burn_seconds": 15,
+   "items_smelted": 1.5
+  },
+  {
+   "item": "stripped_jungle_log",
+   "burn_seconds": 15,
+   "items_smelted": 1.5
+  },
+  {
+   "item": "jungle_wood",
+   "burn_seconds": 15,
+   "items_smelted": 1.5
+  },
+  {
+   "item": "stripped_jungle_wood",
+   "burn_seconds": 15,
+   "items_smelted": 1.5
+  },
+  {
+   "item": "jungle_shelf",
+   "burn_seconds": 15,
+   "items_smelted": 1.5
+  },
+  {
+   "item": "acacia_planks",
+   "burn_seconds": 15,
+   "items_smelted": 1.5
+  },
+  {
+   "item": "acacia_slab",
+   "burn_seconds": 15,
+   "items_smelted": 1.5
+  },
+  {
+   "item": "acacia_fence",
+   "burn_seconds": 15,
+   "items_smelted": 1.5
+  },
+  {
+   "item": "acacia_fence_gate",
+   "burn_seconds": 15,
+   "items_smelted": 1.5
+  },
+  {
+   "item": "acacia_trapdoor",
+   "burn_seconds": 15,
+   "items_smelted": 1.5
+  },
+  {
+   "item": "acacia_pressure_plate",
+   "burn_seconds": 15,
+   "items_smelted": 1.5
+  },
+  {
+   "item": "acacia_log",
+   "burn_seconds": 15,
+   "items_smelted": 1.5
+  },
+  {
+   "item": "stripped_acacia_log",
+   "burn_seconds": 15,
+   "items_smelted": 1.5
+  },
+  {
+   "item": "acacia_wood",
+   "burn_seconds": 15,
+   "items_smelted": 1.5
+  },
+  {
+   "item": "stripped_acacia_wood",
+   "burn_seconds": 15,
+   "items_smelted": 1.5
+  },
+  {
+   "item": "acacia_shelf",
+   "burn_seconds": 15,
+   "items_smelted": 1.5
+  },
+  {
+   "item": "dark_oak_planks",
+   "burn_seconds": 15,
+   "items_smelted": 1.5
+  },
+  {
+   "item": "dark_oak_slab",
+   "burn_seconds": 15,
+   "items_smelted": 1.5
+  },
+  {
+   "item": "dark_oak_fence",
+   "burn_seconds": 15,
+   "items_smelted": 1.5
+  },
+  {
+   "item": "dark_oak_fence_gate",
+   "burn_seconds": 15,
+   "items_smelted": 1.5
+  },
+  {
+   "item": "dark_oak_trapdoor",
+   "burn_seconds": 15,
+   "items_smelted": 1.5
+  },
+  {
+   "item": "dark_oak_pressure_plate",
+   "burn_seconds": 15,
+   "items_smelted": 1.5
+  },
+  {
+   "item": "dark_oak_log",
+   "burn_seconds": 15,
+   "items_smelted": 1.5
+  },
+  {
+   "item": "stripped_dark_oak_log",
+   "burn_seconds": 15,
+   "items_smelted": 1.5
+  },
+  {
+   "item": "dark_oak_wood",
+   "burn_seconds": 15,
+   "items_smelted": 1.5
+  },
+  {
+   "item": "stripped_dark_oak_wood",
+   "burn_seconds": 15,
+   "items_smelted": 1.5
+  },
+  {
+   "item": "dark_oak_shelf",
+   "burn_seconds": 15,
+   "items_smelted": 1.5
+  },
+  {
+   "item": "mangrove_planks",
+   "burn_seconds": 15,
+   "items_smelted": 1.5
+  },
+  {
+   "item": "mangrove_slab",
+   "burn_seconds": 15,
+   "items_smelted": 1.5
+  },
+  {
+   "item": "mangrove_fence",
+   "burn_seconds": 15,
+   "items_smelted": 1.5
+  },
+  {
+   "item": "mangrove_fence_gate",
+   "burn_seconds": 15,
+   "items_smelted": 1.5
+  },
+  {
+   "item": "mangrove_trapdoor",
+   "burn_seconds": 15,
+   "items_smelted": 1.5
+  },
+  {
+   "item": "mangrove_pressure_plate",
+   "burn_seconds": 15,
+   "items_smelted": 1.5
+  },
+  {
+   "item": "mangrove_log",
+   "burn_seconds": 15,
+   "items_smelted": 1.5
+  },
+  {
+   "item": "stripped_mangrove_log",
+   "burn_seconds": 15,
+   "items_smelted": 1.5
+  },
+  {
+   "item": "mangrove_wood",
+   "burn_seconds": 15,
+   "items_smelted": 1.5
+  },
+  {
+   "item": "stripped_mangrove_wood",
+   "burn_seconds": 15,
+   "items_smelted": 1.5
+  },
+  {
+   "item": "mangrove_shelf",
+   "burn_seconds": 15,
+   "items_smelted": 1.5
+  },
+  {
+   "item": "cherry_planks",
+   "burn_seconds": 15,
+   "items_smelted": 1.5
+  },
+  {
+   "item": "cherry_slab",
+   "burn_seconds": 15,
+   "items_smelted": 1.5
+  },
+  {
+   "item": "cherry_fence",
+   "burn_seconds": 15,
+   "items_smelted": 1.5
+  },
+  {
+   "item": "cherry_fence_gate",
+   "burn_seconds": 15,
+   "items_smelted": 1.5
+  },
+  {
+   "item": "cherry_trapdoor",
+   "burn_seconds": 15,
+   "items_smelted": 1.5
+  },
+  {
+   "item": "cherry_pressure_plate",
+   "burn_seconds": 15,
+   "items_smelted": 1.5
+  },
+  {
+   "item": "cherry_log",
+   "burn_seconds": 15,
+   "items_smelted": 1.5
+  },
+  {
+   "item": "stripped_cherry_log",
+   "burn_seconds": 15,
+   "items_smelted": 1.5
+  },
+  {
+   "item": "cherry_wood",
+   "burn_seconds": 15,
+   "items_smelted": 1.5
+  },
+  {
+   "item": "stripped_cherry_wood",
+   "burn_seconds": 15,
+   "items_smelted": 1.5
+  },
+  {
+   "item": "cherry_shelf",
+   "burn_seconds": 15,
+   "items_smelted": 1.5
+  },
+  {
+   "item": "pale_oak_planks",
+   "burn_seconds": 15,
+   "items_smelted": 1.5
+  },
+  {
+   "item": "pale_oak_slab",
+   "burn_seconds": 15,
+   "items_smelted": 1.5
+  },
+  {
+   "item": "pale_oak_fence",
+   "burn_seconds": 15,
+   "items_smelted": 1.5
+  },
+  {
+   "item": "pale_oak_fence_gate",
+   "burn_seconds": 15,
+   "items_smelted": 1.5
+  },
+  {
+   "item": "pale_oak_trapdoor",
+   "burn_seconds": 15,
+   "items_smelted": 1.5
+  },
+  {
+   "item": "pale_oak_pressure_plate",
+   "burn_seconds": 15,
+   "items_smelted": 1.5
+  },
+  {
+   "item": "pale_oak_log",
+   "burn_seconds": 15,
+   "items_smelted": 1.5
+  },
+  {
+   "item": "stripped_pale_oak_log",
+   "burn_seconds": 15,
+   "items_smelted": 1.5
+  },
+  {
+   "item": "pale_oak_wood",
+   "burn_seconds": 15,
+   "items_smelted": 1.5
+  },
+  {
+   "item": "stripped_pale_oak_wood",
+   "burn_seconds": 15,
+   "items_smelted": 1.5
+  },
+  {
+   "item": "pale_oak_shelf",
+   "burn_seconds": 15,
+   "items_smelted": 1.5
+  },
+  {
+   "item": "bamboo_planks",
+   "burn_seconds": 15,
+   "items_smelted": 1.5
+  },
+  {
+   "item": "bamboo_slab",
+   "burn_seconds": 15,
+   "items_smelted": 1.5
+  },
+  {
+   "item": "bamboo_fence",
+   "burn_seconds": 15,
+   "items_smelted": 1.5
+  },
+  {
+   "item": "bamboo_fence_gate",
+   "burn_seconds": 15,
+   "items_smelted": 1.5
+  },
+  {
+   "item": "bamboo_trapdoor",
+   "burn_seconds": 15,
+   "items_smelted": 1.5
+  },
+  {
+   "item": "bamboo_pressure_plate",
+   "burn_seconds": 15,
+   "items_smelted": 1.5
+  },
+  {
+   "item": "bamboo_shelf",
+   "burn_seconds": 15,
+   "items_smelted": 1.5
+  },
+  {
+   "item": "poplar_planks",
+   "burn_seconds": 15,
+   "items_smelted": 1.5,
+   "note": "poplar assumed Overworld wood"
+  },
+  {
+   "item": "poplar_slab",
+   "burn_seconds": 15,
+   "items_smelted": 1.5,
+   "note": "poplar assumed Overworld wood"
+  },
+  {
+   "item": "poplar_fence",
+   "burn_seconds": 15,
+   "items_smelted": 1.5,
+   "note": "poplar assumed Overworld wood"
+  },
+  {
+   "item": "poplar_fence_gate",
+   "burn_seconds": 15,
+   "items_smelted": 1.5,
+   "note": "poplar assumed Overworld wood"
+  },
+  {
+   "item": "poplar_trapdoor",
+   "burn_seconds": 15,
+   "items_smelted": 1.5,
+   "note": "poplar assumed Overworld wood"
+  },
+  {
+   "item": "poplar_pressure_plate",
+   "burn_seconds": 15,
+   "items_smelted": 1.5,
+   "note": "poplar assumed Overworld wood"
+  },
+  {
+   "item": "poplar_log",
+   "burn_seconds": 15,
+   "items_smelted": 1.5,
+   "note": "poplar assumed Overworld wood"
+  },
+  {
+   "item": "stripped_poplar_log",
+   "burn_seconds": 15,
+   "items_smelted": 1.5,
+   "note": "poplar assumed Overworld wood"
+  },
+  {
+   "item": "poplar_wood",
+   "burn_seconds": 15,
+   "items_smelted": 1.5,
+   "note": "poplar assumed Overworld wood"
+  },
+  {
+   "item": "stripped_poplar_wood",
+   "burn_seconds": 15,
+   "items_smelted": 1.5,
+   "note": "poplar assumed Overworld wood"
+  },
+  {
+   "item": "poplar_shelf",
+   "burn_seconds": 15,
+   "items_smelted": 1.5,
+   "note": "poplar assumed Overworld wood"
+  },
+  {
+   "item": "mangrove_roots",
+   "burn_seconds": 15,
+   "items_smelted": 1.5
+  },
+  {
+   "item": "ladder",
+   "burn_seconds": 15,
+   "items_smelted": 1.5
+  },
+  {
+   "item": "crafting_table",
+   "burn_seconds": 15,
+   "items_smelted": 1.5
+  },
+  {
+   "item": "cartography_table",
+   "burn_seconds": 15,
+   "items_smelted": 1.5
+  },
+  {
+   "item": "fletching_table",
+   "burn_seconds": 15,
+   "items_smelted": 1.5
+  },
+  {
+   "item": "smithing_table",
+   "burn_seconds": 15,
+   "items_smelted": 1.5
+  },
+  {
+   "item": "loom",
+   "burn_seconds": 15,
+   "items_smelted": 1.5
+  },
+  {
+   "item": "bookshelf",
+   "burn_seconds": 15,
+   "items_smelted": 1.5
+  },
+  {
+   "item": "lectern",
+   "burn_seconds": 15,
+   "items_smelted": 1.5
+  },
+  {
+   "item": "composter",
+   "burn_seconds": 15,
+   "items_smelted": 1.5
+  },
+  {
+   "item": "chest",
+   "burn_seconds": 15,
+   "items_smelted": 1.5
+  },
+  {
+   "item": "trapped_chest",
+   "burn_seconds": 15,
+   "items_smelted": 1.5
+  },
+  {
+   "item": "barrel",
+   "burn_seconds": 15,
+   "items_smelted": 1.5
+  },
+  {
+   "item": "daylight_detector",
+   "burn_seconds": 15,
+   "items_smelted": 1.5
+  },
+  {
+   "item": "jukebox",
+   "burn_seconds": 15,
+   "items_smelted": 1.5
+  },
+  {
+   "item": "noteblock",
+   "burn_seconds": 15,
+   "items_smelted": 1.5
+  },
+  {
+   "item": "banner",
+   "burn_seconds": 15,
+   "items_smelted": 1.5
+  },
+  {
+   "item": "wooden_pressure_plate",
+   "burn_seconds": 15,
+   "items_smelted": 1.5
+  },
+  {
+   "item": "trapdoor",
+   "burn_seconds": 15,
+   "items_smelted": 1.5
+  },
+  {
+   "item": "fence_gate",
+   "burn_seconds": 15,
+   "items_smelted": 1.5
+  },
+  {
+   "item": "oak_sign",
+   "burn_seconds": 10,
+   "items_smelted": 1.0
+  },
+  {
+   "item": "oak_hanging_sign",
+   "burn_seconds": 10,
+   "items_smelted": 1.0
+  },
+  {
+   "item": "spruce_door",
+   "burn_seconds": 10,
+   "items_smelted": 1.0
+  },
+  {
+   "item": "spruce_sign",
+   "burn_seconds": 10,
+   "items_smelted": 1.0
+  },
+  {
+   "item": "spruce_hanging_sign",
+   "burn_seconds": 10,
+   "items_smelted": 1.0
+  },
+  {
+   "item": "birch_door",
+   "burn_seconds": 10,
+   "items_smelted": 1.0
+  },
+  {
+   "item": "birch_sign",
+   "burn_seconds": 10,
+   "items_smelted": 1.0
+  },
+  {
+   "item": "birch_hanging_sign",
+   "burn_seconds": 10,
+   "items_smelted": 1.0
+  },
+  {
+   "item": "jungle_door",
+   "burn_seconds": 10,
+   "items_smelted": 1.0
+  },
+  {
+   "item": "jungle_sign",
+   "burn_seconds": 10,
+   "items_smelted": 1.0
+  },
+  {
+   "item": "jungle_hanging_sign",
+   "burn_seconds": 10,
+   "items_smelted": 1.0
+  },
+  {
+   "item": "acacia_door",
+   "burn_seconds": 10,
+   "items_smelted": 1.0
+  },
+  {
+   "item": "acacia_sign",
+   "burn_seconds": 10,
+   "items_smelted": 1.0
+  },
+  {
+   "item": "acacia_hanging_sign",
+   "burn_seconds": 10,
+   "items_smelted": 1.0
+  },
+  {
+   "item": "dark_oak_door",
+   "burn_seconds": 10,
+   "items_smelted": 1.0
+  },
+  {
+   "item": "dark_oak_sign",
+   "burn_seconds": 10,
+   "items_smelted": 1.0
+  },
+  {
+   "item": "dark_oak_hanging_sign",
+   "burn_seconds": 10,
+   "items_smelted": 1.0
+  },
+  {
+   "item": "mangrove_door",
+   "burn_seconds": 10,
+   "items_smelted": 1.0
+  },
+  {
+   "item": "mangrove_sign",
+   "burn_seconds": 10,
+   "items_smelted": 1.0
+  },
+  {
+   "item": "mangrove_hanging_sign",
+   "burn_seconds": 10,
+   "items_smelted": 1.0
+  },
+  {
+   "item": "cherry_door",
+   "burn_seconds": 10,
+   "items_smelted": 1.0
+  },
+  {
+   "item": "cherry_sign",
+   "burn_seconds": 10,
+   "items_smelted": 1.0
+  },
+  {
+   "item": "cherry_hanging_sign",
+   "burn_seconds": 10,
+   "items_smelted": 1.0
+  },
+  {
+   "item": "pale_oak_door",
+   "burn_seconds": 10,
+   "items_smelted": 1.0
+  },
+  {
+   "item": "pale_oak_sign",
+   "burn_seconds": 10,
+   "items_smelted": 1.0
+  },
+  {
+   "item": "pale_oak_hanging_sign",
+   "burn_seconds": 10,
+   "items_smelted": 1.0
+  },
+  {
+   "item": "bamboo_door",
+   "burn_seconds": 10,
+   "items_smelted": 1.0
+  },
+  {
+   "item": "bamboo_sign",
+   "burn_seconds": 10,
+   "items_smelted": 1.0
+  },
+  {
+   "item": "bamboo_hanging_sign",
+   "burn_seconds": 10,
+   "items_smelted": 1.0
+  },
+  {
+   "item": "poplar_door",
+   "burn_seconds": 10,
+   "items_smelted": 1.0,
+   "note": "poplar assumed Overworld wood"
+  },
+  {
+   "item": "poplar_sign",
+   "burn_seconds": 10,
+   "items_smelted": 1.0,
+   "note": "poplar assumed Overworld wood"
+  },
+  {
+   "item": "poplar_hanging_sign",
+   "burn_seconds": 10,
+   "items_smelted": 1.0,
+   "note": "poplar assumed Overworld wood"
+  },
+  {
+   "item": "crossbow",
+   "burn_seconds": 10,
+   "items_smelted": 1.0
+  },
+  {
+   "item": "wooden_pickaxe",
+   "burn_seconds": 10,
+   "items_smelted": 1.0
+  },
+  {
+   "item": "wooden_shovel",
+   "burn_seconds": 10,
+   "items_smelted": 1.0
+  },
+  {
+   "item": "wooden_hoe",
+   "burn_seconds": 10,
+   "items_smelted": 1.0
+  },
+  {
+   "item": "wooden_axe",
+   "burn_seconds": 10,
+   "items_smelted": 1.0
+  },
+  {
+   "item": "wooden_sword",
+   "burn_seconds": 10,
+   "items_smelted": 1.0
+  },
+  {
+   "item": "wooden_spear",
+   "burn_seconds": 10,
+   "items_smelted": 1.0
+  },
+  {
+   "item": "bowl",
+   "burn_seconds": 10,
+   "items_smelted": 1.0
+  },
+  {
+   "item": "wooden_door",
+   "burn_seconds": 10,
+   "items_smelted": 1.0
+  },
+  {
+   "item": "spruce_button",
+   "burn_seconds": 5,
+   "items_smelted": 0.5
+  },
+  {
+   "item": "birch_button",
+   "burn_seconds": 5,
+   "items_smelted": 0.5
+  },
+  {
+   "item": "jungle_button",
+   "burn_seconds": 5,
+   "items_smelted": 0.5
+  },
+  {
+   "item": "acacia_button",
+   "burn_seconds": 5,
+   "items_smelted": 0.5
+  },
+  {
+   "item": "dark_oak_button",
+   "burn_seconds": 5,
+   "items_smelted": 0.5
+  },
+  {
+   "item": "mangrove_button",
+   "burn_seconds": 5,
+   "items_smelted": 0.5
+  },
+  {
+   "item": "cherry_button",
+   "burn_seconds": 5,
+   "items_smelted": 0.5
+  },
+  {
+   "item": "pale_oak_button",
+   "burn_seconds": 5,
+   "items_smelted": 0.5
+  },
+  {
+   "item": "bamboo_button",
+   "burn_seconds": 5,
+   "items_smelted": 0.5
+  },
+  {
+   "item": "poplar_button",
+   "burn_seconds": 5,
+   "items_smelted": 0.5,
+   "note": "poplar assumed Overworld wood"
+  },
+  {
+   "item": "stick",
+   "burn_seconds": 5,
+   "items_smelted": 0.5
+  },
+  {
+   "item": "deadbush",
+   "burn_seconds": 5,
+   "items_smelted": 0.5
+  },
+  {
+   "item": "azalea",
+   "burn_seconds": 5,
+   "items_smelted": 0.5
+  },
+  {
+   "item": "flowering_azalea",
+   "burn_seconds": 5,
+   "items_smelted": 0.5
+  },
+  {
+   "item": "leaf_litter",
+   "burn_seconds": 5,
+   "items_smelted": 0.5
+  },
+  {
+   "item": "short_dry_grass",
+   "burn_seconds": 5,
+   "items_smelted": 0.5
+  },
+  {
+   "item": "tall_dry_grass",
+   "burn_seconds": 5,
+   "items_smelted": 0.5
+  },
+  {
+   "item": "wooden_button",
+   "burn_seconds": 5,
+   "items_smelted": 0.5
+  },
+  {
+   "item": "bamboo",
+   "burn_seconds": 2.5,
+   "items_smelted": 0.25
+  },
+  {
+   "item": "scaffolding",
+   "burn_seconds": 2.5,
+   "items_smelted": 0.25
+  },
+  {
+   "item": "white_cushion",
+   "burn_seconds": 2.5,
+   "items_smelted": 0.25
+  },
+  {
+   "item": "orange_cushion",
+   "burn_seconds": 2.5,
+   "items_smelted": 0.25
+  },
+  {
+   "item": "magenta_cushion",
+   "burn_seconds": 2.5,
+   "items_smelted": 0.25
+  },
+  {
+   "item": "light_blue_cushion",
+   "burn_seconds": 2.5,
+   "items_smelted": 0.25
+  },
+  {
+   "item": "yellow_cushion",
+   "burn_seconds": 2.5,
+   "items_smelted": 0.25
+  },
+  {
+   "item": "lime_cushion",
+   "burn_seconds": 2.5,
+   "items_smelted": 0.25
+  },
+  {
+   "item": "pink_cushion",
+   "burn_seconds": 2.5,
+   "items_smelted": 0.25
+  },
+  {
+   "item": "gray_cushion",
+   "burn_seconds": 2.5,
+   "items_smelted": 0.25
+  },
+  {
+   "item": "light_gray_cushion",
+   "burn_seconds": 2.5,
+   "items_smelted": 0.25
+  },
+  {
+   "item": "cyan_cushion",
+   "burn_seconds": 2.5,
+   "items_smelted": 0.25
+  },
+  {
+   "item": "purple_cushion",
+   "burn_seconds": 2.5,
+   "items_smelted": 0.25
+  },
+  {
+   "item": "blue_cushion",
+   "burn_seconds": 2.5,
+   "items_smelted": 0.25
+  },
+  {
+   "item": "brown_cushion",
+   "burn_seconds": 2.5,
+   "items_smelted": 0.25
+  },
+  {
+   "item": "green_cushion",
+   "burn_seconds": 2.5,
+   "items_smelted": 0.25
+  },
+  {
+   "item": "red_cushion",
+   "burn_seconds": 2.5,
+   "items_smelted": 0.25
+  },
+  {
+   "item": "black_cushion",
+   "burn_seconds": 2.5,
+   "items_smelted": 0.25
+  }
+ ],
+ "unmapped": [
+  {
+   "wiki": "Leaves (any) -> Leaf Litter",
+   "note": "wiki lists Leaves->Leaf Litter in furnace; not a Bedrock-confirmed recipe; generic \"leaves\" has no viewer id (oak_leaves etc. exist)"
+  },
+  {
+   "wiki": "Any Banner (all colours)",
+   "note": "viewer has only generic \"banner\"; used"
+  }
+ ],
+ "gear_items_without_viewer_id": [],
+ "missing_from_current_guide": {
+  "smeltable": [
+   "acacia_log",
+   "acacia_wood",
+   "birch_log",
+   "birch_wood",
+   "black_terracotta",
+   "blue_terracotta",
+   "brown_terracotta",
+   "chainmail_boots",
+   "chainmail_chestplate",
+   "chainmail_helmet",
+   "chainmail_leggings",
+   "cherry_log",
+   "cherry_wood",
+   "copper_axe",
+   "copper_boots",
+   "copper_chestplate",
+   "copper_helmet",
+   "copper_hoe",
+   "copper_horse_armor",
+   "copper_leggings",
+   "copper_nautilus_armor",
+   "copper_pickaxe",
+   "copper_shovel",
+   "copper_spear",
+   "copper_sword",
+   "cyan_terracotta",
+   "dark_oak_log",
+   "dark_oak_wood",
+   "deepslate_coal_ore",
+   "deepslate_copper_ore",
+   "deepslate_diamond_ore",
+   "deepslate_emerald_ore",
+   "deepslate_gold_ore",
+   "deepslate_iron_ore",
+   "deepslate_lapis_ore",
+   "deepslate_redstone_ore",
+   "golden_axe",
+   "golden_boots",
+   "golden_chestplate",
+   "golden_helmet",
+   "golden_hoe",
+   "golden_horse_armor",
+   "golden_leggings",
+   "golden_nautilus_armor",
+   "golden_pickaxe",
+   "golden_shovel",
+   "golden_spear",
+   "golden_sword",
+   "gray_terracotta",
+   "green_terracotta",
+   "iron_axe",
+   "iron_boots",
+   "iron_chestplate",
+   "iron_helmet",
+   "iron_hoe",
+   "iron_horse_armor",
+   "iron_leggings",
+   "iron_nautilus_armor",
+   "iron_pickaxe",
+   "iron_shovel",
+   "iron_spear",
+   "iron_sword",
+   "jungle_log",
+   "jungle_wood",
+   "light_blue_terracotta",
+   "light_gray_terracotta",
+   "lime_terracotta",
+   "magenta_terracotta",
+   "mangrove_log",
+   "mangrove_wood",
+   "nether_brick",
+   "oak_wood",
+   "orange_terracotta",
+   "pale_oak_log",
+   "pale_oak_wood",
+   "pink_terracotta",
+   "polished_blackstone_bricks",
+   "poplar_log",
+   "poplar_wood",
+   "purple_terracotta",
+   "quartz_block",
+   "red_sandstone",
+   "red_terracotta",
+   "resin_clump",
+   "sandstone",
+   "spruce_log",
+   "spruce_wood",
+   "stone",
+   "stripped_acacia_log",
+   "stripped_acacia_wood",
+   "stripped_birch_log",
+   "stripped_birch_wood",
+   "stripped_cherry_log",
+   "stripped_cherry_wood",
+   "stripped_dark_oak_log",
+   "stripped_dark_oak_wood",
+   "stripped_jungle_log",
+   "stripped_jungle_wood",
+   "stripped_mangrove_log",
+   "stripped_mangrove_wood",
+   "stripped_oak_log",
+   "stripped_oak_wood",
+   "stripped_pale_oak_log",
+   "stripped_pale_oak_wood",
+   "stripped_poplar_log",
+   "stripped_poplar_wood",
+   "stripped_spruce_log",
+   "stripped_spruce_wood",
+   "wet_sponge",
+   "white_terracotta",
+   "yellow_terracotta"
+  ],
+  "fuel": [
+   "acacia_boat",
+   "acacia_button",
+   "acacia_chest_boat",
+   "acacia_door",
+   "acacia_fence",
+   "acacia_fence_gate",
+   "acacia_hanging_sign",
+   "acacia_log",
+   "acacia_planks",
+   "acacia_pressure_plate",
+   "acacia_shelf",
+   "acacia_sign",
+   "acacia_slab",
+   "acacia_trapdoor",
+   "acacia_wood",
+   "azalea",
+   "bamboo_button",
+   "bamboo_chest_raft",
+   "bamboo_door",
+   "bamboo_fence",
+   "bamboo_fence_gate",
+   "bamboo_hanging_sign",
+   "bamboo_mosaic",
+   "bamboo_mosaic_slab",
+   "bamboo_mosaic_stairs",
+   "bamboo_planks",
+   "bamboo_pressure_plate",
+   "bamboo_raft",
+   "bamboo_shelf",
+   "bamboo_sign",
+   "bamboo_slab",
+   "bamboo_trapdoor",
+   "banner",
+   "barrel",
+   "birch_boat",
+   "birch_button",
+   "birch_chest_boat",
+   "birch_door",
+   "birch_fence",
+   "birch_fence_gate",
+   "birch_hanging_sign",
+   "birch_log",
+   "birch_planks",
+   "birch_pressure_plate",
+   "birch_shelf",
+   "birch_sign",
+   "birch_slab",
+   "birch_trapdoor",
+   "birch_wood",
+   "black_cushion",
+   "blue_cushion",
+   "bookshelf",
+   "bowl",
+   "brown_cushion",
+   "cartography_table",
+   "cherry_boat",
+   "cherry_button",
+   "cherry_chest_boat",
+   "cherry_door",
+   "cherry_fence",
+   "cherry_fence_gate",
+   "cherry_hanging_sign",
+   "cherry_log",
+   "cherry_planks",
+   "cherry_pressure_plate",
+   "cherry_shelf",
+   "cherry_sign",
+   "cherry_slab",
+   "cherry_trapdoor",
+   "cherry_wood",
+   "chest",
+   "chiseled_bookshelf",
+   "composter",
+   "crafting_table",
+   "crossbow",
+   "cyan_cushion",
+   "dark_oak_boat",
+   "dark_oak_button",
+   "dark_oak_chest_boat",
+   "dark_oak_door",
+   "dark_oak_fence",
+   "dark_oak_fence_gate",
+   "dark_oak_hanging_sign",
+   "dark_oak_log",
+   "dark_oak_planks",
+   "dark_oak_pressure_plate",
+   "dark_oak_shelf",
+   "dark_oak_sign",
+   "dark_oak_slab",
+   "dark_oak_trapdoor",
+   "dark_oak_wood",
+   "daylight_detector",
+   "deadbush",
+   "fence_gate",
+   "fletching_table",
+   "flowering_azalea",
+   "gray_cushion",
+   "green_cushion",
+   "jukebox",
+   "jungle_boat",
+   "jungle_button",
+   "jungle_chest_boat",
+   "jungle_door",
+   "jungle_fence",
+   "jungle_fence_gate",
+   "jungle_hanging_sign",
+   "jungle_log",
+   "jungle_planks",
+   "jungle_pressure_plate",
+   "jungle_shelf",
+   "jungle_sign",
+   "jungle_slab",
+   "jungle_trapdoor",
+   "jungle_wood",
+   "ladder",
+   "leaf_litter",
+   "lectern",
+   "light_blue_cushion",
+   "light_gray_cushion",
+   "lime_cushion",
+   "loom",
+   "magenta_cushion",
+   "mangrove_boat",
+   "mangrove_button",
+   "mangrove_chest_boat",
+   "mangrove_door",
+   "mangrove_fence",
+   "mangrove_fence_gate",
+   "mangrove_hanging_sign",
+   "mangrove_log",
+   "mangrove_planks",
+   "mangrove_pressure_plate",
+   "mangrove_roots",
+   "mangrove_shelf",
+   "mangrove_sign",
+   "mangrove_slab",
+   "mangrove_trapdoor",
+   "mangrove_wood",
+   "noteblock",
+   "oak_boat",
+   "oak_chest_boat",
+   "oak_fence",
+   "oak_hanging_sign",
+   "oak_planks",
+   "oak_shelf",
+   "oak_sign",
+   "oak_slab",
+   "oak_wood",
+   "orange_cushion",
+   "pale_oak_boat",
+   "pale_oak_button",
+   "pale_oak_chest_boat",
+   "pale_oak_door",
+   "pale_oak_fence",
+   "pale_oak_fence_gate",
+   "pale_oak_hanging_sign",
+   "pale_oak_log",
+   "pale_oak_planks",
+   "pale_oak_pressure_plate",
+   "pale_oak_shelf",
+   "pale_oak_sign",
+   "pale_oak_slab",
+   "pale_oak_trapdoor",
+   "pale_oak_wood",
+   "pink_cushion",
+   "poplar_boat",
+   "poplar_button",
+   "poplar_chest_boat",
+   "poplar_door",
+   "poplar_fence",
+   "poplar_fence_gate",
+   "poplar_hanging_sign",
+   "poplar_log",
+   "poplar_planks",
+   "poplar_pressure_plate",
+   "poplar_shelf",
+   "poplar_sign",
+   "poplar_slab",
+   "poplar_trapdoor",
+   "poplar_wood",
+   "purple_cushion",
+   "red_cushion",
+   "scaffolding",
+   "short_dry_grass",
+   "smithing_table",
+   "spruce_boat",
+   "spruce_button",
+   "spruce_chest_boat",
+   "spruce_door",
+   "spruce_fence",
+   "spruce_fence_gate",
+   "spruce_hanging_sign",
+   "spruce_log",
+   "spruce_planks",
+   "spruce_pressure_plate",
+   "spruce_shelf",
+   "spruce_sign",
+   "spruce_slab",
+   "spruce_trapdoor",
+   "spruce_wood",
+   "stripped_acacia_log",
+   "stripped_acacia_wood",
+   "stripped_bamboo_block",
+   "stripped_birch_log",
+   "stripped_birch_wood",
+   "stripped_cherry_log",
+   "stripped_cherry_wood",
+   "stripped_dark_oak_log",
+   "stripped_dark_oak_wood",
+   "stripped_jungle_log",
+   "stripped_jungle_wood",
+   "stripped_mangrove_log",
+   "stripped_mangrove_wood",
+   "stripped_oak_log",
+   "stripped_oak_wood",
+   "stripped_pale_oak_log",
+   "stripped_pale_oak_wood",
+   "stripped_poplar_log",
+   "stripped_poplar_wood",
+   "stripped_spruce_log",
+   "stripped_spruce_wood",
+   "tall_dry_grass",
+   "trapdoor",
+   "trapped_chest",
+   "white_cushion",
+   "wooden_axe",
+   "wooden_button",
+   "wooden_door",
+   "wooden_hoe",
+   "wooden_pickaxe",
+   "wooden_pressure_plate",
+   "wooden_shovel",
+   "wooden_spear",
+   "wooden_sword",
+   "yellow_cushion"
+  ]
+ },
+ "wrong_in_current_guide": [],
+ "current_guide_names_not_in_viewer": []
+}

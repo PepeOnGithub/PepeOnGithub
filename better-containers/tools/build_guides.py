@@ -78,6 +78,14 @@ REPAIR_GROUPS = {
     'mace': 'Mace',
     'turtle_shell': 'Turtle helmet',
     'wolf_armor': 'Wolf armor',
+    'spears': 'Spears of every tier, using the same material as that tier',
+    'copper_gear': 'Copper helmet, chestplate, leggings, boots, sword, pickaxe, axe, shovel, hoe (copper ingot)',
+    'iron_armors': 'Iron and chainmail helmet, chestplate, leggings, boots (iron ingot)',
+    'golden_armors': 'Golden helmet, chestplate, leggings, boots (gold ingot)',
+    'diamond_armors': 'Diamond helmet, chestplate, leggings, boots (diamond)',
+    'netherite_armors': 'Netherite helmet, chestplate, leggings, boots (netherite ingot)',
+    'repair_materials': 'Planks fix wood and shields. Cobblestone, cobbled deepslate or blackstone fix stone. Leather, ingots and diamonds fix the rest',
+    'repair_amount': 'Each material restores 25 percent durability. Two damaged items of one kind can also be combined',
 }
 FORMAT_CODES = [('k', 'Obfuscated'), ('l', 'Bold'), ('m', 'Strikethrough'), ('n', 'Underline'), ('o', 'Italic'), ('r', 'Reset')]
 COLOR_CODES = [('0', 'Black'), ('1', 'Dark Blue'), ('2', 'Dark Green'), ('3', 'Dark Aqua'), ('4', 'Dark Red'),
@@ -94,6 +102,7 @@ INFO_PLACEMENTS = {
     'inventory': ('inventory_screen.json', 'player_inventory'),
     'loom': ('loom_screen.json', 'right_panel/loom_screen_inventory'),
     'trade': ('trade_2_screen.json', 'right_panel/trade_screen_inventory'),
+    'stonecutter': ('stonecutter_screen.json', 'right_panel/stonecutter_screen_inventory'),
 }
 HOOK_SPECS = [
     {'file': 'furnace_screen.json', 'screen': None, 'placements': [FURNACE_PLACEMENT]},
