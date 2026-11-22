@@ -10,7 +10,7 @@ It covers the **furnace**, the **blast furnace**, and the **smoker**. It's the f
 | Panel and five tabs | Built: `ui/better_containers/containers/furnace_guide.json` |
 | Item cells | Built: shared `ui/better_containers/shared/item_cell.json` |
 | Hook into the vanilla furnace | Built: `ui/furnace_screen.json` (after the management row) |
-| Blast furnace and smoker hiding | Built as conditions, **not verified** in game (see below) |
+| Blast furnace and smoker | Built: `ui/blast_furnace_screen.json` sets `$is_blast_furnace`, `ui/smoker_screen.json` sets `$is_smoker`; each places the guide. Not verified in game (see below) |
 | Progress bars (fuel and smelting) | Built: two bars bound to `#furnace_flame_ratio` and `#furnace_arrow_ratio`, the vanilla globals the reference uses. Verify the bar widths in game |
 | Smelt time text | Not built |
 | Hover detail text | Not built |
@@ -44,8 +44,7 @@ Before you ship, check each item in game: put it in the furnace and confirm it s
 | `$is_smoker` | the vanilla screen (default `false`) | Hides the Ores label and tab |
 | `$<item>_item_id` | `_global_variables.json` | Item ID for each cell |
 
-The `$is_blast_furnace` and `$is_smoker` values come from the vanilla screen. The pack sets only the defaults. If the vanilla
-blast furnace and smoker screens don't set them, the Foods and Ores tabs show on every furnace. Check this in game first.
+The `$is_blast_furnace` and `$is_smoker` values are set on the blast furnace and smoker screen roots by the override files. The guide hides the Foods tab on the blast furnace and the Ores tab on the smoker. The override mechanism follows the reference pack; check it in game first.
 
 ## Item IDs
 

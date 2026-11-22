@@ -18,7 +18,7 @@ structure Glacier uses, and are restated here as facts about the game.
 | Smithing table | [02 — Smithing](02-smithing.md) | Guide panel built (3 tabs) |
 | Enchanting table | [03 — Enchanting](03-enchanting.md) | Management row only |
 | Anvil | [04 — Anvil](04-anvil.md) | Management row only |
-| Chest, double chest | [06 — Chest](06-chest.md) | Guide panel built (search box, auto place); search does not filter yet |
+| Chest, double chest | [06 — Chest](06-chest.md) | Guide panel built (search filters slots, auto place buttons) |
 | Every container | [07 — Container anatomy](07-container-anatomy.md) | Shared parts described here |
 
 ## Guide anatomy (applies to every guide)

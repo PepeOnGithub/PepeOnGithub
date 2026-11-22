@@ -69,6 +69,13 @@ The IDs in `_global_variables.json` weren't verified against game data (see [14]
 - No `min_engine_version` in the manifest. Set it to the lowest version you tested.
 - The manifest UUIDs were made from fixed names, so they're stable across builds. Give the pack its own UUIDs if you publish it next to another pack.
 
+## Still not built
+
+- Anvil nametag entries: the tab is built and reads `data/nametag_entries.json`, which is empty. The content must come from the pack owner.
+- Brewing recipe filter dropdown (All, Mixed, Positive, Negative): needs each potion's positive or negative flag as data. Not built.
+- Furnace smelt time text: needs the vanilla time binding name, which isn't verified. Not built.
+- Container layouts for the eleven containers that only get the management row (beacon, cartography, enchanting table's own layout beyond the guide, grindstone, horse, inventory, loom, trade). Each needs a layout design; the guides only describe the row.
+
 ## Roadmap
 
 0. **Container-specific layouts.** Eleven containers only get the management row. Decide, one container at a time, whether it needs its own layout, and start from the guide in `docs/containers/`.

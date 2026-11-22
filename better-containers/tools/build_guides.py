@@ -83,14 +83,25 @@ FORMAT_CODES = [('k', 'Obfuscated'), ('l', 'Bold'), ('m', 'Strikethrough'), ('n'
 COLOR_CODES = [('0', 'Black'), ('1', 'Dark Blue'), ('2', 'Dark Green'), ('3', 'Dark Aqua'), ('4', 'Dark Red'),
                ('5', 'Dark Purple'), ('6', 'Gold'), ('7', 'Gray'), ('8', 'Dark Gray'), ('9', 'Blue'), ('a', 'Green'),
                ('b', 'Aqua'), ('c', 'Red'), ('d', 'Light Purple'), ('e', 'Yellow'), ('f', 'White')]
-SCREEN_HOOKS = {
-    'furnace': ('furnace_screen.json', [('right_panel/furnace_screen_inventory', 'furnace_guide')]),
-    'enchanting': ('enchanting_screen.json', [('enchanting_panel/root_panel/enchanting_screen_inventory', 'enchanting_guide')]),
-    'anvil': ('anvil_screen.json', [('anvil_panel/root_panel/anvil_screen_inventory', 'anvil_guide')]),
-    'smithing': ('smithing_table_2_screen.json', [('smithing_table_panel/root_panel/smithing_table_screen_inventory', 'smithing_guide')]),
-    'chest': ('chest_screen.json', [('small_chest_panel/root_panel/chest_panel', 'chest_guide'),
-                                    ('large_chest_panel/root_panel/chest_panel', 'chest_guide')]),
-}
+# Vanilla-named override files. "screen" is the variable block set on the screen root (Glacier does the same
+# for blast furnace and smoker); each placement is (path inside the screen, guide root name, guide namespace).
+FURNACE_PLACEMENT = ('right_panel/furnace_screen_inventory', 'furnace_guide', 'bc_furnace_guide')
+HOOK_SPECS = [
+    {'file': 'furnace_screen.json', 'screen': None, 'placements': [FURNACE_PLACEMENT]},
+    {'file': 'blast_furnace_screen.json', 'screen': {'blast_furnace_screen': {'$is_blast_furnace': True}},
+     'placements': [FURNACE_PLACEMENT]},
+    {'file': 'smoker_screen.json', 'screen': {'smoker_screen': {'$is_smoker': True}},
+     'placements': [FURNACE_PLACEMENT]},
+    {'file': 'enchanting_screen.json', 'screen': None, 'placements': [
+        ('enchanting_panel/root_panel/enchanting_screen_inventory', 'enchanting_guide', 'bc_enchanting_guide')]},
+    {'file': 'anvil_screen.json', 'screen': None, 'placements': [
+        ('anvil_panel/root_panel/anvil_screen_inventory', 'anvil_guide', 'bc_anvil_guide')]},
+    {'file': 'smithing_table_2_screen.json', 'screen': None, 'placements': [
+        ('smithing_table_panel/root_panel/smithing_table_screen_inventory', 'smithing_guide', 'bc_smithing_guide')]},
+    {'file': 'chest_screen.json', 'screen': None, 'placements': [
+        ('small_chest_panel/root_panel/chest_panel', 'chest_guide', 'bc_chest_guide'),
+        ('large_chest_panel/root_panel/chest_panel', 'chest_guide', 'bc_chest_guide')]},
+]
 
 
 # ---------------------------------------------------------------- helpers
@@ -350,23 +361,24 @@ def main():
                           'bindings': [{'binding_type': 'view', 'source_property_name': '(#full_item_id + #item_id)',
                                         'target_property_name': '#item_id_aux'}]}}]}})
 
-    # 4. hooks into the vanilla screens (append, never duplicate)
-    for name, (file, placements) in SCREEN_HOOKS.items():
-        path = os.path.join(PACK, 'ui', file)
-        raw = open(path, encoding='utf-8').read()
+    # 4. hooks into the vanilla screens (append, never duplicate). Files that do not exist yet are created.
+    for spec in HOOK_SPECS:
+        path = os.path.join(PACK, 'ui', spec['file'])
+        raw = open(path, encoding='utf-8').read() if os.path.exists(path) else '{}'
         comment = None
         m = re.search(r'/\*.*?\*/', raw, flags=re.S)
         if m:
             comment = m.group(0)
             raw = raw.replace(comment, '', 1)
         hook = json.loads(re.sub(r'//[^\n]*', '', raw))
-        for path_key, guide in placements:
+        if spec['screen']:
+            hook.update(spec['screen'])
+        for path_key, guide, ns in spec['placements']:
             entry = hook.setdefault(path_key, {'modifications': []})
             mods = entry['modifications']
-            ref = f'{guide}@bc_{name}_guide.{guide}'
+            ref = f'{guide}@{ns}.{guide}'
             if not any(ref in json.dumps(mod) for mod in mods):
-                mods.append({'array_name': 'controls', 'operation': 'insert_back',
-                             'value': {f'{guide}@bc_{name}_guide.{guide}': {}}})
+                mods.append({'array_name': 'controls', 'operation': 'insert_back', 'value': {ref: {}}})
         write_json(path, hook, leading_comment=comment)
 
     # 5. register the new UI files
