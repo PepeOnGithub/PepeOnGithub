@@ -1,0 +1,279 @@
+{
+  "namespace": "double_chest_content",
+  "container_elements@single_chest_content.container_elements": {
+    "controls": [
+      {
+        "primary_elements@toggle_manager.primary_management_toggles": {
+          "$toggle_position": "left"
+        }
+      },
+      {
+        "right_elements@toggle_manager.right_row_toggles": {}
+      },
+      {
+        "chest_top_overlays@double_chest_content.9x6_overlays": {
+          "$slot_pressed_control": "$container_slot_pressed_control",
+          "$slot_highlight_control": "$container_slot_highlight_control",
+          "offset": "$container_overlay_offset"
+        }
+      },
+      {
+        "inventory_overlay@single_chest_content.9x3_overlays": {
+          "anchor_from": "bottom_left",
+          "anchor_to": "bottom_left",
+          "offset": "$inventory_overlay_offset",
+          "$slot_pressed_control": "$inventory_slot_pressed_control",
+          "$slot_highlight_control": "$inventory_slot_highlight_control",
+          "size": [
+            162,
+            54
+          ],
+          "$item_collection_name": "inventory_items"
+        }
+      },
+      {
+        "hotbar_overlay@single_chest_content.9x1_overlays": {
+          "anchor_from": "bottom_left",
+          "anchor_to": "bottom_left",
+          "offset": "$hotbar_overlay_offset",
+          "$slot_pressed_control": "$hotbar_slot_pressed_control",
+          "$slot_highlight_control": "$hotbar_slot_highlight_control",
+          "size": [
+            162,
+            18
+          ]
+        }
+      },
+      {
+        "text_box@_global.text_edit_control": {}
+      }
+    ]
+  },
+  "9x6_overlays": {
+    "type": "panel",
+    "$item_collection_name|default": "container_items",
+    "controls": [
+      {
+        "drop_all_horizontal_overlay@double_chest_content.row_drop_all_overlay": {}
+      },
+      {
+        "move_all_horizontal_overlay@double_chest_content.row_move_all_overlay": {}
+      },
+      {
+        "move_one_horizontal_overlay@double_chest_content.row_move_one_overlay": {}
+      },
+      {
+        "move_two_horizontal_overlay@double_chest_content.row_move_two_overlay": {}
+      }
+    ]
+  },
+  "row_move_two_overlay@double_chest_content.row_drop_all_overlay": {
+    "$output_action": "button.container_auto_place_one",
+    "controls": [
+      {
+        "row_1@single_chest_content.grid_row": {
+          "$row_index_offset": 0
+        }
+      },
+      {
+        "row_2@single_chest_content.grid_row": {
+          "$row_index_offset": 9,
+          "offset": [
+            0,
+            18
+          ]
+        }
+      },
+      {
+        "row_3@single_chest_content.grid_row": {
+          "$row_index_offset": 18,
+          "offset": [
+            0,
+            36
+          ]
+        }
+      },
+      {
+        "row_4@single_chest_content.grid_row": {
+          "$row_index_offset": 27,
+          "offset": [
+            0,
+            54
+          ]
+        }
+      },
+      {
+        "row_5@single_chest_content.grid_row": {
+          "$row_index_offset": 36,
+          "offset": [
+            0,
+            72
+          ]
+        }
+      },
+      {
+        "row_6@single_chest_content.grid_row": {
+          "$row_index_offset": 45,
+          "offset": [
+            0,
+            90
+          ]
+        }
+      },
+      {
+        "row_7@single_chest_content.grid_row": {
+          "$row_index_offset": 0
+        }
+      },
+      {
+        "row_8@single_chest_content.grid_row": {
+          "$row_index_offset": 9,
+          "offset": [
+            0,
+            18
+          ]
+        }
+      },
+      {
+        "row_9@single_chest_content.grid_row": {
+          "$row_index_offset": 18,
+          "offset": [
+            0,
+            36
+          ]
+        }
+      },
+      {
+        "row_10@single_chest_content.grid_row": {
+          "$row_index_offset": 27,
+          "offset": [
+            0,
+            54
+          ]
+        }
+      },
+      {
+        "row_11@single_chest_content.grid_row": {
+          "$row_index_offset": 36,
+          "offset": [
+            0,
+            72
+          ]
+        }
+      },
+      {
+        "row_12@single_chest_content.grid_row": {
+          "$row_index_offset": 45,
+          "offset": [
+            0,
+            90
+          ]
+        }
+      }
+    ],
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "move_two_row",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+  "row_move_one_overlay@double_chest_content.row_drop_all_overlay": {
+    "$output_action": "button.container_auto_place_one",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "move_one_row",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+  "row_move_all_overlay@double_chest_content.row_drop_all_overlay": {
+    "$output_action": "button.container_auto_place",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "move_all_row",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+  "row_drop_all_overlay": {
+    "type": "panel",
+    "offset": [
+      7,
+      9
+    ],
+    "size": [
+      162,
+      108
+    ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "$collection_index|default": 0,
+    "$row_index_offset|default": 0,
+    "$output_action|default": "button.drop_all",
+    "controls": [
+      {
+        "row_1@single_chest_content.grid_row": {}
+      },
+      {
+        "row_2@single_chest_content.grid_row": {
+          "$row_index_offset": 9,
+          "offset": [
+            0,
+            18
+          ]
+        }
+      },
+      {
+        "row_3@single_chest_content.grid_row": {
+          "$row_index_offset": 18,
+          "offset": [
+            0,
+            36
+          ]
+        }
+      },
+      {
+        "row_4@single_chest_content.grid_row": {
+          "$row_index_offset": 27,
+          "offset": [
+            0,
+            54
+          ]
+        }
+      },
+      {
+        "row_5@single_chest_content.grid_row": {
+          "$row_index_offset": 36,
+          "offset": [
+            0,
+            72
+          ]
+        }
+      },
+      {
+        "row_6@single_chest_content.grid_row": {
+          "$row_index_offset": 45,
+          "offset": [
+            0,
+            90
+          ]
+        }
+      }
+    ],
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "drop_all_row",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ]
+  }
+}

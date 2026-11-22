@@ -1,0 +1,296 @@
+{
+  "namespace": "uic",
+  "mx_7x@common.root_panel": {
+    "controls": [
+      {
+        "g4pr0_": {
+          "type": "image",
+          "texture": "textures/ui/recipe_back_panel",
+          "size": [
+            "100% + 8px",
+            "100% - 6px"
+          ]
+        }
+      }
+    ]
+  },
+  "nw_3p": {
+    "type": "panel",
+    "size": [
+      25,
+      24
+    ],
+    "controls": [
+      {
+        "hv_0r9@$tab_icon": {}
+      }
+    ]
+  },
+  "lg_0t@common_tabs.tab_left": {
+    "$toggle_focus_enabled": false,
+    "$radio_toggle_group": true,
+    "$tab_content": "uic.nw_3p",
+    "size": [
+      "100%",
+      25
+    ]
+  },
+  "zxh7_6": {
+    "$navigation_tabs|default": "common.empty_panel",
+    "type": "panel",
+    "controls": [
+      {
+        "znp-3@$navigation_tabs": {
+          "type": "stack_panel",
+          "size": [
+            "100% + 4px",
+            "100%"
+          ],
+          "orientation": "vertical",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left"
+        }
+      }
+    ]
+  },
+  "d-3fa": {
+    "$scroll_content|default": "common.empty_panel",
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%c"
+    ],
+    "controls": [
+      {
+        "yd8-0j@$scroll_content": {}
+      }
+    ]
+  },
+  "ms_y87": {
+    "type": "label",
+    "size": [
+      "100%",
+      10
+    ],
+    "text_alignment": "right",
+    "color": "$title_text_color"
+  },
+  "yw8d5_@common.root_panel": {
+    "layer": 1,
+    "controls": [
+      {
+        "p_xn9@uic.zxh7_6": {
+          "size": [
+            23,
+            "100%"
+          ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_right",
+          "layer": 5
+        }
+      },
+      {
+        "v0a-2s@common.common_panel": {
+          "$show_close_button": false,
+          "layer": 8
+        }
+      },
+      {
+        "q_n3y": {
+          "$tab_text_panel|default": "common.empty_panel",
+          "type": "stack_panel",
+          "size": [
+            "100% - 12px",
+            "100% - 12px"
+          ],
+          "layer": 15,
+          "controls": [
+            {
+              "u-f0i": {
+                "type": "panel",
+                "size": [
+                  "100%",
+                  2
+                ]
+              }
+            },
+            {
+              "fj0_8x@$tab_text_panel": {}
+            },
+            {
+              "hnq_65": {
+                "type": "panel",
+                "size": [
+                  "100%",
+                  2
+                ]
+              }
+            },
+            {
+              "y6aw7_@common.container_scroll_panel": {
+                "size": [
+                  "100%",
+                  "fill"
+                ],
+                "$scrolling_content": "uic.d-3fa"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "w_t4f": {
+    "type": "image",
+    "size": [
+      19,
+      13
+    ],
+    "texture": "textures/ui/inventory_icon"
+  },
+  "dnj-72": {
+    "type": "image",
+    "size": [
+      19,
+      13
+    ],
+    "texture": "textures/ui/recipe_book_icon"
+  },
+  "fs_3m": {
+    "type": "panel",
+    "size": [
+      25,
+      "100%"
+    ],
+    "controls": [
+      {
+        "kd57j_@common_toggles.light_content_toggle": {
+          "$toggle_name": "kd57j_",
+          "$radio_toggle_group": true,
+          "$toggle_group_default_selected": 0,
+          "size": [
+            25,
+            18
+          ]
+        }
+      }
+    ]
+  },
+  "c0z-m": {
+    "type": "panel",
+    "size": [
+      "100%cm",
+      23
+    ],
+    "anchor_from": "top_right",
+    "anchor_to": "bottom_right",
+    "controls": [
+      {
+        "l-r3p8@crafting.toolbar_background": {
+          "size": [
+            "100%sm + 8px",
+            27
+          ],
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "layer": 0
+        }
+      },
+      {
+        "x7yj8-": {
+          "type": "stack_panel",
+          "size": [
+            "100%c",
+            "100%"
+          ],
+          "offset": [
+            0,
+            2
+          ],
+          "orientation": "horizontal",
+          "layer": 1,
+          "controls": [
+            {
+              "p_wn9": {
+                "type": "panel",
+                "size": [
+                  4,
+                  0
+                ]
+              }
+            },
+            {
+              "v8m_g@uic.fs_3m": {
+                "$toggle_view_binding_name": "w-c8l",
+                "$toggle_group_forced_index": 1,
+                "$button_content": "uic.dnj-72"
+              }
+            },
+            {
+              "vp6_9h": {
+                "type": "panel",
+                "size": [
+                  1,
+                  0
+                ]
+              }
+            },
+            {
+              "bg_i4@uic.fs_3m": {
+                "$toggle_view_binding_name": "al_7q",
+                "$toggle_group_forced_index": 0,
+                "$button_content": "uic.w_t4f",
+                "$toggle_default_state": true
+              }
+            },
+            {
+              "c_65qi": {
+                "type": "panel",
+                "size": [
+                  4,
+                  0
+                ]
+              }
+            },
+            {
+              "r7xg_": {
+                "type": "panel",
+                "size": [
+                  15,
+                  "100%"
+                ],
+                "bindings": [
+                  {
+                    "binding_name": "#close_button_visible",
+                    "binding_name_override": "#visible"
+                  }
+                ],
+                "controls": [
+                  {
+                    "y0bq_9@common.light_close_button": {
+                      "offset": [
+                        0,
+                        0
+                      ],
+                      "anchor_from": "center",
+                      "anchor_to": "center"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "df0-t": {
+                "type": "panel",
+                "size": [
+                  2,
+                  0
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

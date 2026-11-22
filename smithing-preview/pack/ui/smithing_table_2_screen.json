@@ -1,0 +1,30 @@
+{
+  "smithing_table_panel": {
+    "modifications": [
+      {
+        "control_name": "root_panel",
+        "operation": "remove"
+      },
+      {
+        "array_name": "controls",
+        "operation": "insert_back",
+        "value": {
+          "y6hs-@smithing.r_fi52": {}
+        }
+      }
+    ]
+  },
+  "smithing_table_panel/root_panel/smithing_table_screen_inventory": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": {
+          "primary_elements@toggle_manager.primary_management_toggles": {
+            "$toggle_position": "right"
+          }
+        }
+      }
+    ]
+  }
+}

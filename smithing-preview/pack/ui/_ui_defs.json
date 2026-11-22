@@ -1,0 +1,19 @@
+{
+  "ui_defs": [
+    "ui/pepe/core/_global.json",
+    "ui/pepe/core/item_data.json",
+    "ui/pepe/core/uic.json",
+    "ui/pepe/core/toggle_manager.json",
+    "ui/pepe/chests/single_chest_content.json",
+    "ui/pepe/chests/double_chest_content.json",
+    "ui/pepe/smithing/smithing.json",
+    "ui/pepe/smithing/smithing_arc.json",
+    "ui/pepe/brewing_guide/brewing_global.json",
+    "ui/pepe/brewing_guide/factory_bindings.json",
+    "ui/pepe/brewing_guide/brewing_toggle.json",
+    "ui/pepe/brewing_guide/inventory_area/brewing_potion_slot.json",
+    "ui/pepe/brewing_guide/inventory_area/modifier_brewing_potion_slot.json",
+    "ui/pepe/brewing_guide/recipe_book_area/brewing_recipe_book.json",
+    "ui/pepe/brewing_guide/recipe_book_area/brewing_recipe_book_grid.json"
+  ]
+}

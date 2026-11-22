@@ -1,0 +1,28 @@
+{
+  "panel/root_panel/redstone_screen_inventory": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": [
+          {
+            "elements@_global.redstone_content": {}
+          }
+        ]
+      }
+    ]
+  },
+  "panel_crafter/root_panel/redstone_screen_inventory": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": [
+          {
+            "elements@_global.redstone_content": {}
+          }
+        ]
+      }
+    ]
+  }
+}

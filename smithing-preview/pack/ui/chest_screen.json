@@ -1,0 +1,27 @@
+{
+  /*
+    custom things in this file can be copied without risk
+  */
+  "small_chest_panel/root_panel/chest_panel": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": {
+          "container_elements@single_chest_content.container_elements": {}
+        }
+      }
+    ]
+  },
+  "large_chest_panel/root_panel/chest_panel": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": {
+          "container_elements@double_chest_content.container_elements": {}
+        }
+      }
+    ]
+  }
+}

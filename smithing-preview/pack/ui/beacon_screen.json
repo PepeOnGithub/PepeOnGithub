@@ -1,0 +1,15 @@
+{
+  "beacon_panel/root_panel/beacon_inventory": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": {
+          "primary_elements@toggle_manager.primary_management_toggles": {
+            "$toggle_position": "right"
+          }
+        }
+      }
+    ]
+  }
+}
