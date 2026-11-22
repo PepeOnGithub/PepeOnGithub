@@ -60,6 +60,10 @@ chests, the brewing stand, and the recipe book.
 | 21 | [Known issues and roadmap](docs/21-known-issues-and-roadmap.md) | What changed, what didn't, and next steps |
 | 22 | [Glossary](docs/22-glossary.md) | Definitions of the terms used in these guides |
 
+## Container guides
+
+Guide-style design for each container, in the same shape as the brewing guide: [docs/guides/README.md](docs/guides/README.md). It covers the furnace, smithing, enchanting, anvil, brewing, and chest.
+
 ## Status
 
 - Verified by the validator: 0 errors. It checks structure and references, not visuals.

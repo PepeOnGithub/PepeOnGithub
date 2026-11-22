@@ -1,5 +1,7 @@
 # Containers
 
+For the guide-style design of each container (tabs, item lists, and text), see [../guides/](../guides/README.md).
+
 Every vanilla container the pack changes has its own guide. Each guide follows the same layout, so you can find the
 same information for any container.
 
