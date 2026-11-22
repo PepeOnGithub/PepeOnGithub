@@ -67,3 +67,7 @@ Every item ID comes from `data/item_ids/stable-1.26.60.json`, the same list the 
 - [ ] Smoker: no Ores tab (verify)
 - [ ] Each curated item smelts, smokes, or burns as the tab says
 - [ ] The guide doesn't cover the management row or the vanilla slots
+
+## Wiki check
+
+`data/wiki/furnace.json` holds the full Bedrock smelting and fuel lists from the Minecraft Wiki (245 fuels, 111 smeltable items the guide does not show, such as gear that smelts to nuggets and all terracotta). The guide tabs now include deepslate ores, more stone blocks, resin clump and every log type. Nothing in the old lists was wrong.

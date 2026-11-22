@@ -31,10 +31,14 @@ TAB_W = 28
 FURNACE_TABS = [
     ('foods', 'Foods', ['beef', 'porkchop', 'chicken', 'mutton', 'rabbit', 'cod', 'salmon', 'potato', 'kelp'], '$is_blast_furnace'),
     ('ores', 'Ores', ['coal_ore', 'copper_ore', 'diamond_ore', 'emerald_ore', 'gold_ore', 'iron_ore', 'lapis_ore',
-                      'nether_gold_ore', 'quartz_ore', 'redstone_ore', 'ancient_debris', 'raw_copper', 'raw_gold', 'raw_iron'], '$is_smoker'),
+                      'nether_gold_ore', 'quartz_ore', 'redstone_ore', 'ancient_debris', 'raw_copper', 'raw_gold', 'raw_iron',
+                      'deepslate_coal_ore', 'deepslate_copper_ore', 'deepslate_diamond_ore', 'deepslate_emerald_ore',
+                      'deepslate_gold_ore', 'deepslate_iron_ore', 'deepslate_lapis_ore', 'deepslate_redstone_ore'], '$is_smoker'),
     ('blocks', 'Blocks', ['cobblestone', 'sand', 'clay', 'netherrack', 'basalt', 'cobbled_deepslate',
-                          'stone_bricks', 'deepslate_bricks', 'deepslate_tiles'], None),
-    ('nature', 'Nature', ['cactus', 'chorus_fruit', 'sea_pickle', 'clay_ball', 'oak_log'], None),
+                          'stone_bricks', 'deepslate_bricks', 'deepslate_tiles', 'stone', 'sandstone', 'red_sandstone',
+                          'nether_brick', 'polished_blackstone_bricks', 'quartz_block', 'wet_sponge'], None),
+    ('nature', 'Nature', ['cactus', 'chorus_fruit', 'sea_pickle', 'clay_ball', 'resin_clump', 'oak_log', 'spruce_log', 'birch_log',
+                         'jungle_log', 'acacia_log', 'dark_oak_log', 'mangrove_log', 'cherry_log', 'pale_oak_log'], None),
     ('fuel', 'Fuel', ['coal', 'charcoal', 'coal_block', 'blaze_rod', 'lava_bucket', 'dried_kelp_block', 'bamboo',
                       'bamboo_block', 'stick'], None),
 ]

@@ -419,6 +419,58 @@
                           "raw_iron_cell@bc_item_cell.item_cell": {
                             "$item_id": "$raw_iron_item_id"
                           }
+                        },
+                        {
+                          "deepslate_coal_ore_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$deepslate_coal_ore_item_id"
+                          }
+                        },
+                        {
+                          "deepslate_copper_ore_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$deepslate_copper_ore_item_id"
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "row_2": {
+                      "type": "stack_panel",
+                      "orientation": "horizontal",
+                      "size": [
+                        "100%",
+                        18
+                      ],
+                      "controls": [
+                        {
+                          "deepslate_diamond_ore_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$deepslate_diamond_ore_item_id"
+                          }
+                        },
+                        {
+                          "deepslate_emerald_ore_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$deepslate_emerald_ore_item_id"
+                          }
+                        },
+                        {
+                          "deepslate_gold_ore_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$deepslate_gold_ore_item_id"
+                          }
+                        },
+                        {
+                          "deepslate_iron_ore_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$deepslate_iron_ore_item_id"
+                          }
+                        },
+                        {
+                          "deepslate_lapis_ore_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$deepslate_lapis_ore_item_id"
+                          }
+                        },
+                        {
+                          "deepslate_redstone_ore_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$deepslate_redstone_ore_item_id"
+                          }
                         }
                       ]
                     }
@@ -509,6 +561,41 @@
                           "deepslate_tiles_cell@bc_item_cell.item_cell": {
                             "$item_id": "$deepslate_tiles_item_id"
                           }
+                        },
+                        {
+                          "stone_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$stone_item_id"
+                          }
+                        },
+                        {
+                          "sandstone_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$sandstone_item_id"
+                          }
+                        },
+                        {
+                          "red_sandstone_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$red_sandstone_item_id"
+                          }
+                        },
+                        {
+                          "nether_brick_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$nether_brick_item_id"
+                          }
+                        },
+                        {
+                          "polished_blackstone_bricks_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$polished_blackstone_bricks_item_id"
+                          }
+                        },
+                        {
+                          "quartz_block_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$quartz_block_item_id"
+                          }
+                        },
+                        {
+                          "wet_sponge_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$wet_sponge_item_id"
+                          }
                         }
                       ]
                     }
@@ -563,8 +650,65 @@
                           }
                         },
                         {
+                          "resin_clump_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$resin_clump_item_id"
+                          }
+                        },
+                        {
                           "oak_log_cell@bc_item_cell.item_cell": {
                             "$item_id": "$oak_log_item_id"
+                          }
+                        },
+                        {
+                          "spruce_log_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$spruce_log_item_id"
+                          }
+                        },
+                        {
+                          "birch_log_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$birch_log_item_id"
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "row_1": {
+                      "type": "stack_panel",
+                      "orientation": "horizontal",
+                      "size": [
+                        "100%",
+                        18
+                      ],
+                      "controls": [
+                        {
+                          "jungle_log_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$jungle_log_item_id"
+                          }
+                        },
+                        {
+                          "acacia_log_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$acacia_log_item_id"
+                          }
+                        },
+                        {
+                          "dark_oak_log_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$dark_oak_log_item_id"
+                          }
+                        },
+                        {
+                          "mangrove_log_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$mangrove_log_item_id"
+                          }
+                        },
+                        {
+                          "cherry_log_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$cherry_log_item_id"
+                          }
+                        },
+                        {
+                          "pale_oak_log_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$pale_oak_log_item_id"
                           }
                         }
                       ]
