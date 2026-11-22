@@ -1,0 +1,302 @@
+{
+ "source": "minecraft.wiki Anvil_mechanics (Repairable items table; /w/Anvil has no table, only special-case text), Smithing_Template, Smithing_Table, Netherite_Upgrade; viewer ids stable-1.26.60",
+ "repair_groups": {
+  "wooden_tools": {
+   "material": [
+    "planks (any)"
+   ],
+   "items": [
+    "wooden_sword",
+    "wooden_pickaxe",
+    "wooden_axe",
+    "wooden_shovel",
+    "wooden_hoe",
+    "wooden_spear"
+   ]
+  },
+  "shield": {
+   "material": [
+    "planks (any)"
+   ],
+   "items": [
+    "shield"
+   ]
+  },
+  "leather_armors": {
+   "material": [
+    "leather"
+   ],
+   "items": [
+    "leather_helmet",
+    "leather_chestplate",
+    "leather_leggings",
+    "leather_boots"
+   ]
+  },
+  "stone_tools": {
+   "material": [
+    "cobblestone",
+    "cobbled_deepslate",
+    "blackstone"
+   ],
+   "items": [
+    "stone_sword",
+    "stone_pickaxe",
+    "stone_axe",
+    "stone_shovel",
+    "stone_hoe",
+    "stone_spear"
+   ]
+  },
+  "copper_gear": {
+   "material": [
+    "copper_ingot"
+   ],
+   "items": [
+    "copper_helmet",
+    "copper_chestplate",
+    "copper_leggings",
+    "copper_boots",
+    "copper_sword",
+    "copper_pickaxe",
+    "copper_axe",
+    "copper_shovel",
+    "copper_hoe",
+    "copper_spear"
+   ]
+  },
+  "iron_gear": {
+   "material": [
+    "iron_ingot"
+   ],
+   "items": [
+    "iron_helmet",
+    "iron_chestplate",
+    "iron_leggings",
+    "iron_boots",
+    "chainmail_helmet",
+    "chainmail_chestplate",
+    "chainmail_leggings",
+    "chainmail_boots",
+    "iron_sword",
+    "iron_pickaxe",
+    "iron_axe",
+    "iron_shovel",
+    "iron_hoe",
+    "iron_spear"
+   ]
+  },
+  "golden_gear": {
+   "material": [
+    "gold_ingot"
+   ],
+   "items": [
+    "golden_helmet",
+    "golden_chestplate",
+    "golden_leggings",
+    "golden_boots",
+    "golden_sword",
+    "golden_pickaxe",
+    "golden_axe",
+    "golden_shovel",
+    "golden_hoe",
+    "golden_spear"
+   ]
+  },
+  "diamond_gear": {
+   "material": [
+    "diamond"
+   ],
+   "items": [
+    "diamond_helmet",
+    "diamond_chestplate",
+    "diamond_leggings",
+    "diamond_boots",
+    "diamond_sword",
+    "diamond_pickaxe",
+    "diamond_axe",
+    "diamond_shovel",
+    "diamond_hoe",
+    "diamond_spear"
+   ]
+  },
+  "netherite_gear": {
+   "material": [
+    "netherite_ingot"
+   ],
+   "items": [
+    "netherite_helmet",
+    "netherite_chestplate",
+    "netherite_leggings",
+    "netherite_boots",
+    "netherite_sword",
+    "netherite_pickaxe",
+    "netherite_axe",
+    "netherite_shovel",
+    "netherite_hoe",
+    "netherite_spear"
+   ]
+  },
+  "turtle_shell": {
+   "material": [
+    "turtle_scute"
+   ],
+   "items": [
+    "turtle_helmet"
+   ]
+  },
+  "elytra": {
+   "material": [
+    "phantom_membrane"
+   ],
+   "items": [
+    "elytra"
+   ]
+  },
+  "mace": {
+   "material": [
+    "breeze_rod"
+   ],
+   "items": [
+    "mace"
+   ]
+  },
+  "wolf_armor": {
+   "material": [
+    "armadillo_scute"
+   ],
+   "items": [
+    "wolf_armor"
+   ]
+  }
+ },
+ "repair_notes": "One unit restores 25% max durability, 1 level per unit. Any damaged item also repairable by combining two of same kind. Wiki lists no unit repair for nautilus armor, horse armor, bows, shears.",
+ "armor_trim_templates": [
+  "bolt_armor_trim_smithing_template",
+  "coast_armor_trim_smithing_template",
+  "dune_armor_trim_smithing_template",
+  "eye_armor_trim_smithing_template",
+  "flow_armor_trim_smithing_template",
+  "host_armor_trim_smithing_template",
+  "raiser_armor_trim_smithing_template",
+  "rib_armor_trim_smithing_template",
+  "sentry_armor_trim_smithing_template",
+  "shaper_armor_trim_smithing_template",
+  "silence_armor_trim_smithing_template",
+  "snout_armor_trim_smithing_template",
+  "spire_armor_trim_smithing_template",
+  "tide_armor_trim_smithing_template",
+  "vex_armor_trim_smithing_template",
+  "ward_armor_trim_smithing_template",
+  "wayfinder_armor_trim_smithing_template",
+  "wild_armor_trim_smithing_template"
+ ],
+ "armor_trim_templates_short": [
+  "bolt",
+  "coast",
+  "dune",
+  "eye",
+  "flow",
+  "host",
+  "raiser",
+  "rib",
+  "sentry",
+  "shaper",
+  "silence",
+  "snout",
+  "spire",
+  "tide",
+  "vex",
+  "ward",
+  "wayfinder",
+  "wild"
+ ],
+ "trim_materials": [
+  "amethyst_shard",
+  "copper_ingot",
+  "diamond",
+  "emerald",
+  "gold_ingot",
+  "iron_ingot",
+  "lapis_lazuli",
+  "quartz",
+  "netherite_ingot",
+  "redstone",
+  "resin_brick"
+ ],
+ "trim_materials_note": "viewer names; code uses nether_quartz->quartz, redstone_dust->redstone",
+ "armor_items": {
+  "trimmable": [
+   "leather_helmet",
+   "leather_chestplate",
+   "leather_leggings",
+   "leather_boots",
+   "chainmail_helmet",
+   "chainmail_chestplate",
+   "chainmail_leggings",
+   "chainmail_boots",
+   "copper_helmet",
+   "copper_chestplate",
+   "copper_leggings",
+   "copper_boots",
+   "iron_helmet",
+   "iron_chestplate",
+   "iron_leggings",
+   "iron_boots",
+   "golden_helmet",
+   "golden_chestplate",
+   "golden_leggings",
+   "golden_boots",
+   "diamond_helmet",
+   "diamond_chestplate",
+   "diamond_leggings",
+   "diamond_boots",
+   "netherite_helmet",
+   "netherite_chestplate",
+   "netherite_leggings",
+   "netherite_boots",
+   "turtle_helmet"
+  ],
+  "netherite_upgradable_from": [
+   "diamond_helmet",
+   "diamond_chestplate",
+   "diamond_leggings",
+   "diamond_boots",
+   "diamond_sword",
+   "diamond_pickaxe",
+   "diamond_axe",
+   "diamond_shovel",
+   "diamond_hoe",
+   "diamond_spear",
+   "diamond_horse_armor",
+   "diamond_nautilus_armor"
+  ]
+ },
+ "netherite_upgrade": {
+  "template": "netherite_upgrade_smithing_template",
+  "base": "any diamond tool/armor/horse armor/nautilus armor",
+  "addition": "netherite_ingot",
+  "result": "matching netherite item",
+  "keeps": "enchantments, trim, lost durability; no XP",
+  "duplication": "diamond x7 + template + netherrack"
+ },
+ "unmapped": [
+  "netherite_throwing_disc (upcoming 2027, not in viewer list)"
+ ],
+ "missing_from_current_guide": [
+  "copper_ingot repair group: copper helmet/chestplate/leggings/boots and sword/pickaxe/axe/shovel/hoe/spear",
+  "chainmail armor repair (iron_ingot) not in leather/iron groups",
+  "spears for all tiers (wooden..netherite, copper)",
+  "stone material alternatives: cobbled_deepslate, blackstone (not just cobblestone)",
+  "wolf_armor material armadillo_scute, turtle_shell material turtle_scute, elytra phantom_membrane, mace breeze_rod, shield planks (check text shows materials)",
+  "armor: no copper_helmet/chestplate/leggings/boots in ARMOR list (trimmable)",
+  "netherite upgrade also applies to diamond horse armor, nautilus armor, tools, spear",
+  "REPAIR_GROUPS has no armor groups for iron/chainmail/golden/diamond/netherite armor (only tools)"
+ ],
+ "wrong_in_current_guide": [
+  "REPAIR_GROUPS tool groups list only pickaxe, axe, shovel, hoe, sword (no spear)",
+  "TRIMS has no wrong entries: the 18 pattern templates match wiki/Bedrock (bolt..wild) plus netherite_upgrade",
+  "RESOURCES matches the 11 wiki trim materials (netherite_ingot ok); ARMOR turtle_shell alias to turtle_helmet ok",
+  "ARMOR mapping: turtle_shell->turtle_helmet is correct; wiki says turtle shells (helmet) trimmable"
+ ]
+}
