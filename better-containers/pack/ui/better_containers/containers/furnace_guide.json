@@ -1,0 +1,634 @@
+{
+  "namespace": "bc_furnace_guide",
+  "tab_label": {
+    "type": "label",
+    "text": "$tab_text",
+    "size": [
+      "100%",
+      12
+    ],
+    "font_size": "small"
+  },
+  "furnace_guide": {
+    "type": "panel",
+    "size": [
+      144,
+      "default"
+    ],
+    "$is_blast_furnace|default": false,
+    "$is_smoker|default": false,
+    "layer": 2,
+    "controls": [
+      {
+        "title_label": {
+          "type": "label",
+          "text": "%bc_furnace_guide.title",
+          "size": [
+            "100%",
+            12
+          ]
+        }
+      },
+      {
+        "tab_bar": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
+          "size": [
+            "100%",
+            16
+          ],
+          "controls": [
+            {
+              "foods_tab_slot": {
+                "type": "panel",
+                "size": [
+                  28,
+                  14
+                ],
+                "controls": [
+                  {
+                    "foods_tab@bc_shared.radio": {
+                      "$toggle_name": "furnace_guide_tabs",
+                      "$toggle_view_binding_name": "foods_tab_toggle",
+                      "$toggle_group_forced_index": 0,
+                      "$toggle_default_state": true,
+                      "$button_content": "bc_furnace_guide.foods_label",
+                      "size": [
+                        28,
+                        14
+                      ]
+                    }
+                  }
+                ],
+                "ignored": "$is_blast_furnace"
+              }
+            },
+            {
+              "ores_tab_slot": {
+                "type": "panel",
+                "size": [
+                  28,
+                  14
+                ],
+                "controls": [
+                  {
+                    "ores_tab@bc_shared.radio": {
+                      "$toggle_name": "furnace_guide_tabs",
+                      "$toggle_view_binding_name": "ores_tab_toggle",
+                      "$toggle_group_forced_index": 1,
+                      "$toggle_default_state": false,
+                      "$button_content": "bc_furnace_guide.ores_label",
+                      "size": [
+                        28,
+                        14
+                      ]
+                    }
+                  }
+                ],
+                "ignored": "$is_smoker"
+              }
+            },
+            {
+              "blocks_tab_slot": {
+                "type": "panel",
+                "size": [
+                  28,
+                  14
+                ],
+                "controls": [
+                  {
+                    "blocks_tab@bc_shared.radio": {
+                      "$toggle_name": "furnace_guide_tabs",
+                      "$toggle_view_binding_name": "blocks_tab_toggle",
+                      "$toggle_group_forced_index": 2,
+                      "$toggle_default_state": false,
+                      "$button_content": "bc_furnace_guide.blocks_label",
+                      "size": [
+                        28,
+                        14
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "nature_tab_slot": {
+                "type": "panel",
+                "size": [
+                  28,
+                  14
+                ],
+                "controls": [
+                  {
+                    "nature_tab@bc_shared.radio": {
+                      "$toggle_name": "furnace_guide_tabs",
+                      "$toggle_view_binding_name": "nature_tab_toggle",
+                      "$toggle_group_forced_index": 3,
+                      "$toggle_default_state": false,
+                      "$button_content": "bc_furnace_guide.nature_label",
+                      "size": [
+                        28,
+                        14
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "fuel_tab_slot": {
+                "type": "panel",
+                "size": [
+                  28,
+                  14
+                ],
+                "controls": [
+                  {
+                    "fuel_tab@bc_shared.radio": {
+                      "$toggle_name": "furnace_guide_tabs",
+                      "$toggle_view_binding_name": "fuel_tab_toggle",
+                      "$toggle_group_forced_index": 4,
+                      "$toggle_default_state": false,
+                      "$button_content": "bc_furnace_guide.fuel_label",
+                      "size": [
+                        28,
+                        14
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "tab_contents": {
+          "type": "panel",
+          "size": [
+            "100%",
+            "default"
+          ],
+          "controls": [
+            {
+              "foods_panel": {
+                "type": "stack_panel",
+                "orientation": "vertical",
+                "size": [
+                  "100%",
+                  "default"
+                ],
+                "controls": [
+                  {
+                    "row_0": {
+                      "type": "stack_panel",
+                      "orientation": "horizontal",
+                      "size": [
+                        "100%",
+                        18
+                      ],
+                      "controls": [
+                        {
+                          "beef_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$beef_item_id"
+                          }
+                        },
+                        {
+                          "porkchop_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$porkchop_item_id"
+                          }
+                        },
+                        {
+                          "chicken_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$chicken_item_id"
+                          }
+                        },
+                        {
+                          "mutton_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$mutton_item_id"
+                          }
+                        },
+                        {
+                          "rabbit_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$rabbit_item_id"
+                          }
+                        },
+                        {
+                          "cod_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$cod_item_id"
+                          }
+                        },
+                        {
+                          "salmon_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$salmon_item_id"
+                          }
+                        },
+                        {
+                          "potato_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$potato_item_id"
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "row_1": {
+                      "type": "stack_panel",
+                      "orientation": "horizontal",
+                      "size": [
+                        "100%",
+                        18
+                      ],
+                      "controls": [
+                        {
+                          "kelp_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$kelp_item_id"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "foods_tab_toggle",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                  }
+                ],
+                "ignored": "$is_blast_furnace"
+              }
+            },
+            {
+              "ores_panel": {
+                "type": "stack_panel",
+                "orientation": "vertical",
+                "size": [
+                  "100%",
+                  "default"
+                ],
+                "controls": [
+                  {
+                    "row_0": {
+                      "type": "stack_panel",
+                      "orientation": "horizontal",
+                      "size": [
+                        "100%",
+                        18
+                      ],
+                      "controls": [
+                        {
+                          "coal_ore_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$coal_ore_item_id"
+                          }
+                        },
+                        {
+                          "copper_ore_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$copper_ore_item_id"
+                          }
+                        },
+                        {
+                          "diamond_ore_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$diamond_ore_item_id"
+                          }
+                        },
+                        {
+                          "emerald_ore_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$emerald_ore_item_id"
+                          }
+                        },
+                        {
+                          "gold_ore_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$gold_ore_item_id"
+                          }
+                        },
+                        {
+                          "iron_ore_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$iron_ore_item_id"
+                          }
+                        },
+                        {
+                          "lapis_ore_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$lapis_ore_item_id"
+                          }
+                        },
+                        {
+                          "nether_gold_ore_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$nether_gold_ore_item_id"
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "row_1": {
+                      "type": "stack_panel",
+                      "orientation": "horizontal",
+                      "size": [
+                        "100%",
+                        18
+                      ],
+                      "controls": [
+                        {
+                          "quartz_ore_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$quartz_ore_item_id"
+                          }
+                        },
+                        {
+                          "redstone_ore_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$redstone_ore_item_id"
+                          }
+                        },
+                        {
+                          "ancient_debris_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$ancient_debris_item_id"
+                          }
+                        },
+                        {
+                          "raw_copper_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$raw_copper_item_id"
+                          }
+                        },
+                        {
+                          "raw_gold_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$raw_gold_item_id"
+                          }
+                        },
+                        {
+                          "raw_iron_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$raw_iron_item_id"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "ores_tab_toggle",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                  }
+                ],
+                "ignored": "$is_smoker"
+              }
+            },
+            {
+              "blocks_panel": {
+                "type": "stack_panel",
+                "orientation": "vertical",
+                "size": [
+                  "100%",
+                  "default"
+                ],
+                "controls": [
+                  {
+                    "row_0": {
+                      "type": "stack_panel",
+                      "orientation": "horizontal",
+                      "size": [
+                        "100%",
+                        18
+                      ],
+                      "controls": [
+                        {
+                          "cobblestone_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$cobblestone_item_id"
+                          }
+                        },
+                        {
+                          "sand_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$sand_item_id"
+                          }
+                        },
+                        {
+                          "clay_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$clay_item_id"
+                          }
+                        },
+                        {
+                          "netherrack_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$netherrack_item_id"
+                          }
+                        },
+                        {
+                          "basalt_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$basalt_item_id"
+                          }
+                        },
+                        {
+                          "cobbled_deepslate_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$cobbled_deepslate_item_id"
+                          }
+                        },
+                        {
+                          "stone_bricks_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$stone_bricks_item_id"
+                          }
+                        },
+                        {
+                          "deepslate_bricks_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$deepslate_bricks_item_id"
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "row_1": {
+                      "type": "stack_panel",
+                      "orientation": "horizontal",
+                      "size": [
+                        "100%",
+                        18
+                      ],
+                      "controls": [
+                        {
+                          "deepslate_tiles_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$deepslate_tiles_item_id"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "blocks_tab_toggle",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "nature_panel": {
+                "type": "stack_panel",
+                "orientation": "vertical",
+                "size": [
+                  "100%",
+                  "default"
+                ],
+                "controls": [
+                  {
+                    "row_0": {
+                      "type": "stack_panel",
+                      "orientation": "horizontal",
+                      "size": [
+                        "100%",
+                        18
+                      ],
+                      "controls": [
+                        {
+                          "cactus_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$cactus_item_id"
+                          }
+                        },
+                        {
+                          "chorus_fruit_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$chorus_fruit_item_id"
+                          }
+                        },
+                        {
+                          "sea_pickle_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$sea_pickle_item_id"
+                          }
+                        },
+                        {
+                          "clay_ball_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$clay_ball_item_id"
+                          }
+                        },
+                        {
+                          "oak_log_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$oak_log_item_id"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "nature_tab_toggle",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "fuel_panel": {
+                "type": "stack_panel",
+                "orientation": "vertical",
+                "size": [
+                  "100%",
+                  "default"
+                ],
+                "controls": [
+                  {
+                    "row_0": {
+                      "type": "stack_panel",
+                      "orientation": "horizontal",
+                      "size": [
+                        "100%",
+                        18
+                      ],
+                      "controls": [
+                        {
+                          "coal_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$coal_item_id"
+                          }
+                        },
+                        {
+                          "charcoal_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$charcoal_item_id"
+                          }
+                        },
+                        {
+                          "coal_block_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$coal_block_item_id"
+                          }
+                        },
+                        {
+                          "blaze_rod_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$blaze_rod_item_id"
+                          }
+                        },
+                        {
+                          "lava_bucket_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$lava_bucket_item_id"
+                          }
+                        },
+                        {
+                          "dried_kelp_block_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$dried_kelp_block_item_id"
+                          }
+                        },
+                        {
+                          "bamboo_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$bamboo_item_id"
+                          }
+                        },
+                        {
+                          "bamboo_block_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$bamboo_block_item_id"
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "row_1": {
+                      "type": "stack_panel",
+                      "orientation": "horizontal",
+                      "size": [
+                        "100%",
+                        18
+                      ],
+                      "controls": [
+                        {
+                          "stick_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$stick_item_id"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "fuel_tab_toggle",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "foods_label@bc_furnace_guide.tab_label": {
+    "$tab_text": "%bc_furnace_guide.tab.foods"
+  },
+  "ores_label@bc_furnace_guide.tab_label": {
+    "$tab_text": "%bc_furnace_guide.tab.ores"
+  },
+  "blocks_label@bc_furnace_guide.tab_label": {
+    "$tab_text": "%bc_furnace_guide.tab.blocks"
+  },
+  "nature_label@bc_furnace_guide.tab_label": {
+    "$tab_text": "%bc_furnace_guide.tab.nature"
+  },
+  "fuel_label@bc_furnace_guide.tab_label": {
+    "$tab_text": "%bc_furnace_guide.tab.fuel"
+  }
+}

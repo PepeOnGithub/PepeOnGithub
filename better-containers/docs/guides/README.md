@@ -12,7 +12,7 @@ structure Glacier uses, and are restated here as facts about the game.
 | Container | Guide | This pack today |
 |---|---|---|
 | Brewing stand | [05 — Brewing](05-brewing.md) | Full guide and recipe book (done) |
-| Furnace, blast furnace, smoker | [01 — Furnace](01-furnace.md) | Management row only |
+| Furnace, blast furnace, smoker | [01 — Furnace](01-furnace.md) | Guide panel built (tabs and items); blast furnace and smoker variants to verify |
 | Smithing table | [02 — Smithing](02-smithing.md) | Custom layout with three tabs, guide not built |
 | Enchanting table | [03 — Enchanting](03-enchanting.md) | Management row only |
 | Anvil | [04 — Anvil](04-anvil.md) | Management row only |

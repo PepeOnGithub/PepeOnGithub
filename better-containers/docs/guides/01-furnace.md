@@ -1,75 +1,69 @@
 # 01 — Furnace guide
 
-The furnace guide shows what can be smelted, and what burns as fuel. It covers the three furnace screens: the **furnace**,
-the **blast furnace** (ores), and the **smoker** (food). In the reference structure, one file serves all three, and
-two conditions hide the tabs that don't apply.
+The furnace guide is the in-game panel beside the furnace. It lists what can be smelted, what can be smoked, and what burns as fuel.
+It covers the **furnace**, the **blast furnace**, and the **smoker**. It's the first container guide built in code.
 
-## What the screen does
+## Status
 
-- Input slot, fuel slot, and output slot (vanilla)
-- Progress arrows: a flame bar for fuel and an arrow bar for smelting, each with a percentage
-- A time readout for the remaining smelt time
+| Part | State |
+|---|---|
+| Panel and five tabs | Built: `ui/better_containers/containers/furnace_guide.json` |
+| Item cells | Built: shared `ui/better_containers/shared/item_cell.json` |
+| Hook into the vanilla furnace | Built: `ui/furnace_screen.json` (after the management row) |
+| Blast furnace and smoker hiding | Built as conditions, **not verified** in game (see below) |
+| Progress bars (flame, arrow) and smelt time | Not built |
+| Hover detail text | Not built |
 
 ## Tabs
 
-| Tab | Items | Furnace | Blast furnace | Smoker |
-|---|---|---|---|---|
-| Foods | 9 | yes | no (label hidden) | yes |
-| Ores | 14 | yes | yes | no (label hidden) |
-| Blocks | 16 | yes | yes | yes |
-| Nature | 10 | yes | yes | yes |
-| Fuel | 32 | yes | yes | yes |
+| Tab | Items | Items (in order) |
+|---|---|---|
+| Foods | 9 | `beef`, `porkchop`, `chicken`, `mutton`, `rabbit`, `cod`, `salmon`, `potato`, `kelp` |
+| Ores | 14 | `coal_ore`, `copper_ore`, `diamond_ore`, `emerald_ore`, `gold_ore`, `iron_ore`, `lapis_ore`, `nether_gold_ore`, `quartz_ore`, `redstone_ore`, `ancient_debris`, `raw_copper`, `raw_gold`, `raw_iron` |
+| Blocks | 9 | `cobblestone`, `sand`, `clay`, `netherrack`, `basalt`, `cobbled_deepslate`, `stone_bricks`, `deepslate_bricks`, `deepslate_tiles` |
+| Nature | 5 | `cactus`, `chorus_fruit`, `sea_pickle`, `clay_ball`, `oak_log` |
+| Fuel | 9 | `coal`, `charcoal`, `coal_block`, `blaze_rod`, `lava_bucket`, `dried_kelp_block`, `bamboo`, `bamboo_block`, `stick` |
 
-The **Foods** label is hidden on the blast furnace, and the **Ores** label is hidden on the smoker. Each hide is an `ignored` condition on the tab label, using `$is_blast_furnace` and `$is_smoker`. The reference file hides the label; check in game whether the tab button also needs hiding.
+Each tab is a radio toggle (`bc_shared.radio`). Selecting a tab shows its items, through a `#visible` binding on the tab's toggle.
 
-### Items in each tab
+## Why these lists differ from the reference
 
-**Foods** (9)
+The reference pack's furnace tabs include entries that aren't furnace inputs or fuel (for example `bow`, `crossbow`), plus
+group headings such as "Wooden Building Blocks". Those can't be correct in a furnace guide, so this guide uses a curated list:
+every item is a real smelting input, smoking input, or fuel in vanilla. Group names (`log`, `wood`, `iron_tools`) were left out
+because they cover several items, and an item must be a single entry to be shown.
 
-`raw_beef`, `raw_porkchop`, `raw_chicken`, `raw_mutton`, `raw_rabbit`, `raw_cod`, `raw_salmon`, `potato`, `kelp`
-
-**Ores** (14)
-
-`raw_iron`, `raw_copper`, `raw_gold`, `nether_gold_ore`, `ancient_debris`, `redstone_ore`, `coal_ore`, `emerald_ore`, `lapis_lazuli_ore`, `diamond_ore`, `nether_quartz_ore`, `iron_ore`, `copper_ore`, `gold_ore`
-
-**Blocks** (16)
-
-`cobblestone`, `stone`, `stone_bricks`, `cobbled_deepslate`, `deepslate_bricks`, `deepslate_tiles`, `sandstone`, `red_sandstone`, `nether_bricks`, `basalt`, `polished_blackstone_bricks`, `block_of_quartz`, `clay`, `dyed_terracotta`, `sand`, `wet_sponge`
-
-**Nature** (10)
-
-`log`, `wood`, `chorus_fruit`, `sea_pickle`, `cactus`, `clay_ball`, `netherrack`, `iron_tools`, `gold_tools`, `leaves`
-
-**Fuel** (32)
-
-`lava_bucket`, `block_of_coal`, `dried_kelp_block`, `blaze_rod`, `coal`, `charcoal`, `boat`, `bamboo_blocks`, `bee_nest`, `beehive`, `chiseled_bookshelf`, `log`, `wood`, `wooden_building_blocks`, `utility_blocks`, `fishing_rod`, `crossbow`, `bow`, `wooden_door`, `sign`, `hanging_sign`, `wooden_tools`, `bowl`, `saplings`, `stick`, `dead_bush`, `azalea`, `leaf_litter`, `short_dry_grass`, `tall_dry_grass`, `bamboo`, `scaffolding`
-
+Before you ship, check each item in game: put it in the furnace and confirm it smelts, smokes, or burns.
 
 ## Variables
 
-| Variable | Meaning |
-|---|---|
-| `$is_blast_furnace` | Hides the Foods tab |
-| `$is_smoker` | Hides the Ores tab |
-| `$is_left_most_tab`, `$is_right_most_tab` | Tab edge styling |
-| `$item_id` | Item shown by a tab cell |
-| `$button_text` | Lang key for the item name |
+| Variable | Set by | Meaning |
+|---|---|---|
+| `$is_blast_furnace` | the vanilla screen (default `false`) | Hides the Foods label and tab |
+| `$is_smoker` | the vanilla screen (default `false`) | Hides the Ores label and tab |
+| `$<item>_item_id` | `_global_variables.json` | Item ID for each cell |
 
-## How this pack handles it today
+The `$is_blast_furnace` and `$is_smoker` values come from the vanilla screen. The pack sets only the defaults. If the vanilla
+blast furnace and smoker screens don't set them, the Foods and Ores tabs show on every furnace. Check this in game first.
 
-The pack has no furnace layout. It adds only the management row (see [containers 08](../containers/08-furnace.md)).
+## Item IDs
 
-## What to build
+Every item ID comes from `data/item_ids/stable-1.26.60.json`, the same list the Minecraft Item ID Viewer uses. Run
+`python3 tools/sync_item_ids.py` to check them against that list. Re-run `python3 tools/build_furnace_guide.py` after you change a tab.
 
-1. One guide file that serves the furnace, blast furnace, and smoker, with the two `ignored` conditions.
-2. Five tabs with the lists above. Start with Foods and Fuel, because they're the most used.
-3. The flame and arrow progress bars, using the furnace's `$*_percentage` templates.
-4. A test for each of the three screens.
+## Build steps (what the generator does)
+
+1. Writes the shared item cell and the furnace guide file.
+2. Adds any missing `$<item>_item_id` to `_global_variables.json`. It never overwrites a value, and stops if a value differs.
+3. Registers both UI files in `_ui_defs.json`, which the game needs to load them.
+4. Adds the guide's strings to every language file.
+5. Adds the guide to the furnace hook.
 
 ## Checklist
 
-- [ ] Furnace: five tabs show, and each lists its items
-- [ ] Blast furnace: no Foods tab, ore tabs show
-- [ ] Smoker: no Ores tab, food tab shows
-- [ ] Clicking an item shows its name in the detail text
-- [ ] Flame and arrow bars move during smelting
+- [ ] Furnace: five tabs show, with the listed items
+- [ ] Clicking a tab shows only its items
+- [ ] Blast furnace: no Foods tab (verify)
+- [ ] Smoker: no Ores tab (verify)
+- [ ] Each curated item smelts, smokes, or burns as the tab says
+- [ ] The guide doesn't cover the management row or the vanilla slots

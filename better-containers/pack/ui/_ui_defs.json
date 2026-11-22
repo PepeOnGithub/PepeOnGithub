@@ -14,6 +14,8 @@
     "ui/better_containers/brewing/slots/potion_slot.json",
     "ui/better_containers/brewing/slots/modifier_slot.json",
     "ui/better_containers/brewing/recipe_book/recipe_book.json",
-    "ui/better_containers/brewing/recipe_book/recipe_grid.json"
+    "ui/better_containers/brewing/recipe_book/recipe_grid.json",
+    "ui/better_containers/shared/item_cell.json",
+    "ui/better_containers/containers/furnace_guide.json"
   ]
 }

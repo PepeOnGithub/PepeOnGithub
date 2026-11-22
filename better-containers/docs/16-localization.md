@@ -2,7 +2,7 @@
 
 ## The language files
 
-`texts/` has 28 locale files, named by locale (`en_US.lang`, `de_DE.lang`, `zh_CN.lang`, and so on).
+`texts/` has 29 locale files, named by locale (`en_US.lang`, `de_DE.lang`, `zh_CN.lang`, and so on).
 `en_US.lang` is the reference. It has 108 keys, and every other language has exactly the same keys.
 
 Each line is `key=value`. Lines that start with `#` are comments.

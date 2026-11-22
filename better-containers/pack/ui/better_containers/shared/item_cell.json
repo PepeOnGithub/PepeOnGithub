@@ -1,0 +1,35 @@
+{
+  "namespace": "bc_item_cell",
+  "item_cell": {
+    "type": "panel",
+    "size": [
+      18,
+      18
+    ],
+    "$item_id|default": 0,
+    "$item_id_aux|default": 0,
+    "controls": [
+      {
+        "icon@common.item_renderer": {
+          "size": [
+            16,
+            16
+          ],
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "property_bag": {
+            "#item_id": "($item_id * 65536)",
+            "#full_item_id": "$item_id_aux"
+          },
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_property_name": "(#full_item_id + #item_id)",
+              "target_property_name": "#item_id_aux"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
