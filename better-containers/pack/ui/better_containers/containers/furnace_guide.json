@@ -54,6 +54,7 @@
       {
         "flame_bar@bc_furnace_guide.progress_bar": {
           "$bar_binding": "#furnace_flame_ratio",
+          "$bar_clip": "left",
           "$bar_color": [
             1.0,
             0.55,
@@ -64,6 +65,7 @@
       {
         "arrow_bar@bc_furnace_guide.progress_bar": {
           "$bar_binding": "#furnace_arrow_ratio",
+          "$bar_clip": "left",
           "$bar_color": [
             0.47,
             0.78,
@@ -736,17 +738,15 @@
                 "texture": "textures/ui/White",
                 "color": "$bar_color",
                 "size": [
-                  "(#progress * 100)%",
+                  "100%",
                   "100%"
                 ],
-                "property_bag": {
-                  "#progress": 0
-                },
+                "clip_direction": "$bar_clip",
                 "bindings": [
                   {
-                    "binding_type": "global",
                     "binding_name": "$bar_binding",
-                    "binding_name_override": "#progress"
+                    "binding_name_override": "#clip_ratio",
+                    "binding_condition": "always"
                   }
                 ]
               }

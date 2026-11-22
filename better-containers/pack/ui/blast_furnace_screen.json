@@ -1,16 +1,5 @@
 {
   "blast_furnace_screen": {
     "$is_blast_furnace": true
-  },
-  "right_panel/furnace_screen_inventory": {
-    "modifications": [
-      {
-        "array_name": "controls",
-        "operation": "insert_back",
-        "value": {
-          "furnace_guide@bc_furnace_guide.furnace_guide": {}
-        }
-      }
-    ]
   }
 }

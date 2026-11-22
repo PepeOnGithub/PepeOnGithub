@@ -44,3 +44,7 @@ Key prefixes follow the feature:
 1. Edit the value in `texts/en_US.lang`.
 2. Edit the same key in every other language, or leave the old text until someone translates it.
 3. Validate, then check the text in game. Long strings can overflow their panel.
+
+## Guide labels
+
+`tools/translate_ui_labels.py` writes translated titles, tab names and brewing filter labels (28 labels) into 27 locales; `en_GB` keeps English. Long guide text (enchantment descriptions, info-panel lines, nametag entries, anvil/smithing lines) is still English in every locale and needs a native speaker. `tools/build_guides.py` runs the translator after writing the English placeholders.

@@ -98,9 +98,9 @@ INFO_PLACEMENTS = {
 HOOK_SPECS = [
     {'file': 'furnace_screen.json', 'screen': None, 'placements': [FURNACE_PLACEMENT]},
     {'file': 'blast_furnace_screen.json', 'screen': {'blast_furnace_screen': {'$is_blast_furnace': True}},
-     'placements': [FURNACE_PLACEMENT]},
+     'placements': []},
     {'file': 'smoker_screen.json', 'screen': {'smoker_screen': {'$is_smoker': True}},
-     'placements': [FURNACE_PLACEMENT]},
+     'placements': []},
     {'file': 'enchanting_screen.json', 'screen': None, 'placements': [
         ('enchanting_panel/root_panel/enchanting_screen_inventory', 'enchanting_guide', 'bc_enchanting_guide')]},
     {'file': 'anvil_screen.json', 'screen': None, 'placements': [
@@ -218,16 +218,15 @@ def furnace():
         'type': 'panel', 'size': ['100%', 6], 'controls': [
             {'track': {'type': 'panel', 'size': ['100%', 4], 'controls': [
                 {'fill': {'type': 'image', 'texture': 'textures/ui/White', 'color': '$bar_color',
-                          'size': ['(#progress * 100)%', '100%'],
-                          'property_bag': {'#progress': 0},
-                          'bindings': [{'binding_type': 'global', 'binding_name': '$bar_binding',
-                                        'binding_name_override': '#progress'}]}}]}}]}
+                          'size': ['100%', '100%'], 'clip_direction': '$bar_clip',
+                          'bindings': [{'binding_name': '$bar_binding', 'binding_name_override': '#clip_ratio',
+                                        'binding_condition': 'always'}]}}]}}]}
     # progress bars sit above the tab bar, in the root panel
     root = body['furnace_guide']
     root['controls'].insert(1, {'flame_bar@bc_furnace_guide.progress_bar': {
-        '$bar_binding': '#furnace_flame_ratio', '$bar_color': [1.0, 0.55, 0.0]}})
+        '$bar_binding': '#furnace_flame_ratio', '$bar_clip': 'left', '$bar_color': [1.0, 0.55, 0.0]}})
     root['controls'].insert(2, {'arrow_bar@bc_furnace_guide.progress_bar': {
-        '$bar_binding': '#furnace_arrow_ratio', '$bar_color': [0.47, 0.78, 0.47]}})
+        '$bar_binding': '#furnace_arrow_ratio', '$bar_clip': 'left', '$bar_color': [0.47, 0.78, 0.47]}})
     return body
 
 
@@ -450,6 +449,8 @@ def main():
             open(path, 'w', encoding='utf-8', newline='\n').write(
                 '\n'.join(lines).rstrip('\n') + '\n' + '\n'.join(new) + '\n')
     print('guides written:', ', '.join(guides))
+    import translate_ui_labels  # re-apply translated short labels over the English placeholders
+    translate_ui_labels.main()
 
 
 if __name__ == '__main__':

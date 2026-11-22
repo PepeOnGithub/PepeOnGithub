@@ -71,3 +71,9 @@ The build runs the validator first and stops on any error. The archive has its f
 
 Each numbered section in `main()` is one check. Add a new check in the same style: collect errors into `ERRORS` and warnings into
 `WARNINGS`. The summary prints both at the end.
+
+## More tools
+
+- `tools/build_brewing_filter.py`: wires the brewing polarity filter (safe to re-run).
+- `tools/translate_ui_labels.py`: translated short labels for 27 locales.
+- Vanilla UI files for checking hook paths and bindings: `https://raw.githubusercontent.com/Mojang/bedrock-samples/main/resource_pack/ui/<name>.json` (all hook paths in this pack were checked against it).
