@@ -1,5 +1,9 @@
 # 04 — Anvil guide
 
+## Status
+
+Built: `ui/better_containers/containers/anvil_guide.json`, hooked into the vanilla anvil after its management row. Four radio tabs: Repairable (12 groups, listed by item name), Formatting (the § codes), Colors (the 16 color codes), and Nametag. The Nametag tab has no entries yet: the reference's nametag content isn't reproduced here, so it needs content written for this pack.
+
 The anvil guide is a reference, not a list of items for every task. It has four tabs: **Repairable Items**, **Formatting Codes**,
 **Color Codes**, and **Nametag Easter Eggs**.
 

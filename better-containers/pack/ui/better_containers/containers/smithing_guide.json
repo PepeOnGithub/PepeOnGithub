@@ -1,0 +1,588 @@
+{
+  "namespace": "bc_smithing_guide",
+  "tab_label": {
+    "type": "label",
+    "text": "$tab_text",
+    "size": [
+      "100%",
+      12
+    ],
+    "font_size": "small"
+  },
+  "text_row": {
+    "type": "label",
+    "text": "$line_text",
+    "size": [
+      "100%",
+      10
+    ],
+    "font_size": "small"
+  },
+  "armors_label@bc_smithing_guide.tab_label": {
+    "$tab_text": "%bc_smithing_guide.tab.armors"
+  },
+  "templates_label@bc_smithing_guide.tab_label": {
+    "$tab_text": "%bc_smithing_guide.tab.templates"
+  },
+  "resources_label@bc_smithing_guide.tab_label": {
+    "$tab_text": "%bc_smithing_guide.tab.resources"
+  },
+  "smithing_guide": {
+    "type": "panel",
+    "size": [
+      144,
+      "default"
+    ],
+    "layer": 2,
+    "controls": [
+      {
+        "title_label": {
+          "type": "label",
+          "text": "%bc_smithing_guide.title",
+          "size": [
+            "100%",
+            12
+          ]
+        }
+      },
+      {
+        "tab_bar": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
+          "size": [
+            "100%",
+            16
+          ],
+          "controls": [
+            {
+              "armors_tab_slot": {
+                "type": "panel",
+                "size": [
+                  28,
+                  14
+                ],
+                "controls": [
+                  {
+                    "armors_tab@bc_shared.radio": {
+                      "$toggle_name": "smithing_guide_tabs",
+                      "$toggle_view_binding_name": "armors_tab_toggle",
+                      "$toggle_group_forced_index": 0,
+                      "$toggle_default_state": true,
+                      "$button_content": "bc_smithing_guide.armors_label",
+                      "size": [
+                        28,
+                        14
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "templates_tab_slot": {
+                "type": "panel",
+                "size": [
+                  28,
+                  14
+                ],
+                "controls": [
+                  {
+                    "templates_tab@bc_shared.radio": {
+                      "$toggle_name": "smithing_guide_tabs",
+                      "$toggle_view_binding_name": "templates_tab_toggle",
+                      "$toggle_group_forced_index": 1,
+                      "$toggle_default_state": false,
+                      "$button_content": "bc_smithing_guide.templates_label",
+                      "size": [
+                        28,
+                        14
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "resources_tab_slot": {
+                "type": "panel",
+                "size": [
+                  28,
+                  14
+                ],
+                "controls": [
+                  {
+                    "resources_tab@bc_shared.radio": {
+                      "$toggle_name": "smithing_guide_tabs",
+                      "$toggle_view_binding_name": "resources_tab_toggle",
+                      "$toggle_group_forced_index": 2,
+                      "$toggle_default_state": false,
+                      "$button_content": "bc_smithing_guide.resources_label",
+                      "size": [
+                        28,
+                        14
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "tab_contents": {
+          "type": "panel",
+          "size": [
+            "100%",
+            "default"
+          ],
+          "controls": [
+            {
+              "armors_panel": {
+                "type": "stack_panel",
+                "orientation": "vertical",
+                "size": [
+                  "100%",
+                  "default"
+                ],
+                "controls": [
+                  {
+                    "row_0": {
+                      "type": "stack_panel",
+                      "orientation": "horizontal",
+                      "size": [
+                        "100%",
+                        18
+                      ],
+                      "controls": [
+                        {
+                          "leather_helmet_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$leather_helmet_item_id"
+                          }
+                        },
+                        {
+                          "leather_chestplate_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$leather_chestplate_item_id"
+                          }
+                        },
+                        {
+                          "leather_leggings_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$leather_leggings_item_id"
+                          }
+                        },
+                        {
+                          "leather_boots_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$leather_boots_item_id"
+                          }
+                        },
+                        {
+                          "chainmail_helmet_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$chainmail_helmet_item_id"
+                          }
+                        },
+                        {
+                          "chainmail_chestplate_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$chainmail_chestplate_item_id"
+                          }
+                        },
+                        {
+                          "chainmail_leggings_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$chainmail_leggings_item_id"
+                          }
+                        },
+                        {
+                          "chainmail_boots_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$chainmail_boots_item_id"
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "row_1": {
+                      "type": "stack_panel",
+                      "orientation": "horizontal",
+                      "size": [
+                        "100%",
+                        18
+                      ],
+                      "controls": [
+                        {
+                          "iron_helmet_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$iron_helmet_item_id"
+                          }
+                        },
+                        {
+                          "iron_chestplate_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$iron_chestplate_item_id"
+                          }
+                        },
+                        {
+                          "iron_leggings_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$iron_leggings_item_id"
+                          }
+                        },
+                        {
+                          "iron_boots_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$iron_boots_item_id"
+                          }
+                        },
+                        {
+                          "golden_helmet_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$golden_helmet_item_id"
+                          }
+                        },
+                        {
+                          "golden_chestplate_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$golden_chestplate_item_id"
+                          }
+                        },
+                        {
+                          "golden_leggings_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$golden_leggings_item_id"
+                          }
+                        },
+                        {
+                          "golden_boots_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$golden_boots_item_id"
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "row_2": {
+                      "type": "stack_panel",
+                      "orientation": "horizontal",
+                      "size": [
+                        "100%",
+                        18
+                      ],
+                      "controls": [
+                        {
+                          "diamond_helmet_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$diamond_helmet_item_id"
+                          }
+                        },
+                        {
+                          "diamond_chestplate_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$diamond_chestplate_item_id"
+                          }
+                        },
+                        {
+                          "diamond_leggings_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$diamond_leggings_item_id"
+                          }
+                        },
+                        {
+                          "diamond_boots_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$diamond_boots_item_id"
+                          }
+                        },
+                        {
+                          "netherite_helmet_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$netherite_helmet_item_id"
+                          }
+                        },
+                        {
+                          "netherite_chestplate_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$netherite_chestplate_item_id"
+                          }
+                        },
+                        {
+                          "netherite_leggings_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$netherite_leggings_item_id"
+                          }
+                        },
+                        {
+                          "netherite_boots_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$netherite_boots_item_id"
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "row_3": {
+                      "type": "stack_panel",
+                      "orientation": "horizontal",
+                      "size": [
+                        "100%",
+                        18
+                      ],
+                      "controls": [
+                        {
+                          "turtle_shell_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$turtle_shell_item_id"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "armors_tab_toggle",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "templates_panel": {
+                "type": "stack_panel",
+                "orientation": "vertical",
+                "size": [
+                  "100%",
+                  "default"
+                ],
+                "controls": [
+                  {
+                    "row_0": {
+                      "type": "stack_panel",
+                      "orientation": "horizontal",
+                      "size": [
+                        "100%",
+                        18
+                      ],
+                      "controls": [
+                        {
+                          "netherite_upgrade_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$netherite_upgrade_item_id"
+                          }
+                        },
+                        {
+                          "sentry_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$sentry_trim_item_id"
+                          }
+                        },
+                        {
+                          "vex_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$vex_trim_item_id"
+                          }
+                        },
+                        {
+                          "wild_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$wild_trim_item_id"
+                          }
+                        },
+                        {
+                          "coast_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$coast_trim_item_id"
+                          }
+                        },
+                        {
+                          "dune_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$dune_trim_item_id"
+                          }
+                        },
+                        {
+                          "wayfinder_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$wayfinder_trim_item_id"
+                          }
+                        },
+                        {
+                          "shaper_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$shaper_trim_item_id"
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "row_1": {
+                      "type": "stack_panel",
+                      "orientation": "horizontal",
+                      "size": [
+                        "100%",
+                        18
+                      ],
+                      "controls": [
+                        {
+                          "raiser_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$raiser_trim_item_id"
+                          }
+                        },
+                        {
+                          "host_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$host_trim_item_id"
+                          }
+                        },
+                        {
+                          "ward_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$ward_trim_item_id"
+                          }
+                        },
+                        {
+                          "silence_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$silence_trim_item_id"
+                          }
+                        },
+                        {
+                          "tide_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$tide_trim_item_id"
+                          }
+                        },
+                        {
+                          "snout_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$snout_trim_item_id"
+                          }
+                        },
+                        {
+                          "rib_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$rib_trim_item_id"
+                          }
+                        },
+                        {
+                          "eye_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$eye_trim_item_id"
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "row_2": {
+                      "type": "stack_panel",
+                      "orientation": "horizontal",
+                      "size": [
+                        "100%",
+                        18
+                      ],
+                      "controls": [
+                        {
+                          "spire_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$spire_trim_item_id"
+                          }
+                        },
+                        {
+                          "flow_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$flow_trim_item_id"
+                          }
+                        },
+                        {
+                          "bolt_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$bolt_trim_item_id"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "templates_tab_toggle",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "resources_panel": {
+                "type": "stack_panel",
+                "orientation": "vertical",
+                "size": [
+                  "100%",
+                  "default"
+                ],
+                "controls": [
+                  {
+                    "row_0": {
+                      "type": "stack_panel",
+                      "orientation": "horizontal",
+                      "size": [
+                        "100%",
+                        18
+                      ],
+                      "controls": [
+                        {
+                          "amethyst_shard_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$amethyst_shard_item_id"
+                          }
+                        },
+                        {
+                          "copper_ingot_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$copper_ingot_item_id"
+                          }
+                        },
+                        {
+                          "diamond_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$diamond_item_id"
+                          }
+                        },
+                        {
+                          "emerald_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$emerald_item_id"
+                          }
+                        },
+                        {
+                          "gold_ingot_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$gold_ingot_item_id"
+                          }
+                        },
+                        {
+                          "iron_ingot_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$iron_ingot_item_id"
+                          }
+                        },
+                        {
+                          "lapis_lazuli_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$lapis_lazuli_item_id"
+                          }
+                        },
+                        {
+                          "nether_quartz_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$nether_quartz_item_id"
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "row_1": {
+                      "type": "stack_panel",
+                      "orientation": "horizontal",
+                      "size": [
+                        "100%",
+                        18
+                      ],
+                      "controls": [
+                        {
+                          "netherite_ingot_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$netherite_ingot_item_id"
+                          }
+                        },
+                        {
+                          "redstone_dust_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$redstone_dust_item_id"
+                          }
+                        },
+                        {
+                          "resin_brick_cell@bc_item_cell.item_cell": {
+                            "$item_id": "$resin_brick_item_id"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "resources_tab_toggle",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

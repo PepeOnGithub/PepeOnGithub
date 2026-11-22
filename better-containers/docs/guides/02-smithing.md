@@ -1,5 +1,9 @@
 # 02 — Smithing table guide
 
+## Status
+
+Built: `ui/better_containers/containers/smithing_guide.json`, hooked into the vanilla smithing table after its management row. Three radio tabs (Armors 25, Smithing Templates 19, Resources 11), using the item variables. Verify in game: the panel's position beside the pack's own smithing layout, which the hook does not measure.
+
 The smithing guide shows which items can be upgraded, which templates apply, and which resources they need.
 It's the closest container to the pack's own smithing table (see [07 — Smithing table](../07-smithing-table.md)).
 

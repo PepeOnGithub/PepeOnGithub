@@ -1,5 +1,9 @@
 # 03 — Enchanting guide
 
+## Status
+
+Built: `ui/better_containers/containers/enchanting_guide.json`, hooked into the vanilla enchanting screen. It is a scrolling list of all 41 enchantments, one row each, with the enchanted book icon, the vanilla enchantment name, and its max level. Not built: selecting a row to show a description (the reference shows descriptions; this pack doesn't copy that text), and the level text is in English only.
+
 The enchanting guide is a book of enchantments. It has one tab, **Enchanted Books**, with one cell per enchantment.
 Selecting a cell shows the enchantment's description and max level.
 

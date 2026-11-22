@@ -1,0 +1,427 @@
+{
+  "namespace": "bc_anvil_guide",
+  "tab_label": {
+    "type": "label",
+    "text": "$tab_text",
+    "size": [
+      "100%",
+      12
+    ],
+    "font_size": "small"
+  },
+  "text_row": {
+    "type": "label",
+    "text": "$line_text",
+    "size": [
+      "100%",
+      10
+    ],
+    "font_size": "small"
+  },
+  "repair_label@bc_anvil_guide.tab_label": {
+    "$tab_text": "%bc_anvil_guide.tab.repair"
+  },
+  "format_label@bc_anvil_guide.tab_label": {
+    "$tab_text": "%bc_anvil_guide.tab.format"
+  },
+  "color_label@bc_anvil_guide.tab_label": {
+    "$tab_text": "%bc_anvil_guide.tab.color"
+  },
+  "nametag_label@bc_anvil_guide.tab_label": {
+    "$tab_text": "%bc_anvil_guide.tab.nametag"
+  },
+  "anvil_guide": {
+    "type": "panel",
+    "size": [
+      144,
+      "default"
+    ],
+    "layer": 2,
+    "controls": [
+      {
+        "title_label": {
+          "type": "label",
+          "text": "%bc_anvil_guide.title",
+          "size": [
+            "100%",
+            12
+          ]
+        }
+      },
+      {
+        "tab_bar": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
+          "size": [
+            "100%",
+            16
+          ],
+          "controls": [
+            {
+              "repair_tab_slot": {
+                "type": "panel",
+                "size": [
+                  28,
+                  14
+                ],
+                "controls": [
+                  {
+                    "repair_tab@bc_shared.radio": {
+                      "$toggle_name": "anvil_guide_tabs",
+                      "$toggle_view_binding_name": "repair_tab_toggle",
+                      "$toggle_group_forced_index": 0,
+                      "$toggle_default_state": true,
+                      "$button_content": "bc_anvil_guide.repair_label",
+                      "size": [
+                        28,
+                        14
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "format_tab_slot": {
+                "type": "panel",
+                "size": [
+                  28,
+                  14
+                ],
+                "controls": [
+                  {
+                    "format_tab@bc_shared.radio": {
+                      "$toggle_name": "anvil_guide_tabs",
+                      "$toggle_view_binding_name": "format_tab_toggle",
+                      "$toggle_group_forced_index": 1,
+                      "$toggle_default_state": false,
+                      "$button_content": "bc_anvil_guide.format_label",
+                      "size": [
+                        28,
+                        14
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "color_tab_slot": {
+                "type": "panel",
+                "size": [
+                  28,
+                  14
+                ],
+                "controls": [
+                  {
+                    "color_tab@bc_shared.radio": {
+                      "$toggle_name": "anvil_guide_tabs",
+                      "$toggle_view_binding_name": "color_tab_toggle",
+                      "$toggle_group_forced_index": 2,
+                      "$toggle_default_state": false,
+                      "$button_content": "bc_anvil_guide.color_label",
+                      "size": [
+                        28,
+                        14
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "nametag_tab_slot": {
+                "type": "panel",
+                "size": [
+                  28,
+                  14
+                ],
+                "controls": [
+                  {
+                    "nametag_tab@bc_shared.radio": {
+                      "$toggle_name": "anvil_guide_tabs",
+                      "$toggle_view_binding_name": "nametag_tab_toggle",
+                      "$toggle_group_forced_index": 3,
+                      "$toggle_default_state": false,
+                      "$button_content": "bc_anvil_guide.nametag_label",
+                      "size": [
+                        28,
+                        14
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "tab_contents": {
+          "type": "panel",
+          "size": [
+            "100%",
+            "default"
+          ],
+          "controls": [
+            {
+              "repair_panel": {
+                "type": "stack_panel",
+                "orientation": "vertical",
+                "size": [
+                  "100%",
+                  "default"
+                ],
+                "controls": [
+                  {
+                    "wooden_tools_line@bc_anvil_guide.text_row": {
+                      "$line_text": "%bc_anvil_guide.group.wooden_tools"
+                    }
+                  },
+                  {
+                    "stone_tools_line@bc_anvil_guide.text_row": {
+                      "$line_text": "%bc_anvil_guide.group.stone_tools"
+                    }
+                  },
+                  {
+                    "iron_tools_line@bc_anvil_guide.text_row": {
+                      "$line_text": "%bc_anvil_guide.group.iron_tools"
+                    }
+                  },
+                  {
+                    "golden_tools_line@bc_anvil_guide.text_row": {
+                      "$line_text": "%bc_anvil_guide.group.golden_tools"
+                    }
+                  },
+                  {
+                    "diamond_tools_line@bc_anvil_guide.text_row": {
+                      "$line_text": "%bc_anvil_guide.group.diamond_tools"
+                    }
+                  },
+                  {
+                    "netherite_tools_line@bc_anvil_guide.text_row": {
+                      "$line_text": "%bc_anvil_guide.group.netherite_tools"
+                    }
+                  },
+                  {
+                    "leather_armors_line@bc_anvil_guide.text_row": {
+                      "$line_text": "%bc_anvil_guide.group.leather_armors"
+                    }
+                  },
+                  {
+                    "elytra_line@bc_anvil_guide.text_row": {
+                      "$line_text": "%bc_anvil_guide.group.elytra"
+                    }
+                  },
+                  {
+                    "shields_line@bc_anvil_guide.text_row": {
+                      "$line_text": "%bc_anvil_guide.group.shields"
+                    }
+                  },
+                  {
+                    "mace_line@bc_anvil_guide.text_row": {
+                      "$line_text": "%bc_anvil_guide.group.mace"
+                    }
+                  },
+                  {
+                    "turtle_shell_line@bc_anvil_guide.text_row": {
+                      "$line_text": "%bc_anvil_guide.group.turtle_shell"
+                    }
+                  },
+                  {
+                    "wolf_armor_line@bc_anvil_guide.text_row": {
+                      "$line_text": "%bc_anvil_guide.group.wolf_armor"
+                    }
+                  }
+                ],
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "repair_tab_toggle",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "format_panel": {
+                "type": "stack_panel",
+                "orientation": "vertical",
+                "size": [
+                  "100%",
+                  "default"
+                ],
+                "controls": [
+                  {
+                    "line_0@bc_anvil_guide.text_row": {
+                      "$line_text": "%bc_anvil_guide.format.k"
+                    }
+                  },
+                  {
+                    "line_1@bc_anvil_guide.text_row": {
+                      "$line_text": "%bc_anvil_guide.format.l"
+                    }
+                  },
+                  {
+                    "line_2@bc_anvil_guide.text_row": {
+                      "$line_text": "%bc_anvil_guide.format.m"
+                    }
+                  },
+                  {
+                    "line_3@bc_anvil_guide.text_row": {
+                      "$line_text": "%bc_anvil_guide.format.n"
+                    }
+                  },
+                  {
+                    "line_4@bc_anvil_guide.text_row": {
+                      "$line_text": "%bc_anvil_guide.format.o"
+                    }
+                  },
+                  {
+                    "line_5@bc_anvil_guide.text_row": {
+                      "$line_text": "%bc_anvil_guide.format.r"
+                    }
+                  }
+                ],
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "format_tab_toggle",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "color_panel": {
+                "type": "stack_panel",
+                "orientation": "vertical",
+                "size": [
+                  "100%",
+                  "default"
+                ],
+                "controls": [
+                  {
+                    "line_0@bc_anvil_guide.text_row": {
+                      "$line_text": "%bc_anvil_guide.color.0"
+                    }
+                  },
+                  {
+                    "line_1@bc_anvil_guide.text_row": {
+                      "$line_text": "%bc_anvil_guide.color.1"
+                    }
+                  },
+                  {
+                    "line_2@bc_anvil_guide.text_row": {
+                      "$line_text": "%bc_anvil_guide.color.2"
+                    }
+                  },
+                  {
+                    "line_3@bc_anvil_guide.text_row": {
+                      "$line_text": "%bc_anvil_guide.color.3"
+                    }
+                  },
+                  {
+                    "line_4@bc_anvil_guide.text_row": {
+                      "$line_text": "%bc_anvil_guide.color.4"
+                    }
+                  },
+                  {
+                    "line_5@bc_anvil_guide.text_row": {
+                      "$line_text": "%bc_anvil_guide.color.5"
+                    }
+                  },
+                  {
+                    "line_6@bc_anvil_guide.text_row": {
+                      "$line_text": "%bc_anvil_guide.color.6"
+                    }
+                  },
+                  {
+                    "line_7@bc_anvil_guide.text_row": {
+                      "$line_text": "%bc_anvil_guide.color.7"
+                    }
+                  },
+                  {
+                    "line_8@bc_anvil_guide.text_row": {
+                      "$line_text": "%bc_anvil_guide.color.8"
+                    }
+                  },
+                  {
+                    "line_9@bc_anvil_guide.text_row": {
+                      "$line_text": "%bc_anvil_guide.color.9"
+                    }
+                  },
+                  {
+                    "line_10@bc_anvil_guide.text_row": {
+                      "$line_text": "%bc_anvil_guide.color.a"
+                    }
+                  },
+                  {
+                    "line_11@bc_anvil_guide.text_row": {
+                      "$line_text": "%bc_anvil_guide.color.b"
+                    }
+                  },
+                  {
+                    "line_12@bc_anvil_guide.text_row": {
+                      "$line_text": "%bc_anvil_guide.color.c"
+                    }
+                  },
+                  {
+                    "line_13@bc_anvil_guide.text_row": {
+                      "$line_text": "%bc_anvil_guide.color.d"
+                    }
+                  },
+                  {
+                    "line_14@bc_anvil_guide.text_row": {
+                      "$line_text": "%bc_anvil_guide.color.e"
+                    }
+                  },
+                  {
+                    "line_15@bc_anvil_guide.text_row": {
+                      "$line_text": "%bc_anvil_guide.color.f"
+                    }
+                  }
+                ],
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "color_tab_toggle",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "nametag_panel": {
+                "type": "stack_panel",
+                "orientation": "vertical",
+                "size": [
+                  "100%",
+                  "default"
+                ],
+                "controls": [
+                  {
+                    "line_0@bc_anvil_guide.text_row": {
+                      "$line_text": "%bc_anvil_guide.nametag.empty"
+                    }
+                  }
+                ],
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "nametag_tab_toggle",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

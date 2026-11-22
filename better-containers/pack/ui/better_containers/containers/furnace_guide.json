@@ -9,14 +9,36 @@
     ],
     "font_size": "small"
   },
+  "text_row": {
+    "type": "label",
+    "text": "$line_text",
+    "size": [
+      "100%",
+      10
+    ],
+    "font_size": "small"
+  },
+  "foods_label@bc_furnace_guide.tab_label": {
+    "$tab_text": "%bc_furnace_guide.tab.foods"
+  },
+  "ores_label@bc_furnace_guide.tab_label": {
+    "$tab_text": "%bc_furnace_guide.tab.ores"
+  },
+  "blocks_label@bc_furnace_guide.tab_label": {
+    "$tab_text": "%bc_furnace_guide.tab.blocks"
+  },
+  "nature_label@bc_furnace_guide.tab_label": {
+    "$tab_text": "%bc_furnace_guide.tab.nature"
+  },
+  "fuel_label@bc_furnace_guide.tab_label": {
+    "$tab_text": "%bc_furnace_guide.tab.fuel"
+  },
   "furnace_guide": {
     "type": "panel",
     "size": [
       144,
       "default"
     ],
-    "$is_blast_furnace|default": false,
-    "$is_smoker|default": false,
     "layer": 2,
     "controls": [
       {
@@ -614,21 +636,8 @@
           ]
         }
       }
-    ]
-  },
-  "foods_label@bc_furnace_guide.tab_label": {
-    "$tab_text": "%bc_furnace_guide.tab.foods"
-  },
-  "ores_label@bc_furnace_guide.tab_label": {
-    "$tab_text": "%bc_furnace_guide.tab.ores"
-  },
-  "blocks_label@bc_furnace_guide.tab_label": {
-    "$tab_text": "%bc_furnace_guide.tab.blocks"
-  },
-  "nature_label@bc_furnace_guide.tab_label": {
-    "$tab_text": "%bc_furnace_guide.tab.nature"
-  },
-  "fuel_label@bc_furnace_guide.tab_label": {
-    "$tab_text": "%bc_furnace_guide.tab.fuel"
+    ],
+    "$is_blast_furnace|default": false,
+    "$is_smoker|default": false
   }
 }

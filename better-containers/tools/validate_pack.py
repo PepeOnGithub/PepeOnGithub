@@ -20,6 +20,7 @@ import sys
 
 ERRORS, WARNINGS = [], []
 # Files that are intentionally kept as uploaded (not reformatted); duplicates there are known.
+VANILLA_LANG_PREFIXES = ('enchantment.',)
 KNOWN_DUPLICATE_FILES = {'ui/better_containers/compat/legacy_container_item.json'}
 # Old namespace names that no longer exist. Vanilla-looking names (_global, uic, smithing) are excluded.
 RETIRED_NAMESPACES = {'single_chest_content', 'double_chest_content', 'item_data', 'toggle_manager',
@@ -133,6 +134,9 @@ def main(root):
             used_keys.setdefault(m, f)
     if ref_keys is not None:
         for key, f in sorted(used_keys.items()):
+            # vanilla lang keys (enchantment names) are provided by the game, not by the pack
+            if key.startswith(VANILLA_LANG_PREFIXES):
+                continue
             if key not in ref_keys:
                 ERRORS.append(f'{f}: lang key %{key} is not defined in texts/en_US.lang')
 

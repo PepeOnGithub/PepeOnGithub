@@ -1,5 +1,9 @@
 # 06 — Chest guide
 
+## Status
+
+Built: `ui/better_containers/containers/chest_guide.json`, hooked into the small and large chest after the overlay rows. It has a search box (the shared text box) and two buttons: Auto place all (`button.container_auto_place`) and Auto place one (`button.container_auto_place_one`). Not built: the search box does not filter items yet, so it is an input only. The two button actions are the ones the pack's move buttons use; confirm in game that "Auto place all" does what its label says.
+
 The chest guide covers the chest and the double chest. The reference chest adds three things on top of the basic slots:
 a **search box**, and **quick-transfer** controls for the chest and the inventory (named *stealer* in the reference file).
 

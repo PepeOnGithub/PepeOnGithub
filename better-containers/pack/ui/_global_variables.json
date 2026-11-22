@@ -147,5 +147,6 @@
   "$dried_kelp_block_item_id": -139,
   "$bamboo_item_id": -163,
   "$bamboo_block_item_id": -527,
-  "$stick_item_id": 323
+  "$stick_item_id": 323,
+  "$enchanted_book_item_id": 531
 }

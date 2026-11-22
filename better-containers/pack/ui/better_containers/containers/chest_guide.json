@@ -1,0 +1,63 @@
+{
+  "namespace": "bc_chest_guide",
+  "action_label": {
+    "type": "label",
+    "text": "$action_text",
+    "size": [
+      "100%",
+      10
+    ],
+    "font_size": "small"
+  },
+  "chest_guide": {
+    "type": "panel",
+    "size": [
+      60,
+      "default"
+    ],
+    "layer": 2,
+    "controls": [
+      {
+        "title_label": {
+          "type": "label",
+          "text": "%bc_chest_guide.title",
+          "size": [
+            "100%",
+            12
+          ]
+        }
+      },
+      {
+        "search_box@bc_shared.text_edit_control": {}
+      },
+      {
+        "auto_place_all_label@bc_chest_guide.action_label": {
+          "$action_text": "%bc_chest_guide.auto_place_all"
+        }
+      },
+      {
+        "auto_place_all_button@bc_shared.button": {
+          "$button_output_action": "button.container_auto_place",
+          "size": [
+            56,
+            14
+          ]
+        }
+      },
+      {
+        "auto_place_one_label@bc_chest_guide.action_label": {
+          "$action_text": "%bc_chest_guide.auto_place_one"
+        }
+      },
+      {
+        "auto_place_one_button@bc_shared.button": {
+          "$button_output_action": "button.container_auto_place_one",
+          "size": [
+            56,
+            14
+          ]
+        }
+      }
+    ]
+  }
+}

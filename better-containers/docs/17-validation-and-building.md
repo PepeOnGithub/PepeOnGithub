@@ -54,9 +54,9 @@ python3 tools/sync_item_ids.py           # report
 python3 tools/sync_item_ids.py --write   # correct
 ```
 
-## `tools/build_furnace_guide.py`
+## `tools/build_guides.py`
 
-Generates the furnace guide panel from its tab lists (see [01 — Furnace guide](guides/01-furnace.md)). Re-run after you change a tab.
+Generates all five in-game guide panels (furnace, enchanting, anvil, smithing, chest) and hooks them into their vanilla screens. Re-run after you change a guide. See [the guides index](guides/README.md).
 
 ## `tools/build_mcpack.py`
 

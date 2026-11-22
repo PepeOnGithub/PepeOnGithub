@@ -16,6 +16,10 @@
     "ui/better_containers/brewing/recipe_book/recipe_book.json",
     "ui/better_containers/brewing/recipe_book/recipe_grid.json",
     "ui/better_containers/shared/item_cell.json",
-    "ui/better_containers/containers/furnace_guide.json"
+    "ui/better_containers/containers/furnace_guide.json",
+    "ui/better_containers/containers/enchanting_guide.json",
+    "ui/better_containers/containers/anvil_guide.json",
+    "ui/better_containers/containers/smithing_guide.json",
+    "ui/better_containers/containers/chest_guide.json"
   ]
 }

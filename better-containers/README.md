@@ -21,7 +21,7 @@ better-containers/
 │   ├── validate_pack.py   checks JSON, references, textures, language keys
 │   ├── build_mcpack.py    validates, then zips pack/ into dist/*.mcpack
 │   ├── sync_item_ids.py   checks item IDs against data/item_ids (Item ID Viewer list)
-│   └── build_furnace_guide.py   generates the furnace guide panel
+│   └── build_guides.py    generates the in-game guide panels (furnace, enchanting, anvil, smithing, chest)
 └── dist/          built packs (not committed)
 ```
 
@@ -64,7 +64,7 @@ chests, the brewing stand, and the recipe book.
 
 ## In-game guides (code)
 
-- Furnace guide: built (`tools/build_furnace_guide.py`). Enchanting, anvil, smithing, and chest guide panels are next.
+- Guide panels built by `tools/build_guides.py`: furnace, enchanting, anvil, smithing table, chest. Blast furnace/smoker variants, the chest search filter, and the anvil nametag entries still need work or in-game checks.
 
 ## Container guides
 

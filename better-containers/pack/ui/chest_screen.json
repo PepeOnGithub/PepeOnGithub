@@ -1,5 +1,5 @@
 {
-  /*
+/*
     custom things in this file can be copied without risk
   */
   "small_chest_panel/root_panel/chest_panel": {
@@ -9,6 +9,13 @@
         "operation": "insert_front",
         "value": {
           "container_elements@bc_chest_single.container_elements": {}
+        }
+      },
+      {
+        "array_name": "controls",
+        "operation": "insert_back",
+        "value": {
+          "chest_guide@bc_chest_guide.chest_guide": {}
         }
       }
     ]
@@ -20,6 +27,13 @@
         "operation": "insert_front",
         "value": {
           "container_elements@bc_chest_double.container_elements": {}
+        }
+      },
+      {
+        "array_name": "controls",
+        "operation": "insert_back",
+        "value": {
+          "chest_guide@bc_chest_guide.chest_guide": {}
         }
       }
     ]

@@ -11,7 +11,7 @@ It covers the **furnace**, the **blast furnace**, and the **smoker**. It's the f
 | Item cells | Built: shared `ui/better_containers/shared/item_cell.json` |
 | Hook into the vanilla furnace | Built: `ui/furnace_screen.json` (after the management row) |
 | Blast furnace and smoker hiding | Built as conditions, **not verified** in game (see below) |
-| Progress bars (flame, arrow) and smelt time | Not built |
+| Progress bars (flame, arrow) and smelt time | Not built (the vanilla furnace already shows progress) |
 | Hover detail text | Not built |
 
 ## Tabs
@@ -49,7 +49,7 @@ blast furnace and smoker screens don't set them, the Foods and Ores tabs show on
 ## Item IDs
 
 Every item ID comes from `data/item_ids/stable-1.26.60.json`, the same list the Minecraft Item ID Viewer uses. Run
-`python3 tools/sync_item_ids.py` to check them against that list. Re-run `python3 tools/build_furnace_guide.py` after you change a tab.
+`python3 tools/sync_item_ids.py` to check them against that list. Re-run `python3 tools/build_guides.py` after you change a tab.
 
 ## Build steps (what the generator does)
 
