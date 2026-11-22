@@ -230,7 +230,57 @@
                         "#move_two_row": "x2",
                         "#move_all_row": "x64",
                         "#drop_all_row": "x64"
-                      }
+                      },
+                      "bindings": [
+                        {
+                          "binding_type": "view",
+                          "source_control_name": "$toggle_view_binding_name",
+                          "source_property_name": "(not #toggle_state)",
+                          "target_property_name": "#visible"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "toggle_label_active": {
+                      "type": "label",
+                      "size": [
+                        "default",
+                        10
+                      ],
+                      "layer": 5,
+                      "offset": [
+                        1,
+                        0
+                      ],
+                      "anchor_from": "center",
+                      "anchor_to": "center",
+                      "color": [
+                        0.45,
+                        1.0,
+                        0.45
+                      ],
+                      "text": "('#' + $toggle_view_binding_name)",
+                      "property_bag": {
+                        "#move_one": "x1",
+                        "#move_two": "x2",
+                        "#move_all": "x64",
+                        "#drop_one": "x1",
+                        "#drop_all": "x64",
+                        "#toggle_mode_reset": "structure_block.reset",
+                        "#move_one_row": "x1",
+                        "#move_two_row": "x2",
+                        "#move_all_row": "x64",
+                        "#drop_all_row": "x64"
+                      },
+                      "bindings": [
+                        {
+                          "binding_type": "view",
+                          "source_control_name": "$toggle_view_binding_name",
+                          "source_property_name": "#toggle_state",
+                          "target_property_name": "#visible"
+                        }
+                      ]
                     }
                   }
                 ]

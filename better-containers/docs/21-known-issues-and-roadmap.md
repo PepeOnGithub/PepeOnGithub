@@ -93,7 +93,7 @@ Fixed: every guide and info panel is now a vertical stack that anchors to the ri
 
 Panel fit: guides are now 108 px wide (6 cells) with two tabs per row, so a guide beside the 176 px screen needs a GUI width of about 400, which is GUI scale 4 on a 1080p display. At scale 5 or higher on 1080p the guide is cut off by the screen edge; JSON UI cannot read the GUI scale, so there is no automatic fallback.
 
-Mode toggles: the `'#mode_' + $toggle_view_binding_name` global binding is copied unchanged from the original pack. Nothing in the pack ever writes a `#mode_*` global, so the binding resolves to nothing and the toggles run on their own `#toggle_state` and `toggle_mode_reset` logic. It is inert, not a source of failures.
+Mode toggles: JSON UI cannot write a global binding, so the `'#mode_' + $toggle_view_binding_name` binding (copied from the original pack, never written by anything) stays inert and is left as it was. The real mode state is now wired through view bindings: each mode button has two labels bound to its own `#toggle_state`, and the active one shows in green while the others stay white. The status label above the buttons already reads the same states. Unverified in game: the label colour swap.
 
 Brewing filter gaps: fixed. Each filter (Good, Bad, Mixed) has its own grid with only the matching potions packed from the first cell, so hiding leaves no holes. The All grid is unchanged. `tools/build_brewing_filter.py` builds the grids from `data/potion_polarity.json`.
 
