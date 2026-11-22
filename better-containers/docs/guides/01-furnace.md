@@ -11,7 +11,8 @@ It covers the **furnace**, the **blast furnace**, and the **smoker**. It's the f
 | Item cells | Built: shared `ui/better_containers/shared/item_cell.json` |
 | Hook into the vanilla furnace | Built: `ui/furnace_screen.json` (after the management row) |
 | Blast furnace and smoker hiding | Built as conditions, **not verified** in game (see below) |
-| Progress bars (flame, arrow) and smelt time | Not built (the vanilla furnace already shows progress) |
+| Progress bars (fuel and smelting) | Built: two bars bound to `#furnace_flame_ratio` and `#furnace_arrow_ratio`, the vanilla globals the reference uses. Verify the bar widths in game |
+| Smelt time text | Not built |
 | Hover detail text | Not built |
 
 ## Tabs

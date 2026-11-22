@@ -181,22 +181,41 @@ def furnace():
     tabs = []
     for key, title, items, hidden in FURNACE_TABS:
         tabs.append((key, f'bc_furnace_guide.tab.{key}', grid([(i, i) for i in items]), hidden))
-    return tabbed('bc_furnace_guide', 'furnace_guide', 'bc_furnace_guide.title', CELL * COLUMNS, tabs,
+    body = tabbed('bc_furnace_guide', 'furnace_guide', 'bc_furnace_guide.title', CELL * COLUMNS, tabs,
                   defaults={'$is_blast_furnace|default': False, '$is_smoker|default': False})
+    body['progress_bar'] = {
+        'type': 'panel', 'size': ['100%', 6], 'controls': [
+            {'track': {'type': 'panel', 'size': ['100%', 4], 'controls': [
+                {'fill': {'type': 'image', 'texture': 'textures/ui/White', 'color': '$bar_color',
+                          'size': ['(#progress * 100)%', '100%'],
+                          'property_bag': {'#progress': 0},
+                          'bindings': [{'binding_type': 'global', 'binding_name': '$bar_binding',
+                                        'binding_name_override': '#progress'}]}}]}}]}
+    # progress bars sit above the tab bar, in the root panel
+    root = body['furnace_guide']
+    root['controls'].insert(1, {'flame_bar@bc_furnace_guide.progress_bar': {
+        '$bar_binding': '#furnace_flame_ratio', '$bar_color': [1.0, 0.55, 0.0]}})
+    root['controls'].insert(2, {'arrow_bar@bc_furnace_guide.progress_bar': {
+        '$bar_binding': '#furnace_arrow_ratio', '$bar_color': [0.47, 0.78, 0.47]}})
+    return body
 
 
 def enchanting(enchants):
+    """enchants: list of (lang key, roman max level). Each row: icon, name, description, max level."""
     rows = []
     for i, (key, level) in enumerate(enchants):
         rows.append({f'row_{i}@bc_enchanting_guide.enchant_row': {
-            '$name_text': f'%{key}', '$level_text': f'Max {level}'}})
+            '$name_text': f'%{key}', '$desc_text': f'%bc_enchanting_guide.desc.{key}', '$level_text': level}})
     top = {'namespace': 'bc_enchanting_guide',
-           'enchant_row': {'type': 'panel', 'size': ['100%', 16], 'controls': [
-               {'book_icon@bc_item_cell.item_cell': {'$item_id': '$enchanted_book_item_id', 'size': [14, 14]}},
-               {'name_label': {'type': 'label', 'text': '$name_text', 'size': ['100%-60px', 10],
+           'enchant_row': {'type': 'panel', 'size': ['100%', 26], 'controls': [
+               {'book_icon@bc_item_cell.item_cell': {'$item_id': '$enchanted_book_item_id', 'size': [14, 14],
+                                                     'offset': [0, 2]}},
+               {'name_label': {'type': 'label', 'text': '$name_text', 'size': ['100%-70px', 10],
                                'offset': [18, 0], 'font_size': 'small'}},
-               {'level_label': {'type': 'label', 'text': '$level_text', 'size': [54, 10],
-                                'anchor_from': 'right_middle', 'anchor_to': 'right_middle', 'font_size': 'small'}}]}}
+               {'desc_label': {'type': 'label', 'text': '$desc_text', 'size': ['100%-18px', 10],
+                               'offset': [18, 11], 'font_size': 'small'}},
+               {'level_label': {'type': 'label', 'text': '$level_text', 'size': [40, 10],
+                                'anchor_from': 'top_right', 'anchor_to': 'top_right', 'font_size': 'small'}}]}}
     top['enchanting_guide'] = {'type': 'panel', 'size': [CELL * COLUMNS, 'default'], 'layer': 2, 'controls': [
         {'title_label': {'type': 'label', 'text': '%bc_enchanting_guide.title', 'size': ['100%', 12]}},
         {'scroll_view': {'type': 'scroll_view', 'size': ['100%', 120], 'controls': [
@@ -214,8 +233,9 @@ def anvil():
                  text_panel_controls('bc_anvil_guide', [f'bc_anvil_guide.format.{c}' for c, _ in FORMAT_CODES]), None))
     tabs.append(('color', 'bc_anvil_guide.tab.color',
                  text_panel_controls('bc_anvil_guide', [f'bc_anvil_guide.color.{c}' for c, _ in COLOR_CODES]), None))
-    tabs.append(('nametag', 'bc_anvil_guide.tab.nametag',
-                 text_panel_controls('bc_anvil_guide', ['bc_anvil_guide.nametag.empty']), None))
+    entries = read_json(os.path.join(ROOT, 'data', 'nametag_entries.json'))
+    keys = [f'bc_anvil_guide.nametag.{i}' for i in range(len(entries))] or ['bc_anvil_guide.nametag.empty']
+    tabs.append(('nametag', 'bc_anvil_guide.tab.nametag', text_panel_controls('bc_anvil_guide', keys), None))
     return tabbed('bc_anvil_guide', 'anvil_guide', 'bc_anvil_guide.title', CELL * COLUMNS, tabs)
 
 
@@ -244,6 +264,8 @@ def chest():
 
 # ---------------------------------------------------------------- lang text
 def strings():
+    descriptions = read_json(os.path.join(ROOT, 'data', 'enchantment_descriptions.json'))
+    nametags = read_json(os.path.join(ROOT, 'data', 'nametag_entries.json'))
     s = {
         'bc_furnace_guide.title': 'Furnace Guide',
         'bc_furnace_guide.tab.foods': 'Foods', 'bc_furnace_guide.tab.ores': 'Ores',
@@ -262,6 +284,10 @@ def strings():
         'bc_chest_guide.auto_place_all': 'Auto place all',
         'bc_chest_guide.auto_place_one': 'Auto place one',
     }
+    for key, text in descriptions.items():
+        s[f'bc_enchanting_guide.desc.{key}'] = text
+    for i, entry in enumerate(nametags):
+        s[f'bc_anvil_guide.nametag.{i}'] = entry
     for g, desc in REPAIR_GROUPS.items():
         s[f'bc_anvil_guide.group.{g}'] = f'{g.replace("_", " ").title()}: {desc}'
     for c, name in FORMAT_CODES:

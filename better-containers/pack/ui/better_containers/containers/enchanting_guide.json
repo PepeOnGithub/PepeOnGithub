@@ -4,7 +4,7 @@
     "type": "panel",
     "size": [
       "100%",
-      16
+      26
     ],
     "controls": [
       {
@@ -13,6 +13,10 @@
           "size": [
             14,
             14
+          ],
+          "offset": [
+            0,
+            2
           ]
         }
       },
@@ -21,7 +25,7 @@
           "type": "label",
           "text": "$name_text",
           "size": [
-            "100%-60px",
+            "100%-70px",
             10
           ],
           "offset": [
@@ -32,15 +36,30 @@
         }
       },
       {
+        "desc_label": {
+          "type": "label",
+          "text": "$desc_text",
+          "size": [
+            "100%-18px",
+            10
+          ],
+          "offset": [
+            18,
+            11
+          ],
+          "font_size": "small"
+        }
+      },
+      {
         "level_label": {
           "type": "label",
           "text": "$level_text",
           "size": [
-            54,
+            40,
             10
           ],
-          "anchor_from": "right_middle",
-          "anchor_to": "right_middle",
+          "anchor_from": "top_right",
+          "anchor_to": "top_right",
           "font_size": "small"
         }
       }
@@ -84,247 +103,288 @@
                   {
                     "row_0@bc_enchanting_guide.enchant_row": {
                       "$name_text": "%enchantment.arrowDamage",
-                      "$level_text": "Max V"
+                      "$desc_text": "%bc_enchanting_guide.desc.enchantment.arrowDamage",
+                      "$level_text": "V"
                     }
                   },
                   {
                     "row_1@bc_enchanting_guide.enchant_row": {
                       "$name_text": "%enchantment.arrowFire",
-                      "$level_text": "Max I"
+                      "$desc_text": "%bc_enchanting_guide.desc.enchantment.arrowFire",
+                      "$level_text": "I"
                     }
                   },
                   {
                     "row_2@bc_enchanting_guide.enchant_row": {
                       "$name_text": "%enchantment.arrowInfinite",
-                      "$level_text": "Max I"
+                      "$desc_text": "%bc_enchanting_guide.desc.enchantment.arrowInfinite",
+                      "$level_text": "I"
                     }
                   },
                   {
                     "row_3@bc_enchanting_guide.enchant_row": {
                       "$name_text": "%enchantment.arrowKnockback",
-                      "$level_text": "Max II"
+                      "$desc_text": "%bc_enchanting_guide.desc.enchantment.arrowKnockback",
+                      "$level_text": "II"
                     }
                   },
                   {
                     "row_4@bc_enchanting_guide.enchant_row": {
                       "$name_text": "%enchantment.crossbowMultishot",
-                      "$level_text": "Max I"
+                      "$desc_text": "%bc_enchanting_guide.desc.enchantment.crossbowMultishot",
+                      "$level_text": "I"
                     }
                   },
                   {
                     "row_5@bc_enchanting_guide.enchant_row": {
                       "$name_text": "%enchantment.crossbowPiercing",
-                      "$level_text": "Max IV"
+                      "$desc_text": "%bc_enchanting_guide.desc.enchantment.crossbowPiercing",
+                      "$level_text": "IV"
                     }
                   },
                   {
                     "row_6@bc_enchanting_guide.enchant_row": {
                       "$name_text": "%enchantment.crossbowQuickCharge",
-                      "$level_text": "Max III"
+                      "$desc_text": "%bc_enchanting_guide.desc.enchantment.crossbowQuickCharge",
+                      "$level_text": "III"
                     }
                   },
                   {
                     "row_7@bc_enchanting_guide.enchant_row": {
                       "$name_text": "%enchantment.curse.binding",
-                      "$level_text": "Max I"
+                      "$desc_text": "%bc_enchanting_guide.desc.enchantment.curse.binding",
+                      "$level_text": "I"
                     }
                   },
                   {
                     "row_8@bc_enchanting_guide.enchant_row": {
                       "$name_text": "%enchantment.curse.vanishing",
-                      "$level_text": "Max I"
+                      "$desc_text": "%bc_enchanting_guide.desc.enchantment.curse.vanishing",
+                      "$level_text": "I"
                     }
                   },
                   {
                     "row_9@bc_enchanting_guide.enchant_row": {
                       "$name_text": "%enchantment.damage.all",
-                      "$level_text": "Max V"
+                      "$desc_text": "%bc_enchanting_guide.desc.enchantment.damage.all",
+                      "$level_text": "V"
                     }
                   },
                   {
                     "row_10@bc_enchanting_guide.enchant_row": {
                       "$name_text": "%enchantment.damage.arthropods",
-                      "$level_text": "Max V"
+                      "$desc_text": "%bc_enchanting_guide.desc.enchantment.damage.arthropods",
+                      "$level_text": "V"
                     }
                   },
                   {
                     "row_11@bc_enchanting_guide.enchant_row": {
                       "$name_text": "%enchantment.damage.undead",
-                      "$level_text": "Max V"
+                      "$desc_text": "%bc_enchanting_guide.desc.enchantment.damage.undead",
+                      "$level_text": "V"
                     }
                   },
                   {
                     "row_12@bc_enchanting_guide.enchant_row": {
                       "$name_text": "%enchantment.digging",
-                      "$level_text": "Max V"
+                      "$desc_text": "%bc_enchanting_guide.desc.enchantment.digging",
+                      "$level_text": "V"
                     }
                   },
                   {
                     "row_13@bc_enchanting_guide.enchant_row": {
                       "$name_text": "%enchantment.durability",
-                      "$level_text": "Max III"
+                      "$desc_text": "%bc_enchanting_guide.desc.enchantment.durability",
+                      "$level_text": "III"
                     }
                   },
                   {
                     "row_14@bc_enchanting_guide.enchant_row": {
                       "$name_text": "%enchantment.fire",
-                      "$level_text": "Max II"
+                      "$desc_text": "%bc_enchanting_guide.desc.enchantment.fire",
+                      "$level_text": "II"
                     }
                   },
                   {
                     "row_15@bc_enchanting_guide.enchant_row": {
                       "$name_text": "%enchantment.fishingSpeed",
-                      "$level_text": "Max III"
+                      "$desc_text": "%bc_enchanting_guide.desc.enchantment.fishingSpeed",
+                      "$level_text": "III"
                     }
                   },
                   {
                     "row_16@bc_enchanting_guide.enchant_row": {
                       "$name_text": "%enchantment.frostWalker",
-                      "$level_text": "Max II"
+                      "$desc_text": "%bc_enchanting_guide.desc.enchantment.frostWalker",
+                      "$level_text": "II"
                     }
                   },
                   {
                     "row_17@bc_enchanting_guide.enchant_row": {
                       "$name_text": "%enchantment.heavy_weapon.breach",
-                      "$level_text": "Max IV"
+                      "$desc_text": "%bc_enchanting_guide.desc.enchantment.heavy_weapon.breach",
+                      "$level_text": "IV"
                     }
                   },
                   {
                     "row_18@bc_enchanting_guide.enchant_row": {
                       "$name_text": "%enchantment.heavy_weapon.density",
-                      "$level_text": "Max V"
+                      "$desc_text": "%bc_enchanting_guide.desc.enchantment.heavy_weapon.density",
+                      "$level_text": "V"
                     }
                   },
                   {
                     "row_19@bc_enchanting_guide.enchant_row": {
                       "$name_text": "%enchantment.heavy_weapon.windBurst",
-                      "$level_text": "Max III"
+                      "$desc_text": "%bc_enchanting_guide.desc.enchantment.heavy_weapon.windBurst",
+                      "$level_text": "III"
                     }
                   },
                   {
                     "row_20@bc_enchanting_guide.enchant_row": {
                       "$name_text": "%enchantment.knockback",
-                      "$level_text": "Max II"
+                      "$desc_text": "%bc_enchanting_guide.desc.enchantment.knockback",
+                      "$level_text": "II"
                     }
                   },
                   {
                     "row_21@bc_enchanting_guide.enchant_row": {
                       "$name_text": "%enchantment.lootBonus",
-                      "$level_text": "Max III"
+                      "$desc_text": "%bc_enchanting_guide.desc.enchantment.lootBonus",
+                      "$level_text": "III"
                     }
                   },
                   {
                     "row_22@bc_enchanting_guide.enchant_row": {
                       "$name_text": "%enchantment.lootBonusDigger",
-                      "$level_text": "Max III"
+                      "$desc_text": "%bc_enchanting_guide.desc.enchantment.lootBonusDigger",
+                      "$level_text": "III"
                     }
                   },
                   {
                     "row_23@bc_enchanting_guide.enchant_row": {
                       "$name_text": "%enchantment.lootBonusFishing",
-                      "$level_text": "Max III"
+                      "$desc_text": "%bc_enchanting_guide.desc.enchantment.lootBonusFishing",
+                      "$level_text": "III"
                     }
                   },
                   {
                     "row_24@bc_enchanting_guide.enchant_row": {
                       "$name_text": "%enchantment.mending",
-                      "$level_text": "Max I"
+                      "$desc_text": "%bc_enchanting_guide.desc.enchantment.mending",
+                      "$level_text": "I"
                     }
                   },
                   {
                     "row_25@bc_enchanting_guide.enchant_row": {
                       "$name_text": "%enchantment.oxygen",
-                      "$level_text": "Max III"
+                      "$desc_text": "%bc_enchanting_guide.desc.enchantment.oxygen",
+                      "$level_text": "III"
                     }
                   },
                   {
                     "row_26@bc_enchanting_guide.enchant_row": {
                       "$name_text": "%enchantment.protect.all",
-                      "$level_text": "Max IV"
+                      "$desc_text": "%bc_enchanting_guide.desc.enchantment.protect.all",
+                      "$level_text": "IV"
                     }
                   },
                   {
                     "row_27@bc_enchanting_guide.enchant_row": {
                       "$name_text": "%enchantment.protect.explosion",
-                      "$level_text": "Max IV"
+                      "$desc_text": "%bc_enchanting_guide.desc.enchantment.protect.explosion",
+                      "$level_text": "IV"
                     }
                   },
                   {
                     "row_28@bc_enchanting_guide.enchant_row": {
                       "$name_text": "%enchantment.protect.fall",
-                      "$level_text": "Max IV"
+                      "$desc_text": "%bc_enchanting_guide.desc.enchantment.protect.fall",
+                      "$level_text": "IV"
                     }
                   },
                   {
                     "row_29@bc_enchanting_guide.enchant_row": {
                       "$name_text": "%enchantment.protect.fire",
-                      "$level_text": "Max IV"
+                      "$desc_text": "%bc_enchanting_guide.desc.enchantment.protect.fire",
+                      "$level_text": "IV"
                     }
                   },
                   {
                     "row_30@bc_enchanting_guide.enchant_row": {
                       "$name_text": "%enchantment.protect.projectile",
-                      "$level_text": "Max IV"
+                      "$desc_text": "%bc_enchanting_guide.desc.enchantment.protect.projectile",
+                      "$level_text": "IV"
                     }
                   },
                   {
                     "row_31@bc_enchanting_guide.enchant_row": {
                       "$name_text": "%enchantment.soul_speed",
-                      "$level_text": "Max III"
+                      "$desc_text": "%bc_enchanting_guide.desc.enchantment.soul_speed",
+                      "$level_text": "III"
                     }
                   },
                   {
                     "row_32@bc_enchanting_guide.enchant_row": {
                       "$name_text": "%enchantment.swift_sneak",
-                      "$level_text": "Max III"
+                      "$desc_text": "%bc_enchanting_guide.desc.enchantment.swift_sneak",
+                      "$level_text": "III"
                     }
                   },
                   {
                     "row_33@bc_enchanting_guide.enchant_row": {
                       "$name_text": "%enchantment.thorns",
-                      "$level_text": "Max III"
+                      "$desc_text": "%bc_enchanting_guide.desc.enchantment.thorns",
+                      "$level_text": "III"
                     }
                   },
                   {
                     "row_34@bc_enchanting_guide.enchant_row": {
                       "$name_text": "%enchantment.tridentChanneling",
-                      "$level_text": "Max I"
+                      "$desc_text": "%bc_enchanting_guide.desc.enchantment.tridentChanneling",
+                      "$level_text": "I"
                     }
                   },
                   {
                     "row_35@bc_enchanting_guide.enchant_row": {
                       "$name_text": "%enchantment.tridentImpaling",
-                      "$level_text": "Max V"
+                      "$desc_text": "%bc_enchanting_guide.desc.enchantment.tridentImpaling",
+                      "$level_text": "V"
                     }
                   },
                   {
                     "row_36@bc_enchanting_guide.enchant_row": {
                       "$name_text": "%enchantment.tridentLoyalty",
-                      "$level_text": "Max III"
+                      "$desc_text": "%bc_enchanting_guide.desc.enchantment.tridentLoyalty",
+                      "$level_text": "III"
                     }
                   },
                   {
                     "row_37@bc_enchanting_guide.enchant_row": {
                       "$name_text": "%enchantment.tridentRiptide",
-                      "$level_text": "Max III"
+                      "$desc_text": "%bc_enchanting_guide.desc.enchantment.tridentRiptide",
+                      "$level_text": "III"
                     }
                   },
                   {
                     "row_38@bc_enchanting_guide.enchant_row": {
                       "$name_text": "%enchantment.untouching",
-                      "$level_text": "Max I"
+                      "$desc_text": "%bc_enchanting_guide.desc.enchantment.untouching",
+                      "$level_text": "I"
                     }
                   },
                   {
                     "row_39@bc_enchanting_guide.enchant_row": {
                       "$name_text": "%enchantment.waterWalker",
-                      "$level_text": "Max III"
+                      "$desc_text": "%bc_enchanting_guide.desc.enchantment.waterWalker",
+                      "$level_text": "III"
                     }
                   },
                   {
                     "row_40@bc_enchanting_guide.enchant_row": {
                       "$name_text": "%enchantment.waterWorker",
-                      "$level_text": "Max I"
+                      "$desc_text": "%bc_enchanting_guide.desc.enchantment.waterWorker",
+                      "$level_text": "I"
                     }
                   }
                 ]
