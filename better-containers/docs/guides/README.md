@@ -13,8 +13,8 @@ structure Glacier uses, and are restated here as facts about the game.
 |---|---|---|
 | Brewing stand | [05 — Brewing](05-brewing.md) | Full guide and recipe book (done) |
 | Furnace, blast furnace, smoker | [01 — Furnace](01-furnace.md) | Guide panel built (5 tabs); blast furnace and smoker variants to verify |
-| Enchanting table | [03 — Enchanting](03-enchanting.md) | Guide panel built (41 enchantments) |
-| Anvil | [04 — Anvil](04-anvil.md) | Guide panel built (4 tabs); nametag entries to write |
+| Enchanting table | [03 — Enchanting](03-enchanting.md) | Guide panel built (42 enchantments, incl. Lunge) |
+| Anvil | [04 — Anvil](04-anvil.md) | Guide panel built (4 tabs, nametag entries filled) |
 | Smithing table | [02 — Smithing](02-smithing.md) | Guide panel built (3 tabs) |
 | Enchanting table | [03 — Enchanting](03-enchanting.md) | Management row only |
 | Anvil | [04 — Anvil](04-anvil.md) | Management row only |

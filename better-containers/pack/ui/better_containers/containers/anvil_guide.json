@@ -405,7 +405,37 @@
                 "controls": [
                   {
                     "line_0@bc_anvil_guide.text_row": {
-                      "$line_text": "%bc_anvil_guide.nametag.empty"
+                      "$line_text": "%bc_anvil_guide.nametag.0"
+                    }
+                  },
+                  {
+                    "line_1@bc_anvil_guide.text_row": {
+                      "$line_text": "%bc_anvil_guide.nametag.1"
+                    }
+                  },
+                  {
+                    "line_2@bc_anvil_guide.text_row": {
+                      "$line_text": "%bc_anvil_guide.nametag.2"
+                    }
+                  },
+                  {
+                    "line_3@bc_anvil_guide.text_row": {
+                      "$line_text": "%bc_anvil_guide.nametag.3"
+                    }
+                  },
+                  {
+                    "line_4@bc_anvil_guide.text_row": {
+                      "$line_text": "%bc_anvil_guide.nametag.4"
+                    }
+                  },
+                  {
+                    "line_5@bc_anvil_guide.text_row": {
+                      "$line_text": "%bc_anvil_guide.nametag.5"
+                    }
+                  },
+                  {
+                    "line_6@bc_anvil_guide.text_row": {
+                      "$line_text": "%bc_anvil_guide.nametag.6"
                     }
                   }
                 ],

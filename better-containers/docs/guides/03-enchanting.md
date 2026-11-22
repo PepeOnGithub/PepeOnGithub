@@ -2,7 +2,7 @@
 
 ## Status
 
-Built: `ui/better_containers/containers/enchanting_guide.json`, hooked into the vanilla enchanting screen. It is a scrolling list of all 41 enchantments, one row each, with the enchanted book icon, the vanilla enchantment name, and its max level. Descriptions are in `data/enchantment_descriptions.json`, written for this pack (not copied from the reference). Edit that file and re-run `tools/build_guides.py`. The level is a roman numeral, which is the same in every language.
+Built: `ui/better_containers/containers/enchanting_guide.json`, hooked into the vanilla enchanting screen. It is a scrolling list of all 42 enchantments, one row each, with the enchanted book icon, the vanilla enchantment name, and its max level. Descriptions are in `data/enchantment_descriptions.json`, written for this pack (not copied from the reference). Edit that file and re-run `tools/build_guides.py`. The level is a roman numeral, which is the same in every language.
 
 The enchanting guide is a book of enchantments. It has one tab, **Enchanted Books**, with one cell per enchantment.
 Selecting a cell shows the enchantment's description and max level.

@@ -1,1 +1,9 @@
-[]
+[
+  "A name tag must be renamed in an anvil before it can be used on a mob.",
+  "A renamed spawn egg spawns a mob with that name.",
+  "Names can be up to 30 characters in Bedrock Edition.",
+  "Renaming costs 1 level plus any prior-work penalty. A rename-only job costs at most 39 levels.",
+  "Leave the name blank to restore the item's default name.",
+  "Named items do not stack with unnamed or differently named items.",
+  "Chests, barrels, furnaces, hoppers, shulker boxes, brewing stands and enchanting tables show their name in their screen once placed."
+]

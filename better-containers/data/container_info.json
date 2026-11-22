@@ -18,26 +18,28 @@
     "beacon": {
       "title": "Beacon",
       "lines": [
-        "Build a pyramid of iron, gold, emerald, diamond, or netherite blocks under the beacon to power it.",
-        "A bigger pyramid unlocks more effects. Pick one primary effect.",
-        "Pay with one accepted ingot: iron, gold, emerald, diamond, or netherite.",
-        "At pyramid level 4 you can also pick Regeneration as a second effect."
+        "Build a pyramid of iron, gold, emerald, diamond or netherite blocks. The block type is cosmetic; mixing is fine.",
+        "Primary powers: Speed and Haste (level 1 pyramid), Resistance and Jump Boost (level 2), Strength (level 3).",
+        "Pay one iron ingot, gold ingot, emerald, diamond or netherite ingot to set the powers.",
+        "A level 4 pyramid unlocks the secondary power: Regeneration, or primary power level II.",
+        "Effects last 9 seconds plus 2 per pyramid level and refresh every 4 seconds."
       ]
     },
     "cartography": {
       "title": "Cartography Table",
       "lines": [
-        "Copy a map: a filled map and an empty map.",
-        "Zoom out a map: a filled map and paper.",
-        "Lock a map so it cannot change: a filled map and a glass pane.",
-        "Check the recipe in game if a slot does not accept an item."
+        "Zoom out: a filled map and paper.",
+        "Copy: a filled map and an empty map.",
+        "Lock: a filled map and a glass pane, so the map can no longer change.",
+        "In Bedrock Edition you can also add pointers, make empty maps and rename maps."
       ]
     },
     "grindstone": {
       "title": "Grindstone",
       "lines": [
-        "Put two damaged items of the same type in to repair them into one.",
-        "Remove enchantments from an item. You get experience back for each one removed."
+        "One enchanted item removes all enchantments except curses and gives experience back.",
+        "Two items of the same type combine into one repaired, unenchanted item. Prior-work cost resets.",
+        "Custom names are kept. Curses are not removed."
       ]
     },
     "horse": {
@@ -59,8 +61,9 @@
     "loom": {
       "title": "Loom",
       "lines": [
-        "Put a banner and a dye in the loom to make a new banner design.",
-        "A banner pattern in the pattern slot adds a design to the banner."
+        "Put a banner and a dye in, then pick a pattern.",
+        "Some patterns need a banner pattern item in the third slot: Flower Charge, Creeper Charge, Skull Charge, Thing, Snout, Globe, Field Masoned, Bordure Indented, Flow and Guster.",
+        "The banner pattern item is not used up."
       ]
     },
     "trade": {

@@ -386,6 +386,13 @@
                       "$desc_text": "%bc_enchanting_guide.desc.enchantment.waterWorker",
                       "$level_text": "I"
                     }
+                  },
+                  {
+                    "row_41@bc_enchanting_guide.enchant_row": {
+                      "$name_text": "%enchantment.lunge",
+                      "$desc_text": "%bc_enchanting_guide.desc.enchantment.lunge",
+                      "$level_text": "III"
+                    }
                   }
                 ]
               }

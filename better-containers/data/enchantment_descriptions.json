@@ -39,5 +39,6 @@
   "enchantment.tridentRiptide": "The trident launches you forward when thrown in water or rain.",
   "enchantment.untouching": "Blocks drop themselves, such as spawners or ores, when mined.",
   "enchantment.waterWalker": "You move faster through water.",
-  "enchantment.waterWorker": "Mining underwater is no slower."
+  "enchantment.waterWorker": "Mining underwater is no slower.",
+  "enchantment.lunge": "A spear jab launches you forward, at the cost of hunger and 1 durability."
 }

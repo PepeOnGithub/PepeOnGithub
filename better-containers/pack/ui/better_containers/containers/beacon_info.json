@@ -55,6 +55,11 @@
               "line_3@bc_beacon_info.info_row": {
                 "$line_text": "%bc_beacon_info.line.3"
               }
+            },
+            {
+              "line_4@bc_beacon_info.info_row": {
+                "$line_text": "%bc_beacon_info.line.4"
+              }
             }
           ]
         }

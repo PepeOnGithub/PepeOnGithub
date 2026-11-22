@@ -45,6 +45,11 @@
               "line_1@bc_loom_info.info_row": {
                 "$line_text": "%bc_loom_info.line.1"
               }
+            },
+            {
+              "line_2@bc_loom_info.info_row": {
+                "$line_text": "%bc_loom_info.line.2"
+              }
             }
           ]
         }

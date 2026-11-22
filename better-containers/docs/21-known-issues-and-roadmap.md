@@ -75,7 +75,6 @@ The items below are what still needs work, and why.
 
 - **Brewing filter dropdown:** the polarity data is in `data/potion_polarity.json` (all potions now classified from the Minecraft Wiki Effect page: Wind Charged, Weaving, Oozing and Infested are Negative; Turtle Master is mixed). The grid's potion order comes from the game's `brewing_items` collection, so the filter needs a per-potion binding I can't verify offline.
 
-- Anvil nametag entries: the tab is built and reads `data/nametag_entries.json`, which is empty. The content must come from the pack owner.
 - Information panels for the seven management-row containers are built. Positions and text wrapping must be checked in game.
 
 ## Roadmap
