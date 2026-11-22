@@ -1,0 +1,164 @@
+{
+  "namespace": "bc_brewing_factories",
+  "bindings": {
+    "$factory_bindings_index|default": 1
+  },
+  "potion_bindings@bc_brewing_factories.bindings": {
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "('potion_item_' + $factory_bindings_index + '01')",
+        "source_property_name": "(#toggle_state * 1)",
+        "target_property_name": "#is_awkward_potion"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "('potion_item_' + $factory_bindings_index + '02')",
+        "source_property_name": "(#toggle_state * 2)",
+        "target_property_name": "#is_night_vision"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "('potion_item_' + $factory_bindings_index + '03')",
+        "source_property_name": "(#toggle_state * 3)",
+        "target_property_name": "#is_invisibility"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "('potion_item_' + $factory_bindings_index + '04')",
+        "source_property_name": "(#toggle_state * 4)",
+        "target_property_name": "#is_leaping"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "('potion_item_' + $factory_bindings_index + '05')",
+        "source_property_name": "(#toggle_state * 5)",
+        "target_property_name": "#is_fire_resistance"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "('potion_item_' + $factory_bindings_index + '06')",
+        "source_property_name": "(#toggle_state * 6)",
+        "target_property_name": "#is_swiftness"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "('potion_item_' + $factory_bindings_index + '07')",
+        "source_property_name": "(#toggle_state * 7)",
+        "target_property_name": "#is_slowness"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "('potion_item_' + $factory_bindings_index + '08')",
+        "source_property_name": "(#toggle_state * 8)",
+        "target_property_name": "#is_water_breathing"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "('potion_item_' + $factory_bindings_index + '09')",
+        "source_property_name": "(#toggle_state * 9)",
+        "target_property_name": "#is_healing"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "('potion_item_' + $factory_bindings_index + '10')",
+        "source_property_name": "(#toggle_state * 10)",
+        "target_property_name": "#is_harming"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "('potion_item_' + $factory_bindings_index + '11')",
+        "source_property_name": "(#toggle_state * 11)",
+        "target_property_name": "#is_poison"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "('potion_item_' + $factory_bindings_index + '12')",
+        "source_property_name": "(#toggle_state * 12)",
+        "target_property_name": "#is_regeneration"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "('potion_item_' + $factory_bindings_index + '13')",
+        "source_property_name": "(#toggle_state * 13)",
+        "target_property_name": "#is_strength"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "('potion_item_' + $factory_bindings_index + '14')",
+        "source_property_name": "(#toggle_state * 14)",
+        "target_property_name": "#is_weakness"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "('potion_item_' + $factory_bindings_index + '15')",
+        "source_property_name": "(#toggle_state * 15)",
+        "target_property_name": "#is_turtle_master"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "('potion_item_' + $factory_bindings_index + '16')",
+        "source_property_name": "(#toggle_state * 16)",
+        "target_property_name": "#is_slow_falling"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "('potion_item_' + $factory_bindings_index + '17')",
+        "source_property_name": "(#toggle_state * 17)",
+        "target_property_name": "#is_wind_charging"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "('potion_item_' + $factory_bindings_index + '18')",
+        "source_property_name": "(#toggle_state * 18)",
+        "target_property_name": "#is_weaving"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "('potion_item_' + $factory_bindings_index + '19')",
+        "source_property_name": "(#toggle_state * 19)",
+        "target_property_name": "#is_oozing"
+      },
+      {
+        "binding_type": "view",
+        "source_control_name": "('potion_item_' + $factory_bindings_index + '20')",
+        "source_property_name": "(#toggle_state * 20)",
+        "target_property_name": "#is_infestation"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#is_awkward_potion + #is_night_vision + #is_invisibility + #is_leaping + #is_fire_resistance + #is_swiftness + #is_slowness + #is_water_breathing + #is_healing + #is_harming + #is_poison + #is_regeneration + #is_strength + #is_weakness + #is_turtle_master + #is_slow_falling + #is_wind_charging + #is_weaving + #is_oozing + #is_infestation)",
+        "target_property_name": "#item_selected_index"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "('#item_index_' + #item_selected_index)",
+        "target_property_name": "#collection_length"
+      }
+    ]
+  },
+  "splash_potion_bindings@bc_brewing_factories.potion_bindings": {
+    "$factory_bindings_index": 2
+  },
+  "lingering_potion_bindings@bc_brewing_factories.potion_bindings": {
+    "$factory_bindings_index": 3
+  },
+  "duration_potion_bindings@bc_brewing_factories.potion_bindings": {
+    "$factory_bindings_index": 11
+  },
+  "potency_potion_bindings@bc_brewing_factories.potion_bindings": {
+    "$factory_bindings_index": 21
+  },
+  "duration_splash_potion_bindings@bc_brewing_factories.potion_bindings": {
+    "$factory_bindings_index": 12
+  },
+  "potency_splash_potion_bindings@bc_brewing_factories.potion_bindings": {
+    "$factory_bindings_index": 22
+  },
+  "duration_lingering_potion_bindings@bc_brewing_factories.potion_bindings": {
+    "$factory_bindings_index": 13
+  },
+  "potency_lingering_potion_bindings@bc_brewing_factories.potion_bindings": {
+    "$factory_bindings_index": 23
+  }
+}

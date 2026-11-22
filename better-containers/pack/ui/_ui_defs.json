@@ -1,0 +1,19 @@
+{
+  "ui_defs": [
+    "ui/better_containers/shared/shared_controls.json",
+    "ui/better_containers/shared/item_movement.json",
+    "ui/better_containers/shared/navigation.json",
+    "ui/better_containers/shared/management_toggles.json",
+    "ui/better_containers/containers/chest_single.json",
+    "ui/better_containers/containers/chest_double.json",
+    "ui/better_containers/smithing/smithing_table.json",
+    "ui/better_containers/smithing/armor_arc.json",
+    "ui/better_containers/brewing/brewing_common.json",
+    "ui/better_containers/brewing/brewing_factories.json",
+    "ui/better_containers/brewing/brewing_toggles.json",
+    "ui/better_containers/brewing/slots/potion_slot.json",
+    "ui/better_containers/brewing/slots/modifier_slot.json",
+    "ui/better_containers/brewing/recipe_book/recipe_book.json",
+    "ui/better_containers/brewing/recipe_book/recipe_grid.json"
+  ]
+}

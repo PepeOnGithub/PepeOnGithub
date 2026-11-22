@@ -1,0 +1,478 @@
+{
+  "namespace": "bc_management_toggles",
+  "primary_management_toggles": {
+    "type": "panel",
+    "anchor_from": "$toggle_holder_anchor_from",
+    "anchor_to": "$toggle_holder_anchor_to",
+    "$management_toggle_size|default": [
+      18,
+      18
+    ],
+    "$toggle_holder_anchor_to": "right_middle",
+    "$toggle_holder_anchor_from": "left_middle",
+    "$status_label_anchor|default": "top_right",
+    "$status_label_anchor_offset|default": [
+      -1,
+      -16
+    ],
+    "$status_label_property_text|default": {
+      "#status_index_1": "structure_block.mirror.none",
+      "#status_index_2": " x1",
+      "#status_index_3": " x2",
+      "#status_index_4": " x64",
+      "#status_index_5": " x1",
+      "#status_index_6": " x64",
+      "#status_index_7": " x1",
+      "#status_index_8": " x2",
+      "#status_index_9": " x64",
+      "#status_index_10": " x64"
+    },
+    "$row_icon_texture|default": "textures/better_containers/icons/row_icon",
+    "$row_icon_size|default": [
+      36,
+      4
+    ],
+    "$row_icon_offset|default": [
+      2,
+      -5
+    ],
+    "$toggle_label_underlay_texture|default": "textures/better_containers/backgrounds/label_underlay",
+    "$toggle_label_underlay_texture_nineslice|default": 1,
+    "$toggle_label_underlay_uv|default": [
+      0,
+      0
+    ],
+    "$toggle_label_underlay_uv_size|default": [
+      3,
+      5
+    ],
+    "$toggle_label_underlay_offset|default": [
+      1,
+      0
+    ],
+    "$toggle_label_color|default": "white",
+    "$button_default_texture|default": "textures/better_containers/buttons/toggle_default",
+    "$button_hover_texture|default": "textures/better_containers/buttons/toggle_hover",
+    "$button_pressed_texture|default": "textures/better_containers/buttons/toggle_checked_hover",
+    "$button_texture_nineslice|default": 2,
+    "$icon_texture_default_color|default": [
+      0.29,
+      0.286,
+      0.286
+    ],
+    "$icon_texture_hover_color|default": [
+      0.89,
+      0.89,
+      0.89
+    ],
+    "$icon_texture_offset|default": [
+      0,
+      0
+    ],
+    "$icon_texture_size|default": [
+      10,
+      10
+    ],
+    "$icon_texture_reset_size|default": [
+      9,
+      9
+    ],
+    "$icon_reset_texture|default": "textures/better_containers/icons/reset",
+    "$icon_texture_move|default": "textures/better_containers/icons/move",
+    "$icon_texture_drop|default": "textures/better_containers/icons/drop",
+    "variables": [
+      {
+        "requires": "($toggle_position = 'right')",
+        "$toggle_label_underlay_offset": [
+          -1,
+          0
+        ],
+        "$toggle_label_underlay_uv": [
+          4,
+          0
+        ],
+        "$status_label_anchor_offset": [
+          2,
+          -16
+        ],
+        "$status_label_anchor": "top_left",
+        "$toggle_holder_anchor_to": "left_middle",
+        "$toggle_holder_anchor_from": "right_middle"
+      }
+    ],
+    "$ignore_status_bar|default": false,
+    "size": [
+      "100%cm",
+      "100%c"
+    ],
+    "controls": [
+      {
+        "status_label_holder": {
+          "type": "panel",
+          "size": [
+            "100%sm - 1px",
+            1
+          ],
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "ignored": "$ignore_status_bar",
+          "controls": [
+            {
+              "status_label_overlay": {
+                "type": "image",
+                "texture": "textures/better_containers/backgrounds/status_label_underlay",
+                "nineslice_size": 2,
+                "layer": 2,
+                "offset": "$status_label_anchor_offset",
+                "anchor_from": "$status_label_anchor",
+                "anchor_to": "$status_label_anchor",
+                "size": [
+                  "100%c + 7px",
+                  16
+                ],
+                "controls": [
+                  {
+                    "status_label": {
+                      "type": "label",
+                      "text": "#selection_status",
+                      "size": [
+                        "default",
+                        10
+                      ],
+                      "localize": true,
+                      "offset": [
+                        1,
+                        0
+                      ],
+                      "anchor_from": "center",
+                      "anchor_to": "center",
+                      "layer": 3,
+                      "property_bag": "$status_label_property_text",
+                      "bindings": [
+                        {
+                          "binding_type": "view",
+                          "source_control_name": "toggle_mode_reset",
+                          "source_property_name": "(#toggle_state * 1)",
+                          "target_property_name": "#p1"
+                        },
+                        {
+                          "binding_type": "view",
+                          "source_control_name": "move_one",
+                          "source_property_name": "(#toggle_state * 2)",
+                          "target_property_name": "#p2"
+                        },
+                        {
+                          "binding_type": "view",
+                          "source_control_name": "move_two",
+                          "source_property_name": "(#toggle_state * 3)",
+                          "target_property_name": "#p3"
+                        },
+                        {
+                          "binding_type": "view",
+                          "source_control_name": "move_all",
+                          "source_property_name": "(#toggle_state * 4)",
+                          "target_property_name": "#p4"
+                        },
+                        {
+                          "binding_type": "view",
+                          "source_control_name": "drop_one",
+                          "source_property_name": "(#toggle_state * 5)",
+                          "target_property_name": "#p5"
+                        },
+                        {
+                          "binding_type": "view",
+                          "source_control_name": "drop_all",
+                          "source_property_name": "(#toggle_state * 6)",
+                          "target_property_name": "#p6"
+                        },
+                        {
+                          "binding_type": "view",
+                          "source_control_name": "move_one_row",
+                          "source_property_name": "(#toggle_state * 7)",
+                          "target_property_name": "#p7"
+                        },
+                        {
+                          "binding_type": "view",
+                          "source_control_name": "move_two_row",
+                          "source_property_name": "(#toggle_state * 8)",
+                          "target_property_name": "#p8"
+                        },
+                        {
+                          "binding_type": "view",
+                          "source_control_name": "move_all_row",
+                          "source_property_name": "(#toggle_state * 9)",
+                          "target_property_name": "#p9"
+                        },
+                        {
+                          "binding_type": "view",
+                          "source_control_name": "drop_all_row",
+                          "source_property_name": "(#toggle_state * 10)",
+                          "target_property_name": "#p10"
+                        },
+                        {
+                          "binding_type": "view",
+                          "binding_condition": "always",
+                          "source_property_name": "(#p7 + #p8 + #p9 + #p10)",
+                          "target_property_name": "#row_toggles_length"
+                        },
+                        {
+                          "binding_type": "view",
+                          "binding_condition": "always",
+                          "source_property_name": "('#status_index_' + (#p1 + #p2 + #p3 + #p4 + #p5 + #p6 + #row_toggles_length))",
+                          "target_property_name": "#selection_status"
+                        }
+                      ],
+                      "controls": [
+                        {
+                          "row_icon": {
+                            "type": "image",
+                            "size": "$row_icon_size",
+                            "ignored": "($toggle_position = 'right')",
+                            "texture": "$row_icon_texture",
+                            "offset": "$row_icon_offset",
+                            "anchor_from": "top_right",
+                            "anchor_to": "bottom_right",
+                            "bindings": [
+                              {
+                                "binding_type": "view",
+                                "source_control_name": "status_label",
+                                "source_property_name": "(#row_toggles_length > 6)",
+                                "target_property_name": "#visible"
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "stack_panel": {
+          "type": "stack_panel",
+          "size": [
+            "100%cm",
+            "100%c"
+          ],
+          "orientation": "vertical",
+          "controls": "$toggle_stack_controls"
+        }
+      }
+    ],
+    "$toggle_stack_controls|default": [
+      {
+        "reset_toggle@bc_management_toggles.button_holder_template": {
+          "controls": [
+            {
+              "button_visuals@bc_shared.button_visuals": {}
+            },
+            {
+              "reset_selection_toggle@bc_shared.radio": {
+                "$toggle_view_binding_name": "toggle_mode_reset",
+                "$toggle_default_state": true
+              }
+            }
+          ]
+        }
+      },
+      {
+        "move_toggles@bc_management_toggles.button_holder_template": {
+          "controls": [
+            {
+              "button_visuals@bc_shared.button_visuals": {
+                "$icon_path": "$icon_texture_move"
+              }
+            },
+            {
+              "1@bc_shared.radio": {
+                "$toggle_view_binding_name": "move_one",
+                "$toggle_group_forced_index": 1,
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "move_one",
+                    "source_property_name": "(not #toggle_state)",
+                    "target_property_name": "#is_not_move_one"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "move_two",
+                    "source_property_name": "(not #toggle_state)",
+                    "target_property_name": "#is_not_move_two"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "(#is_not_move_one and #is_not_move_two)",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "2@bc_shared.radio": {
+                "$toggle_view_binding_name": "move_two",
+                "$toggle_group_forced_index": 2,
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "move_one",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "3@bc_shared.radio": {
+                "$toggle_view_binding_name": "move_all",
+                "$toggle_group_forced_index": 3,
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "move_two",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "drop_toggles@bc_management_toggles.button_holder_template": {
+          "controls": [
+            {
+              "button_visuals@bc_shared.button_visuals": {
+                "$icon_path": "$icon_texture_drop"
+              }
+            },
+            {
+              "1@bc_shared.radio": {
+                "$toggle_view_binding_name": "drop_one",
+                "$toggle_group_forced_index": 4,
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "drop_one",
+                    "source_property_name": "(not #toggle_state)",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "2@bc_shared.radio": {
+                "$toggle_view_binding_name": "drop_all",
+                "$toggle_group_forced_index": 5,
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "drop_one",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "right_row_toggles@bc_management_toggles.primary_management_toggles": {
+    "$toggle_position": "right",
+    "$ignore_status_bar": true,
+    "$toggle_stack_controls": [
+      {
+        "move_row_toggle@bc_management_toggles.button_holder_template": {
+          "controls": [
+            {
+              "button_visuals@bc_shared.button_visuals": {
+                "$icon_path": "$icon_texture_move"
+              }
+            },
+            {
+              "1@bc_shared.radio": {
+                "$toggle_view_binding_name": "move_one_row",
+                "$toggle_group_forced_index": 6,
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "move_one_row",
+                    "source_property_name": "(not #toggle_state)",
+                    "target_property_name": "#is_not_move_one_row"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "move_two_row",
+                    "source_property_name": "(not #toggle_state)",
+                    "target_property_name": "#is_not_move_two_row"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "(#is_not_move_one_row and #is_not_move_two_row)",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "2@bc_shared.radio": {
+                "$toggle_view_binding_name": "move_two_row",
+                "$toggle_group_forced_index": 7,
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "move_one_row",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "3@bc_shared.radio": {
+                "$toggle_view_binding_name": "move_all_row",
+                "$toggle_group_forced_index": 8,
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "move_two_row",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "drop_row_toggle@bc_management_toggles.button_holder_template": {
+          "controls": [
+            {
+              "button_visuals@bc_shared.button_visuals": {
+                "$icon_path": "$icon_texture_drop"
+              }
+            },
+            {
+              "1@bc_shared.radio": {
+                "$toggle_view_binding_name": "drop_all_row",
+                "$toggle_group_forced_index": 9
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "button_holder_template": {
+    "type": "panel",
+    "size": "$management_toggle_size"
+  }
+}

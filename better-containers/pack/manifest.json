@@ -1,0 +1,24 @@
+{
+  "format_version": 2,
+  "header": {
+    "name": "Better Containers",
+    "description": "Better container screens: chests, smithing table, brewing stand and the vanilla containers with management toggles.",
+    "uuid": "4f20e82c-8808-588e-9571-c858449aa1d1",
+    "version": [
+      1,
+      0,
+      0
+    ]
+  },
+  "modules": [
+    {
+      "type": "resources",
+      "uuid": "4a87cdf8-109f-5b69-8d0e-e98e2a8b7c36",
+      "version": [
+        1,
+        0,
+        0
+      ]
+    }
+  ]
+}

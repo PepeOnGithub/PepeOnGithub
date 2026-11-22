@@ -1,0 +1,15 @@
+{
+  "horse_panel/root_panel": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": {
+          "primary_elements@bc_management_toggles.primary_management_toggles": {
+            "$toggle_position": "right"
+          }
+        }
+      }
+    ]
+  }
+}
