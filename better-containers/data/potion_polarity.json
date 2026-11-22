@@ -15,16 +15,15 @@
     "harming",
     "poison",
     "weakness",
-    "slowness"
-  ],
-  "mixed": [
-    "turtle_master"
-  ],
-  "unknown": [
+    "slowness",
     "wind_charging",
     "weaving",
     "oozing",
     "infestation"
   ],
-  "_note": "Polarity per potion, from the vanilla effect list. \"unknown\" entries must be checked in game before a filter uses them."
+  "mixed": [
+    "turtle_master"
+  ],
+  "unknown": [],
+  "_note": "Polarity from the Minecraft Wiki Effect page (Wind Charged, Weaving, Oozing and Infested are listed Negative). turtle_master is mixed (Slowness + Resistance). Source verified 2026-11-22."
 }
