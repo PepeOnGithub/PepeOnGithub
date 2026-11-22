@@ -12,7 +12,7 @@ It covers the **furnace**, the **blast furnace**, and the **smoker**. It's the f
 | Hook into the vanilla furnace | Built: `ui/furnace_screen.json` (after the management row) |
 | Blast furnace and smoker | Built: `ui/blast_furnace_screen.json` sets `$is_blast_furnace`, `ui/smoker_screen.json` sets `$is_smoker`; each places the guide. Not verified in game (see below) |
 | Progress bars (fuel and smelting) | Built: two bars bound to `#furnace_flame_ratio` and `#furnace_arrow_ratio`, the vanilla globals the reference uses. Verify the bar widths in game |
-| Smelt time text | Not built |
+| Smelt time text | Built as fixed text (10 s furnace, 5 s blast furnace and smoker), and each fuel shows its burn time. These are the vanilla values, not live readings |
 | Hover detail text | Not built |
 
 ## Tabs

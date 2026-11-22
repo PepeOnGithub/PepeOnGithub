@@ -65,4 +65,6 @@ The hook targets the right-hand trade inventory. The trade list is not changed.
 
 ## Status
 
-Only the management row is added here. There's no container-specific layout yet. That's the next step if this screen needs more than the row (see [21 — Known issues](../21-known-issues-and-roadmap.md)).
+Built: an information panel, `ui/better_containers/containers/trade_info.json`, hooked on the same path as the management row. It explains what the container does, in plain text from `data/container_info.json`. The management row is unchanged. The panel's position and whether its wrapped lines fit are not checked in game.
+
+Before this panel, only the management row was added here. There's no container-specific layout yet. That's the next step if this screen needs more than the row (see [21 — Known issues](../21-known-issues-and-roadmap.md)).

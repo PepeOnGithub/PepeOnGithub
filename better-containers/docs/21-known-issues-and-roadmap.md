@@ -71,10 +71,12 @@ The IDs in `_global_variables.json` weren't verified against game data (see [14]
 
 ## Still not built
 
+The items below are what still needs work, and why.
+
+- **Brewing filter dropdown:** the polarity data is in `data/potion_polarity.json` (four potions are marked unknown). The grid's potion order comes from the game's `brewing_items` collection, so the filter needs a per-potion binding I can't verify offline.
+
 - Anvil nametag entries: the tab is built and reads `data/nametag_entries.json`, which is empty. The content must come from the pack owner.
-- Brewing recipe filter dropdown (All, Mixed, Positive, Negative): needs each potion's positive or negative flag as data. Not built.
-- Furnace smelt time text: needs the vanilla time binding name, which isn't verified. Not built.
-- Container layouts for the eleven containers that only get the management row (beacon, cartography, enchanting table's own layout beyond the guide, grindstone, horse, inventory, loom, trade). Each needs a layout design; the guides only describe the row.
+- Information panels for the seven management-row containers are built. Positions and text wrapping must be checked in game.
 
 ## Roadmap
 
