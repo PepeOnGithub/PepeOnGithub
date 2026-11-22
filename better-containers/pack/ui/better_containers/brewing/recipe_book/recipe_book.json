@@ -411,6 +411,9 @@
                   }
                 ]
               }
+            },
+            {
+              "filter_row@bc_brewing_recipe_book.filter_row": {}
             }
           ]
         }
@@ -478,6 +481,233 @@
     "offset": [
       15,
       50
+    ]
+  },
+  "filter_on": {
+    "type": "image",
+    "texture": "textures/ui/craft_toggle_on",
+    "size": [
+      34,
+      15
+    ],
+    "layer": 8
+  },
+  "filter_off": {
+    "type": "image",
+    "texture": "textures/ui/craft_toggle_off",
+    "size": [
+      34,
+      15
+    ],
+    "layer": 8
+  },
+  "filter_row": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "size": [
+      "100%",
+      15
+    ],
+    "anchor_from": "bottom_left",
+    "anchor_to": "bottom_left",
+    "offset": [
+      4,
+      -2
+    ],
+    "layer": 8,
+    "controls": [
+      {
+        "bc_filter_all": {
+          "type": "toggle",
+          "size": [
+            34,
+            15
+          ],
+          "toggle_name": "bc_brewing_filter",
+          "radio_toggle_group": true,
+          "toggle_default_state": true,
+          "toggle_group_forced_index": 0,
+          "toggle_group_default_selected": 0,
+          "property_bag": {
+            "#toggle_state": true
+          },
+          "sound_name": "random.click",
+          "button_mappings": [
+            {
+              "from_button_id": "button.menu_select",
+              "to_button_id": "button.menu_ok",
+              "mapping_type": "pressed"
+            },
+            {
+              "from_button_id": "button.menu_ok",
+              "to_button_id": "button.menu_ok",
+              "mapping_type": "pressed"
+            }
+          ],
+          "unchecked_control": "bc_brewing_recipe_book.filter_off",
+          "checked_control": "bc_brewing_recipe_book.filter_on",
+          "unchecked_hover_control": "bc_brewing_recipe_book.filter_off",
+          "checked_hover_control": "bc_brewing_recipe_book.filter_on",
+          "layer": 8,
+          "controls": [
+            {
+              "filter_label": {
+                "type": "label",
+                "text": "%bc_brewing_filter.all",
+                "font_size": "small",
+                "layer": 10,
+                "anchor_from": "center",
+                "anchor_to": "center",
+                "color": "$title_text_color"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "bc_filter_positive": {
+          "type": "toggle",
+          "size": [
+            34,
+            15
+          ],
+          "toggle_name": "bc_brewing_filter",
+          "radio_toggle_group": true,
+          "toggle_default_state": false,
+          "toggle_group_forced_index": 1,
+          "toggle_group_default_selected": 0,
+          "property_bag": {
+            "#toggle_state": false
+          },
+          "sound_name": "random.click",
+          "button_mappings": [
+            {
+              "from_button_id": "button.menu_select",
+              "to_button_id": "button.menu_ok",
+              "mapping_type": "pressed"
+            },
+            {
+              "from_button_id": "button.menu_ok",
+              "to_button_id": "button.menu_ok",
+              "mapping_type": "pressed"
+            }
+          ],
+          "unchecked_control": "bc_brewing_recipe_book.filter_off",
+          "checked_control": "bc_brewing_recipe_book.filter_on",
+          "unchecked_hover_control": "bc_brewing_recipe_book.filter_off",
+          "checked_hover_control": "bc_brewing_recipe_book.filter_on",
+          "layer": 8,
+          "controls": [
+            {
+              "filter_label": {
+                "type": "label",
+                "text": "%bc_brewing_filter.positive",
+                "font_size": "small",
+                "layer": 10,
+                "anchor_from": "center",
+                "anchor_to": "center",
+                "color": "$title_text_color"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "bc_filter_negative": {
+          "type": "toggle",
+          "size": [
+            34,
+            15
+          ],
+          "toggle_name": "bc_brewing_filter",
+          "radio_toggle_group": true,
+          "toggle_default_state": false,
+          "toggle_group_forced_index": 2,
+          "toggle_group_default_selected": 0,
+          "property_bag": {
+            "#toggle_state": false
+          },
+          "sound_name": "random.click",
+          "button_mappings": [
+            {
+              "from_button_id": "button.menu_select",
+              "to_button_id": "button.menu_ok",
+              "mapping_type": "pressed"
+            },
+            {
+              "from_button_id": "button.menu_ok",
+              "to_button_id": "button.menu_ok",
+              "mapping_type": "pressed"
+            }
+          ],
+          "unchecked_control": "bc_brewing_recipe_book.filter_off",
+          "checked_control": "bc_brewing_recipe_book.filter_on",
+          "unchecked_hover_control": "bc_brewing_recipe_book.filter_off",
+          "checked_hover_control": "bc_brewing_recipe_book.filter_on",
+          "layer": 8,
+          "controls": [
+            {
+              "filter_label": {
+                "type": "label",
+                "text": "%bc_brewing_filter.negative",
+                "font_size": "small",
+                "layer": 10,
+                "anchor_from": "center",
+                "anchor_to": "center",
+                "color": "$title_text_color"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "bc_filter_mixed": {
+          "type": "toggle",
+          "size": [
+            34,
+            15
+          ],
+          "toggle_name": "bc_brewing_filter",
+          "radio_toggle_group": true,
+          "toggle_default_state": false,
+          "toggle_group_forced_index": 3,
+          "toggle_group_default_selected": 0,
+          "property_bag": {
+            "#toggle_state": false
+          },
+          "sound_name": "random.click",
+          "button_mappings": [
+            {
+              "from_button_id": "button.menu_select",
+              "to_button_id": "button.menu_ok",
+              "mapping_type": "pressed"
+            },
+            {
+              "from_button_id": "button.menu_ok",
+              "to_button_id": "button.menu_ok",
+              "mapping_type": "pressed"
+            }
+          ],
+          "unchecked_control": "bc_brewing_recipe_book.filter_off",
+          "checked_control": "bc_brewing_recipe_book.filter_on",
+          "unchecked_hover_control": "bc_brewing_recipe_book.filter_off",
+          "checked_hover_control": "bc_brewing_recipe_book.filter_on",
+          "layer": 8,
+          "controls": [
+            {
+              "filter_label": {
+                "type": "label",
+                "text": "%bc_brewing_filter.mixed",
+                "font_size": "small",
+                "layer": 10,
+                "anchor_from": "center",
+                "anchor_to": "center",
+                "color": "$title_text_color"
+              }
+            }
+          ]
+        }
+      }
     ]
   }
 }

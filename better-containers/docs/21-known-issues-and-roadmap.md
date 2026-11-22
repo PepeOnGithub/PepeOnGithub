@@ -73,7 +73,7 @@ The IDs in `_global_variables.json` weren't verified against game data (see [14]
 
 The items below are what still needs work, and why.
 
-- **Brewing filter dropdown:** the polarity data is in `data/potion_polarity.json` (all potions now classified from the Minecraft Wiki Effect page: Wind Charged, Weaving, Oozing and Infested are Negative; Turtle Master is mixed). The grid's potion order comes from the game's `brewing_items` collection, so the filter needs a per-potion binding I can't verify offline.
+- **Brewing filter:** built by `tools/build_brewing_filter.py`. Each recipe-grid potion is a fixed control, so its polarity comes from `data/potion_polarity.json` and is written as `$polarity_control`. Four radio toggles (All, Good, Bad, Mixed) at the bottom of the recipe book show or hide grid items. Hidden items leave a gap because grid positions are fixed. Unverified in game: the row position, the `(#filter_all or #filter_match)` visibility binding, and the checked/unchecked textures (`craft_toggle_on`/`off`).
 
 - Information panels for the seven management-row containers are built. Positions and text wrapping must be checked in game.
 

@@ -250,3 +250,7 @@ bc_anvil_guide.nametag.4=Leave the name blank to restore the item's default name
 bc_anvil_guide.nametag.5=Named items do not stack with unnamed or differently named items.
 bc_anvil_guide.nametag.6=Chests, barrels, furnaces, hoppers, shulker boxes, brewing stands and enchanting tables show their name in their screen once placed.
 bc_enchanting_guide.desc.enchantment.lunge=A spear jab launches you forward, at the cost of hunger and 1 durability.
+bc_brewing_filter.all=All
+bc_brewing_filter.positive=Good
+bc_brewing_filter.negative=Bad
+bc_brewing_filter.mixed=Mixed
